@@ -1,0 +1,109 @@
+//
+//  PrefixHeader.pch
+//  zycProject
+//
+//  Created by yc on 2018/10/30.
+//  Copyright © 2018 yc. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//宏定义
+#define Debug 0
+
+//height
+#define ScreenWith   [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+//#define ScreenScale  375.0 / CGRectGetWidth([UIScreen mainScreen].bounds)
+
+//#define NVH         44
+//#define SBH         20
+//#define TBH         49
+
+////color
+//#define RGBCOLOR(r,g,b)    [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+//#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+//
+//#define ButtonColorCancel  [UIColor colorWithHexString:@"#333333"]
+//#define ButtonColorDefault [UIColor colorWithHexString:@"#ff6537"]
+//
+////block
+//#define WEAKSELF typeof(self) __weak weakSelf = self;
+//#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
+
+#define Dedug 1
+// 日志打印
+#if Dedug
+#define YCLog(fmt, ...) NSLog((@"%@ : " fmt), NSStringFromClass([self class]), ##__VA_ARGS__)
+#else
+#define YCLog(...)
+#endif
+
+//#define IBZPlaceImage [UIImage imageNamed:@"imageD1"]
+//
+////FIXME: 建议以后将所有颜色（即使是系统颜色）提出出来，方便统一更换风格
+////custom
+//#define ScreenWithOutBarsSize   CGRectMake(0, 0, ScreenWith, ScreenHeight-64-49)
+//#define ScreenWithOutNavSize    CGRectMake(0, 0, ScreenWith, ScreenHeight-64)
+//
+//
+////---------------------------color---------------------------------
+//#define IBZItemColor       RGBCOLOR(216, 87, 77)
+//
+//#define IBZBlackColor     [UIColor colorWithWhite:0.200 alpha:1.000]
+//#define IBZGrayColor      [UIColor colorWithWhite:0.400 alpha:1.000]
+//#define IBZLightGrayColor [UIColor colorWithWhite:0.600 alpha:1.000]
+//
+//#define IBZButtonDisableColor   IBZLightGrayColor
+//#define IBZCellLineColor        [UIColor colorWithWhite:0.941 alpha:1.000]
+//#define IBZViewBackColor        IBZCellLineColor
+//#define ThemeColor              IBZItemColor
+////-----------------------------------------------------------------
+//
+//
+//
+////----------------------------method-------------------------------
+//#define DismissAction     - (void)dissmissAction{\
+//[self.navigationController dismissViewControllerAnimated:YES completion:nil];\
+//}
+//
+////-----------------------------------------------------------------
+//
+//#define UmengAPK        @"57c39c3867e58e53960002f8"
+//#define QQAPID          @"1105215427"
+//#define QQAPK           @"DoKCZQCccvUeRjYs"
+////#define WeiboAPK        @"1289254337"
+////#define WeiboSecret     @"29c6f931ec96057098a3328f7b973211"
+//#define WeiboAPK        @"2763318414"
+//#define WeiboSecret     @"2d16bb46907847905a27c662924faa23"
+//#define WXAPK           @"wx938e7e74e9fa92ee"
+//#define WXSecret        @"f9aac77b1ca0561f80bbcd379c6b4ef1"
+//#define PGY_APP_ID      @"a81ac88fe2c82e9d158b5960a7300f1d"
+//
+//
+////#define BaseURL           @"http://192.168.0.222:20051"
+//#define BaseURL           @"http://192.168.0.222:9999"
+////#define BaseURL           @"http://192.168.0.130:8100/"
+////#define BaseURL           @"http://192.168.0.222:21590/"
+//
+//
+//#define FindURL           @"http://m.ibaozhuang.com/WeChat/Portal/Index.html?Ios"
+////#define FindURL           @"http://192.168.0.130:8899/WeChat/Portal/Index.html?Ios"
+//#define HomeURLString     [NSString stringWithFormat:@"%@WeChat/Portal/Index.html?Ios",H5BaseURL]
+//#define CategoryURLString [NSString stringWithFormat:@"%@WeChat/Classification/Classify.html?Ios",H5BaseURL]
+//#define PolicyURLString   [NSString stringWithFormat:@"%@WeChat/Portal/Registration.html",H5BaseURL]
+//#define IBZPhoneNumber    4009209688
+//#define RefreshTime       1.2
+//#define TitleHeight       30
+//
+//
+////头文件
+//#define MainColor [UIColor colorWithRed:219/255.0 green:43/255.0 blue:55/255.0 alpha:1.0]
+//#define NavigationColor [UIColor colorWithRed:28.0/255 green:27.0/255 blue:32.0/255 alpha:1.0]
+//#define NavigationBlackColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
+
+#endif /* PrefixHeader_pch */

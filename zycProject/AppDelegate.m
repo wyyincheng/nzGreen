@@ -8,15 +8,48 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import <Bugly/Bugly.h>
+#import "YZStaticString.h"
+#import <WechatOpenSDK/WXApi.h>
+
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
 @implementation AppDelegate
 
+#pragma mark - delegate
+#pragma mark WXPay delegate
+- (void)onResp:(BaseResp *)resp {
+    if ([resp isKindOfClass:[PayResp class]]) {
+        PayResp*response=(PayResp*)resp;
+        switch(response.errCode){
+            case 0:
+                YCLog(@"支付成功！");
+                [[NSNotificationCenter defaultCenter] postNotificationName:kYZWeixinPaySuccessPushFlag object:nil];
+                break;
+            default:
+                YCLog(@"支付失败！");
+                [[NSNotificationCenter defaultCenter] postNotificationName:kYZWeixinPayFaliurePushFlag object:nil];
+                break;
+        }
+    }
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [Bugly startWithAppId:kYZBugly_AppId];
+    [WXApi registerApp:kYZWeixinPay_AppId];
+    
+    return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if ([url.host isEqualToString:@"pay"]) {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
     return YES;
 }
 

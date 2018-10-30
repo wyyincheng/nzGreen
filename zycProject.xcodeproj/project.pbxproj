@@ -29,6 +29,8 @@
 		5896295F21884C0A008EFDD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5896296121884C0A008EFDD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5896296221884C0A008EFDD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5896296A21885DEE008EFDD8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5896296C21885FBF008EFDD8 /* YZStaticString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZStaticString.h; sourceTree = "<group>"; };
 		6446A18C3C1BF941303405CD /* Pods-zycProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zycProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-zycProject/Pods-zycProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,8 @@
 		5896295221884C09008EFDD8 /* zycProject */ = {
 			isa = PBXGroup;
 			children = (
+				5896296B21885F91008EFDD8 /* Common */,
+				5896296921885DBE008EFDD8 /* YZNCTOOL */,
 				5896295321884C09008EFDD8 /* AppDelegate.h */,
 				5896295421884C09008EFDD8 /* AppDelegate.m */,
 				5896295621884C09008EFDD8 /* ViewController.h */,
@@ -84,6 +88,22 @@
 				5896296221884C0A008EFDD8 /* main.m */,
 			);
 			path = zycProject;
+			sourceTree = "<group>";
+		};
+		5896296921885DBE008EFDD8 /* YZNCTOOL */ = {
+			isa = PBXGroup;
+			children = (
+				5896296A21885DEE008EFDD8 /* PrefixHeader.pch */,
+			);
+			path = YZNCTOOL;
+			sourceTree = SOURCE_ROOT;
+		};
+		5896296B21885F91008EFDD8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5896296C21885FBF008EFDD8 /* YZStaticString.h */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		84EC094F8958FF34B0C0AAE5 /* Pods */ = {
@@ -373,6 +393,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 792VSVYYVC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YZNCTOOL/PrefixHeader.pch";
 				INFOPLIST_FILE = zycProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,6 +413,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 792VSVYYVC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YZNCTOOL/PrefixHeader.pch";
 				INFOPLIST_FILE = zycProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
