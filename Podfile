@@ -7,21 +7,21 @@ target 'zycProject' do
 
   # Pods for zycProject
 
-    pod 'Masonry','1.1.0'
-    pod 'SDWebImage','4.4.2'
-    pod 'MJRefresh','3.1.15.7'
-    pod 'AFNetworking','3.2.1'
-	  pod 'IQKeyboardManager','6.2.0'
+    pod 'Masonry','1.1.0',:inhibit_warnings => true
+    pod 'SDWebImage','4.4.2',:inhibit_warnings => true
+    pod 'MJRefresh','3.1.15.7',:inhibit_warnings => true
+    pod 'AFNetworking','3.2.1',:inhibit_warnings => true
+	  pod 'IQKeyboardManager','6.2.0',:inhibit_warnings => true
 #    pod 'MBProgressHUD', '1.1.0'
     # pod 'UMCCommon', '1.5.0'
     # pod 'UMCAnalytics', '5.5.0'
     # pod 'UMCErrorCatch', '1.0.0'
-    pod 'SDCycleScrollView','1.75'
-    pod 'MJExtension', '3.0.15.1'
-    pod 'DZNEmptyDataSet','1.8.1'
-    pod 'Bugly','2.5.0'
-    pod 'ZLPhotoBrowser','2.7.4'
-    pod 'BRPickerView','2.2.1'
-    pod 'WechatOpenSDK','1.8.3'
+    pod 'SDCycleScrollView','1.75',:inhibit_warnings => true
+    pod 'MJExtension', '3.0.15.1',:inhibit_warnings => true
+    pod 'DZNEmptyDataSet','1.8.1',:inhibit_warnings => true
+    pod 'Bugly','2.5.0',:inhibit_warnings => true
+    pod 'ZLPhotoBrowser','2.7.4',:inhibit_warnings => true
+    pod 'BRPickerView','2.2.1',:inhibit_warnings => true
+    pod 'WechatOpenSDK','1.8.3',:inhibit_warnings => true
 
 end
