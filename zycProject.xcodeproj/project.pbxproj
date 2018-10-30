@@ -13,6 +13,11 @@
 		5896295D21884C0A008EFDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5896295C21884C0A008EFDD8 /* Assets.xcassets */; };
 		5896296021884C0A008EFDD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5896295E21884C0A008EFDD8 /* LaunchScreen.storyboard */; };
 		5896296321884C0A008EFDD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896296221884C0A008EFDD8 /* main.m */; };
+		5896297321886224008EFDD8 /* YZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896297221886224008EFDD8 /* YZBaseViewController.m */; };
+		5896297821886348008EFDD8 /* icon_nav_back_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5896297621886348008EFDD8 /* icon_nav_back_white@2x.png */; };
+		5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5896297721886348008EFDD8 /* icon_nav_back_white@3x.png */; };
+		5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896297B21886381008EFDD8 /* YZFirstViewController.m */; };
+		5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5896297C21886381008EFDD8 /* YZFirstViewController.xib */; };
 		78CAD97803F4FEAD6036FCE4 /* libPods-zycProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A717BB25F481332515EE13 /* libPods-zycProject.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,13 @@
 		5896296221884C0A008EFDD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5896296A21885DEE008EFDD8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5896296C21885FBF008EFDD8 /* YZStaticString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZStaticString.h; sourceTree = "<group>"; };
+		5896297121886224008EFDD8 /* YZBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBaseViewController.h; sourceTree = "<group>"; };
+		5896297221886224008EFDD8 /* YZBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBaseViewController.m; sourceTree = "<group>"; };
+		5896297621886348008EFDD8 /* icon_nav_back_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_nav_back_white@2x.png"; sourceTree = "<group>"; };
+		5896297721886348008EFDD8 /* icon_nav_back_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_nav_back_white@3x.png"; sourceTree = "<group>"; };
+		5896297A21886381008EFDD8 /* YZFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZFirstViewController.h; sourceTree = "<group>"; };
+		5896297B21886381008EFDD8 /* YZFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZFirstViewController.m; sourceTree = "<group>"; };
+		5896297C21886381008EFDD8 /* YZFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZFirstViewController.xib; sourceTree = "<group>"; };
 		6446A18C3C1BF941303405CD /* Pods-zycProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zycProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-zycProject/Pods-zycProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +87,8 @@
 		5896295221884C09008EFDD8 /* zycProject */ = {
 			isa = PBXGroup;
 			children = (
+				58962974218862F7008EFDD8 /* Resources */,
+				5896296D218861CB008EFDD8 /* Classes */,
 				5896296B21885F91008EFDD8 /* Common */,
 				5896296921885DBE008EFDD8 /* YZNCTOOL */,
 				5896295321884C09008EFDD8 /* AppDelegate.h */,
@@ -102,8 +116,61 @@
 			isa = PBXGroup;
 			children = (
 				5896296C21885FBF008EFDD8 /* YZStaticString.h */,
+				5896297121886224008EFDD8 /* YZBaseViewController.h */,
+				5896297221886224008EFDD8 /* YZBaseViewController.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5896296D218861CB008EFDD8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5896296E218861CB008EFDD8 /* LoginVC */,
+				5896296F218861CB008EFDD8 /* FirstVC */,
+				58962970218861CB008EFDD8 /* MainTab */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5896296E218861CB008EFDD8 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		5896296F218861CB008EFDD8 /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				5896297A21886381008EFDD8 /* YZFirstViewController.h */,
+				5896297B21886381008EFDD8 /* YZFirstViewController.m */,
+				5896297C21886381008EFDD8 /* YZFirstViewController.xib */,
+			);
+			path = FirstVC;
+			sourceTree = "<group>";
+		};
+		58962970218861CB008EFDD8 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		58962974218862F7008EFDD8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5896297521886303008EFDD8 /* icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5896297521886303008EFDD8 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				5896297621886348008EFDD8 /* icon_nav_back_white@2x.png */,
+				5896297721886348008EFDD8 /* icon_nav_back_white@3x.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 		84EC094F8958FF34B0C0AAE5 /* Pods */ = {
@@ -143,6 +210,7 @@
 		5896294821884C09008EFDD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YZ;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = yc;
 				TargetAttributes = {
@@ -174,8 +242,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5896297821886348008EFDD8 /* icon_nav_back_white@2x.png in Resources */,
+				5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */,
 				5896296021884C0A008EFDD8 /* LaunchScreen.storyboard in Resources */,
 				5896295D21884C0A008EFDD8 /* Assets.xcassets in Resources */,
+				5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */,
 				5896295B21884C09008EFDD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +319,9 @@
 			files = (
 				5896295821884C09008EFDD8 /* ViewController.m in Sources */,
 				5896296321884C0A008EFDD8 /* main.m in Sources */,
+				5896297321886224008EFDD8 /* YZBaseViewController.m in Sources */,
 				5896295521884C09008EFDD8 /* AppDelegate.m in Sources */,
+				5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

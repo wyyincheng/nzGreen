@@ -24,9 +24,9 @@
 //#define SBH         20
 //#define TBH         49
 
-////color
-//#define RGBCOLOR(r,g,b)    [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-//#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+//color
+#define RGBCOLOR(r,g,b)    [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 //
 //#define ButtonColorCancel  [UIColor colorWithHexString:@"#333333"]
 //#define ButtonColorDefault [UIColor colorWithHexString:@"#ff6537"]
@@ -42,6 +42,10 @@
 #else
 #define YCLog(...)
 #endif
+
+
+#define kYZBackViewColor [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0]
+
 
 //#define IBZPlaceImage [UIImage imageNamed:@"imageD1"]
 //
@@ -105,5 +109,7 @@
 //#define MainColor [UIColor colorWithRed:219/255.0 green:43/255.0 blue:55/255.0 alpha:1.0]
 //#define NavigationColor [UIColor colorWithRed:28.0/255 green:27.0/255 blue:32.0/255 alpha:1.0]
 //#define NavigationBlackColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
+
+
 
 #endif /* PrefixHeader_pch */

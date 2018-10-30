@@ -12,6 +12,8 @@
 #import "YZStaticString.h"
 #import <WechatOpenSDK/WXApi.h>
 
+#import "YZFirstViewController.h"
+
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
@@ -39,8 +41,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //--------------------  第三方库设置 start  --------------------
     [Bugly startWithAppId:kYZBugly_AppId];
     [WXApi registerApp:kYZWeixinPay_AppId];
+    //--------------------  第三方库设置 end    --------------------
+    
+    YZFirstViewController *firstVC = [YZFirstViewController new];
+    self.window.rootViewController = firstVC;
     
     return YES;
 }
