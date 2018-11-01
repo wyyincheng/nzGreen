@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584FFDE8218AB7FE008B2B61 /* YZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDE7218AB7FE008B2B61 /* YZMainViewController.m */; };
+		584FFDEF218AB8D5008B2B61 /* YZGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDED218AB8D5008B2B61 /* YZGoodsListViewController.m */; };
+		584FFDF0218AB8D5008B2B61 /* YZGoodsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFDEE218AB8D5008B2B61 /* YZGoodsListViewController.xib */; };
+		584FFDF4218AB8E3008B2B61 /* YZShopCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDF2218AB8E3008B2B61 /* YZShopCarViewController.m */; };
+		584FFDF5218AB8E3008B2B61 /* YZShopCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFDF3218AB8E3008B2B61 /* YZShopCarViewController.xib */; };
+		584FFDF9218AB8F3008B2B61 /* YZUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDF7218AB8F3008B2B61 /* YZUserCenterViewController.m */; };
+		584FFDFA218AB8F3008B2B61 /* YZUserCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFDF8218AB8F3008B2B61 /* YZUserCenterViewController.xib */; };
+		584FFDFF218ACDE2008B2B61 /* YZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDFE218ACDE2008B2B61 /* YZBaseModel.m */; };
+		584FFE02218ACE5C008B2B61 /* YZUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE01218ACE5C008B2B61 /* YZUserModel.m */; };
+		584FFE05218AD872008B2B61 /* YZUserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE04218AD872008B2B61 /* YZUserCenter.m */; };
+		584FFE08218AE145008B2B61 /* NSString+YZImageUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE07218AE145008B2B61 /* NSString+YZImageUrl.m */; };
+		584FFE0E218AE75D008B2B61 /* icon_app_83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE0D218AE75D008B2B61 /* icon_app_83.5@2x.png */; };
 		5896295521884C09008EFDD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896295421884C09008EFDD8 /* AppDelegate.m */; };
 		5896295821884C09008EFDD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896295721884C09008EFDD8 /* ViewController.m */; };
 		5896295B21884C09008EFDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5896295921884C09008EFDD8 /* Main.storyboard */; };
@@ -22,12 +34,9 @@
 		5896298321886897008EFDD8 /* YZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5896298121886897008EFDD8 /* YZLoginViewController.xib */; };
 		58962986218869A9008EFDD8 /* icon_nav_back_radio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */; };
 		58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */; };
-		5896298E218872BB008EFDD8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962989218872BB008EFDD8 /* MBProgressHUD.m */; };
-		5896298F218872BB008EFDD8 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896298C218872BB008EFDD8 /* MBProgressHUD+MJ.m */; };
-		58962990218872BB008EFDD8 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5896298D218872BB008EFDD8 /* MBProgressHUD.bundle */; };
 		589629AC218873E6008EFDD8 /* UIImage+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962994218873E6008EFDD8 /* UIImage+Placeholder.m */; };
 		589629AD218873E6008EFDD8 /* NSDictionary+YMMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962996218873E6008EFDD8 /* NSDictionary+YMMSafe.m */; };
-		589629AE218873E6008EFDD8 /* UIColor+IMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962999218873E6008EFDD8 /* UIColor+IMHelper.m */; };
+		589629AE218873E6008EFDD8 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962999218873E6008EFDD8 /* UIColor+Utils.m */; };
 		589629AF218873E6008EFDD8 /* NSString+NZCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896299C218873E6008EFDD8 /* NSString+NZCheck.m */; };
 		589629B0218873E6008EFDD8 /* NSArray+YMMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629A0218873E6008EFDD8 /* NSArray+YMMSafe.m */; };
 		589629B1218873E6008EFDD8 /* UINavigationBar+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629A2218873E6008EFDD8 /* UINavigationBar+Alpha.m */; };
@@ -42,6 +51,26 @@
 /* Begin PBXFileReference section */
 		27CBE9A5FB465A3E06071EE4 /* Pods-zycProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zycProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zycProject/Pods-zycProject.debug.xcconfig"; sourceTree = "<group>"; };
 		29A717BB25F481332515EE13 /* libPods-zycProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zycProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		584FFDE6218AB7FE008B2B61 /* YZMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZMainViewController.h; sourceTree = "<group>"; };
+		584FFDE7218AB7FE008B2B61 /* YZMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZMainViewController.m; sourceTree = "<group>"; };
+		584FFDEC218AB8D5008B2B61 /* YZGoodsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsListViewController.h; sourceTree = "<group>"; };
+		584FFDED218AB8D5008B2B61 /* YZGoodsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsListViewController.m; sourceTree = "<group>"; };
+		584FFDEE218AB8D5008B2B61 /* YZGoodsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsListViewController.xib; sourceTree = "<group>"; };
+		584FFDF1218AB8E3008B2B61 /* YZShopCarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZShopCarViewController.h; sourceTree = "<group>"; };
+		584FFDF2218AB8E3008B2B61 /* YZShopCarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZShopCarViewController.m; sourceTree = "<group>"; };
+		584FFDF3218AB8E3008B2B61 /* YZShopCarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZShopCarViewController.xib; sourceTree = "<group>"; };
+		584FFDF6218AB8F3008B2B61 /* YZUserCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZUserCenterViewController.h; sourceTree = "<group>"; };
+		584FFDF7218AB8F3008B2B61 /* YZUserCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZUserCenterViewController.m; sourceTree = "<group>"; };
+		584FFDF8218AB8F3008B2B61 /* YZUserCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZUserCenterViewController.xib; sourceTree = "<group>"; };
+		584FFDFD218ACDE2008B2B61 /* YZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBaseModel.h; sourceTree = "<group>"; };
+		584FFDFE218ACDE2008B2B61 /* YZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBaseModel.m; sourceTree = "<group>"; };
+		584FFE00218ACE5C008B2B61 /* YZUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZUserModel.h; sourceTree = "<group>"; };
+		584FFE01218ACE5C008B2B61 /* YZUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZUserModel.m; sourceTree = "<group>"; };
+		584FFE03218AD872008B2B61 /* YZUserCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZUserCenter.h; sourceTree = "<group>"; };
+		584FFE04218AD872008B2B61 /* YZUserCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZUserCenter.m; sourceTree = "<group>"; };
+		584FFE06218AE145008B2B61 /* NSString+YZImageUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YZImageUrl.h"; sourceTree = "<group>"; };
+		584FFE07218AE145008B2B61 /* NSString+YZImageUrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YZImageUrl.m"; sourceTree = "<group>"; };
+		584FFE0D218AE75D008B2B61 /* icon_app_83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_app_83.5@2x.png"; sourceTree = "<group>"; };
 		5896295021884C09008EFDD8 /* zycProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zycProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5896295321884C09008EFDD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5896295421884C09008EFDD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,17 +95,12 @@
 		5896298121886897008EFDD8 /* YZLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZLoginViewController.xib; sourceTree = "<group>"; };
 		58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_nav_back_radio@3x.png"; sourceTree = "<group>"; };
 		58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_nav_back_radio@2x.png"; sourceTree = "<group>"; };
-		58962989218872BB008EFDD8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		5896298A218872BB008EFDD8 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
-		5896298B218872BB008EFDD8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		5896298C218872BB008EFDD8 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		5896298D218872BB008EFDD8 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		58962993218873E6008EFDD8 /* UIImage+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Placeholder.h"; sourceTree = "<group>"; };
 		58962994218873E6008EFDD8 /* UIImage+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Placeholder.m"; sourceTree = "<group>"; };
 		58962996218873E6008EFDD8 /* NSDictionary+YMMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YMMSafe.m"; sourceTree = "<group>"; };
 		58962997218873E6008EFDD8 /* NSDictionary+YMMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YMMSafe.h"; sourceTree = "<group>"; };
-		58962999218873E6008EFDD8 /* UIColor+IMHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IMHelper.m"; sourceTree = "<group>"; };
-		5896299A218873E6008EFDD8 /* UIColor+IMHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IMHelper.h"; sourceTree = "<group>"; };
+		58962999218873E6008EFDD8 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		5896299A218873E6008EFDD8 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
 		5896299C218873E6008EFDD8 /* NSString+NZCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NZCheck.m"; sourceTree = "<group>"; };
 		5896299D218873E6008EFDD8 /* NSString+NZCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NZCheck.h"; sourceTree = "<group>"; };
 		5896299F218873E6008EFDD8 /* NSArray+YMMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YMMSafe.h"; sourceTree = "<group>"; };
@@ -113,6 +137,59 @@
 				29A717BB25F481332515EE13 /* libPods-zycProject.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		584FFDE9218AB899008B2B61 /* userCenterVC */ = {
+			isa = PBXGroup;
+			children = (
+				584FFDF6218AB8F3008B2B61 /* YZUserCenterViewController.h */,
+				584FFDF7218AB8F3008B2B61 /* YZUserCenterViewController.m */,
+				584FFDF8218AB8F3008B2B61 /* YZUserCenterViewController.xib */,
+			);
+			name = userCenterVC;
+			path = MainTab/userCenterVC;
+			sourceTree = "<group>";
+		};
+		584FFDEA218AB899008B2B61 /* goodsListVC */ = {
+			isa = PBXGroup;
+			children = (
+				584FFDEC218AB8D5008B2B61 /* YZGoodsListViewController.h */,
+				584FFDED218AB8D5008B2B61 /* YZGoodsListViewController.m */,
+				584FFDEE218AB8D5008B2B61 /* YZGoodsListViewController.xib */,
+			);
+			name = goodsListVC;
+			path = MainTab/goodsListVC;
+			sourceTree = "<group>";
+		};
+		584FFDEB218AB899008B2B61 /* shopCarVC */ = {
+			isa = PBXGroup;
+			children = (
+				584FFDF1218AB8E3008B2B61 /* YZShopCarViewController.h */,
+				584FFDF2218AB8E3008B2B61 /* YZShopCarViewController.m */,
+				584FFDF3218AB8E3008B2B61 /* YZShopCarViewController.xib */,
+			);
+			name = shopCarVC;
+			path = MainTab/shopCarVC;
+			sourceTree = "<group>";
+		};
+		584FFDFB218ACDBE008B2B61 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				584FFE00218ACE5C008B2B61 /* YZUserModel.h */,
+				584FFE01218ACE5C008B2B61 /* YZUserModel.m */,
+				584FFE03218AD872008B2B61 /* YZUserCenter.h */,
+				584FFE04218AD872008B2B61 /* YZUserCenter.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		584FFDFC218ACDD4008B2B61 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				584FFDFD218ACDE2008B2B61 /* YZBaseModel.h */,
+				584FFDFE218ACDE2008B2B61 /* YZBaseModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		5896294721884C09008EFDD8 = {
@@ -157,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				58962991218873E6008EFDD8 /* Category */,
-				58962988218872BB008EFDD8 /* MBProgressHUD */,
 				5896296A21885DEE008EFDD8 /* PrefixHeader.pch */,
 			);
 			path = YZNCTOOL;
@@ -166,6 +242,7 @@
 		5896296B21885F91008EFDD8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				584FFDFC218ACDD4008B2B61 /* model */,
 				5896296C21885FBF008EFDD8 /* YZStaticString.h */,
 				5896297121886224008EFDD8 /* YZBaseViewController.h */,
 				5896297221886224008EFDD8 /* YZBaseViewController.m */,
@@ -176,6 +253,9 @@
 		5896296D218861CB008EFDD8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				584FFDEA218AB899008B2B61 /* goodsListVC */,
+				584FFDEB218AB899008B2B61 /* shopCarVC */,
+				584FFDE9218AB899008B2B61 /* userCenterVC */,
 				5896296E218861CB008EFDD8 /* LoginVC */,
 				5896296F218861CB008EFDD8 /* FirstVC */,
 				58962970218861CB008EFDD8 /* MainTab */,
@@ -186,6 +266,7 @@
 		5896296E218861CB008EFDD8 /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
+				584FFDFB218ACDBE008B2B61 /* model */,
 				589629B62188746E008EFDD8 /* view */,
 				5896297F21886897008EFDD8 /* YZLoginViewController.h */,
 				5896298021886897008EFDD8 /* YZLoginViewController.m */,
@@ -207,6 +288,8 @@
 		58962970218861CB008EFDD8 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
+				584FFDE6218AB7FE008B2B61 /* YZMainViewController.h */,
+				584FFDE7218AB7FE008B2B61 /* YZMainViewController.m */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -222,24 +305,13 @@
 		5896297521886303008EFDD8 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				584FFE0D218AE75D008B2B61 /* icon_app_83.5@2x.png */,
 				58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */,
 				58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */,
 				5896297621886348008EFDD8 /* icon_nav_back_white@2x.png */,
 				5896297721886348008EFDD8 /* icon_nav_back_white@3x.png */,
 			);
 			path = icons;
-			sourceTree = "<group>";
-		};
-		58962988218872BB008EFDD8 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				58962989218872BB008EFDD8 /* MBProgressHUD.m */,
-				5896298A218872BB008EFDD8 /* MBProgressHUD+MJ.h */,
-				5896298B218872BB008EFDD8 /* MBProgressHUD.h */,
-				5896298C218872BB008EFDD8 /* MBProgressHUD+MJ.m */,
-				5896298D218872BB008EFDD8 /* MBProgressHUD.bundle */,
-			);
-			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		58962991218873E6008EFDD8 /* Category */ = {
@@ -277,8 +349,8 @@
 		58962998218873E6008EFDD8 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				58962999218873E6008EFDD8 /* UIColor+IMHelper.m */,
-				5896299A218873E6008EFDD8 /* UIColor+IMHelper.h */,
+				58962999218873E6008EFDD8 /* UIColor+Utils.m */,
+				5896299A218873E6008EFDD8 /* UIColor+Utils.h */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -288,6 +360,8 @@
 			children = (
 				5896299C218873E6008EFDD8 /* NSString+NZCheck.m */,
 				5896299D218873E6008EFDD8 /* NSString+NZCheck.h */,
+				584FFE06218AE145008B2B61 /* NSString+YZImageUrl.h */,
+				584FFE07218AE145008B2B61 /* NSString+YZImageUrl.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -409,9 +483,12 @@
 				58962986218869A9008EFDD8 /* icon_nav_back_radio@3x.png in Resources */,
 				5896296021884C0A008EFDD8 /* LaunchScreen.storyboard in Resources */,
 				5896295D21884C0A008EFDD8 /* Assets.xcassets in Resources */,
+				584FFDFA218AB8F3008B2B61 /* YZUserCenterViewController.xib in Resources */,
+				584FFDF0218AB8D5008B2B61 /* YZGoodsListViewController.xib in Resources */,
+				584FFE0E218AE75D008B2B61 /* icon_app_83.5@2x.png in Resources */,
 				58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */,
-				58962990218872BB008EFDD8 /* MBProgressHUD.bundle in Resources */,
 				5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */,
+				584FFDF5218AB8E3008B2B61 /* YZShopCarViewController.xib in Resources */,
 				5896295B21884C09008EFDD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,21 +563,27 @@
 			files = (
 				5896295821884C09008EFDD8 /* ViewController.m in Sources */,
 				589629AC218873E6008EFDD8 /* UIImage+Placeholder.m in Sources */,
+				584FFDFF218ACDE2008B2B61 /* YZBaseModel.m in Sources */,
 				589629B1218873E6008EFDD8 /* UINavigationBar+Alpha.m in Sources */,
 				589629AF218873E6008EFDD8 /* NSString+NZCheck.m in Sources */,
 				589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */,
+				584FFDF9218AB8F3008B2B61 /* YZUserCenterViewController.m in Sources */,
+				584FFE05218AD872008B2B61 /* YZUserCenter.m in Sources */,
 				5896296321884C0A008EFDD8 /* main.m in Sources */,
 				5896297321886224008EFDD8 /* YZBaseViewController.m in Sources */,
 				5896298221886897008EFDD8 /* YZLoginViewController.m in Sources */,
 				589629B4218873E6008EFDD8 /* MBProgressHUD+MJ.m in Sources */,
-				589629AE218873E6008EFDD8 /* UIColor+IMHelper.m in Sources */,
+				589629AE218873E6008EFDD8 /* UIColor+Utils.m in Sources */,
 				589629B0218873E6008EFDD8 /* NSArray+YMMSafe.m in Sources */,
-				5896298F218872BB008EFDD8 /* MBProgressHUD+MJ.m in Sources */,
+				584FFDE8218AB7FE008B2B61 /* YZMainViewController.m in Sources */,
+				584FFDEF218AB8D5008B2B61 /* YZGoodsListViewController.m in Sources */,
+				584FFE02218ACE5C008B2B61 /* YZUserModel.m in Sources */,
 				5896295521884C09008EFDD8 /* AppDelegate.m in Sources */,
+				584FFDF4218AB8E3008B2B61 /* YZShopCarViewController.m in Sources */,
 				589629AD218873E6008EFDD8 /* NSDictionary+YMMSafe.m in Sources */,
+				584FFE08218AE145008B2B61 /* NSString+YZImageUrl.m in Sources */,
 				589629B92188746E008EFDD8 /* NZTipView.m in Sources */,
 				5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */,
-				5896298E218872BB008EFDD8 /* MBProgressHUD.m in Sources */,
 				589629B3218873E6008EFDD8 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

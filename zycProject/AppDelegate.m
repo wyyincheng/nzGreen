@@ -11,6 +11,7 @@
 #import <Bugly/Bugly.h>
 #import "YZStaticString.h"
 #import <WechatOpenSDK/WXApi.h>
+#import <AVOSCloud/AVOSCloud.h>
 
 #import "YZFirstViewController.h"
 
@@ -44,6 +45,9 @@
     //--------------------  第三方库设置 start  --------------------
     [Bugly startWithAppId:kYZBugly_AppId];
     [WXApi registerApp:kYZWeixinPay_AppId];
+    [AVOSCloud setApplicationId:kYZLeanCloud_AppId clientKey:kYZLeanCloud_AppKey];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [AVOSCloud setAllLogsEnabled:YZDEBUG];
     //--------------------  第三方库设置 end    --------------------
     
     YZFirstViewController *firstVC = [YZFirstViewController new];

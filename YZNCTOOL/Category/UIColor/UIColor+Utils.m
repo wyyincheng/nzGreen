@@ -6,9 +6,9 @@
 //  Copyright © 2017年 YMM. All rights reserved.
 //
 
-#import "UIColor+IMHelper.h"
+#import "UIColor+Utils.h"
 
-@implementation UIColor (IMHelper)
+@implementation UIColor (Utils)
 
 + (UIColor* )colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alphaValue{
     return [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0

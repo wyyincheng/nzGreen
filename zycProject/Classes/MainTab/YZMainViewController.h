@@ -1,8 +1,8 @@
 //
-//  YZFirstViewController.h
+//  YZMainViewController.h
 //  zycProject
 //
-//  Created by yc on 2018/10/30.
+//  Created by yc on 2018/11/1.
 //  Copyright © 2018 yc. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YZFirstViewController : UIViewController
+@interface YZMainViewController : UITabBarController
 
 @end
 

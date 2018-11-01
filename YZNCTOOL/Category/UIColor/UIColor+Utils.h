@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (IMHelper)
+@interface UIColor (Utils)
 
 + (UIColor*)colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alphaValue;
 
 + (UIColor*)colorWithHex:(NSInteger)hexValue;
+
 @end

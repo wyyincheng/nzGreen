@@ -24,5 +24,5 @@ target 'zycProject' do
     pod 'BRPickerView','2.2.1',:inhibit_warnings => true
     pod 'WechatOpenSDK','1.8.3',:inhibit_warnings => true
     #leanCloud
-    pod 'AVOSCloud'               # 数据存储、短信、云引擎调用等基础服务模块
+    pod 'AVOSCloud',:inhibit_warnings => true # 数据存储、短信、云引擎调用等基础服务模块
 end

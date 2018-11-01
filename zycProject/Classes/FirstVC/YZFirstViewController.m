@@ -7,154 +7,67 @@
 //
 
 #import "YZFirstViewController.h"
-#import "NSString+NZCheck.h"
-#import "NZTipView.h"
 
-@interface YZFirstViewController () <UITextFieldDelegate>
+#import "YZUserModel.h"
+#import "YZMainViewController.h"
+#import "YZLoginViewController.h"
 
-@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
-@property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
-
-@property (weak, nonatomic) IBOutlet UIButton *contactServiceBt;
-@property (weak, nonatomic) IBOutlet UIButton *changePwdBt;
-@property (weak, nonatomic) IBOutlet UIButton *registerBt;
-@property (weak, nonatomic) IBOutlet UIButton *loginBt;
-@property (weak, nonatomic) IBOutlet UIButton *backBt;
+@interface YZFirstViewController ()
 
 //@property (nonatomic, assign) BOOL isRegister;
 
 @end
-
-static NSInteger kYZTextFieldTag_Phone = 8000;
-static NSInteger kYZTextFieldTag_Pwd = 8001;
 
 @implementation YZFirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.phoneTextField.tag = kYZTextFieldTag_Phone;
-    self.phoneTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"输入账号"
-                                                                                attributes:@{NSForegroundColorAttributeName:kTextColorNormal}];
-    self.pwdTextField.tag = kYZTextFieldTag_Pwd;
-    self.pwdTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"输入密码"
-                                                                              attributes:@{NSForegroundColorAttributeName:kTextColorNormal}];
-    
-    self.phoneTextField.delegate = self;
-    self.pwdTextField.delegate = self;
-    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
-    
-}
-
-#pragma mark - action
-- (IBAction)backAction:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)registerAction:(id)sender {
-//    self.isRegister = !self.isRegister;
-//    [self.loginBt setTitle:(self.isRegister ? @"注册" : @"登录")
-//                  forState:UIControlStateNormal];
-//    [self.registerBt setTitle:(self.isRegister ? @"登录" : @"注册")
-//                     forState:UIControlStateNormal];
-}
-
-#pragma mark - delegate
-#pragma mark textfield delegate
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    YCLog(@"textFeild change : %@ %@",textField.text,string);
-    if (textField.tag == kYZTextFieldTag_Phone &&
-        [NSString stringWithFormat:@"%@%@",textField.text,string].length > 11) {
-        return NO;
+    /**
+    本地记录当前版本已审核通过直接进入主页；
+    否则查询当前版本审状态；
+    查询到审核通过后本地记录；
+    */
+    if ([YZUserCenter shared].hasReviewed) {
+        [self gotoNextVC];
+    } else {
+        [self checkAppReviewInfo];
     }
-    if (textField.tag == kYZTextFieldTag_Pwd &&
-        [NSString stringWithFormat:@"%@%@",textField.text,string].length > 16) {
-        return NO;
-    }
-    return YES;
 }
 
-#pragma mark - private
-- (void)showRegisterError {
-    [MBProgressHUD hideHUD];
-    [MBProgressHUD showError:@"改账号已存在，可直接登录"];
+- (void)checkAppReviewInfo {
+    AVQuery *query = [AVQuery queryWithClassName:kYZClass_AppStoreInfo];
+    [query whereKey:kYZClassAppStore_AppVersion equalTo:kYZAppVersion];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            [YZUserCenter shared].hasReviewed = [[objects firstObject] objectForKey:kYZClassAppStore_HasReviewed];
+        }
+        [self gotoNextVC];
+    }];
 }
 
-#pragma mark - action
-- (IBAction)loginAction:(UIButton *)sender {
-    if (![self.phoneTextField.text isPhoneNumber]) {
-        [NZTipView showError:@"请输入正确的账号" onScreen:self.view];
-        [self.phoneTextField becomeFirstResponder];
-        return;
+- (void)gotoNextVC {
+    YCLog(@"hasReview :%@",[YZUserCenter shared].hasReviewed ? @"hasReviewed" : @"notReview");
+    
+    /**
+     读取本地存储用户信息：
+     1.正在审核：读取Temp账号信息
+     2.审核通过：读取用户真实信息
+     本地信息读取不到时：
+      跳转登录页面
+     */
+    
+    id nextVC = nil;
+    if ([YZUserCenter shared].hasReviewed && ![YZUserCenter shared].userInfo) {
+        YZLoginViewController *loginVC = [YZLoginViewController new];
+        loginVC.hiddenBackBt = YES;
+        nextVC = loginVC;
+    } else {
+        nextVC = [YZMainViewController new];
     }
     
-    if (![self.pwdTextField.text isPassword]) {
-        [NZTipView showError:@"请输入正确的密码" onScreen:self.view];
-        [self.pwdTextField becomeFirstResponder];
-        return;
-    }
-    
-    __weak typeof(self) weakSelf = self;
-    [MBProgressHUD showMessage:@"加载中…"];
-    
-//    if (self.isRegister) {
-//        if ([self.phoneTextField.text isEqualToString:@"11111111111"]) {
-//            [self performSelector:@selector(showRegisterError)
-//                       withObject:nil
-//                       afterDelay:(arc4random() % 5 + 1)];
-//            return;
-//        }
-//
-//        [[YZNCNetAPI sharedAPI].userAPI loginWithPhone:@"11111111111"
-//                                              password:@"11111111111"
-//                                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                                                   [NZUserCenter shared].normalLogin = YES;
-//                                                   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_normalLogin"];
-//                                                   [[NSUserDefaults standardUserDefaults] synchronize];
-//                                                   [NZUserCenter shared].userInfo = [UserModel yc_objectWithKeyValues:responseObject];
-//                                                   AccountModel *demo = [[AccountModel alloc] init];
-//                                                   demo.nickname = self.phoneTextField.text;
-//                                                   demo.telephone = self.phoneTextField.text;
-//                                                   [NZUserCenter shared].demoUserInfo = demo;
-//                                                   [weakSelf hiddenHUD];
-//                                                   [MBProgressHUD showSuccess:@"注册成功"];
-//                                               } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
-//                                                   [MBProgressHUD hideHUD];
-//                                                   [NZTipView showError:error.msg onScreen:weakSelf.view];
-//                                               }];
-//    }
-    
-    //FIXME: network
-    
-//    [[YZNCNetAPI sharedAPI].userAPI loginWithPhone:self.phoneTextField.text
-//                                          password:self.pwdTextField.text
-//                                           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                                               [NZUserCenter shared].normalLogin = YES;
-//                                               [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_normalLogin"];
-//                                               [[NSUserDefaults standardUserDefaults] synchronize];
-//                                               [NZUserCenter shared].userInfo = [UserModel yc_objectWithKeyValues:responseObject];
-//                                               [weakSelf hiddenHUD];
-//                                           } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
-//                                               [MBProgressHUD hideHUD];
-//                                               [NZTipView showError:error.msg onScreen:weakSelf.view];
-//                                           }];
-}
-
-- (void)hiddenHUD {
-    [MBProgressHUD hideHUD];
-    if (self.dissMissLoginVC) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-        return;
-    }
-    [self jumpToMainVC];
-}
-
-- (void)jumpToMainVC {
-//    if ([NZUserCenter shared].normalUser) {
-        [self performSegueWithIdentifier:@"mainVC" sender:nil];
-//    } else {
-//        [self performSegueWithIdentifier:@"testVC" sender:nil];
-//    }
+    UIWindow *window =  [[UIApplication sharedApplication].delegate window];
+    window.rootViewController = nextVC;
 }
 
 @end

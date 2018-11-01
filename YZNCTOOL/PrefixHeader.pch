@@ -16,8 +16,10 @@
 #define Debug 0
 
 //height
-#define ScreenWith   [UIScreen mainScreen].bounds.size.width
-#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kStatusBarHeight CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
+#define kNavigationHeight kStatusBarHeight + 44
 //#define ScreenScale  375.0 / CGRectGetWidth([UIScreen mainScreen].bounds)
 
 //#define NVH         44
@@ -35,9 +37,9 @@
 //#define WEAKSELF typeof(self) __weak weakSelf = self;
 //#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
 
-#define Dedug 1
+#define YZDEBUG 1
 // 日志打印
-#if Dedug
+#if YZDEBUG
 #define YCLog(fmt, ...) NSLog((@"%@ : " fmt), NSStringFromClass([self class]), ##__VA_ARGS__)
 #else
 #define YCLog(...)
@@ -115,7 +117,20 @@
 //#define NavigationColor [UIColor colorWithRed:28.0/255 green:27.0/255 blue:32.0/255 alpha:1.0]
 //#define NavigationBlackColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
 
+//AppInfo
+#define kYZAppVersion [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
+
+//third lib
+#import <Masonry/Masonry.h>
+#import <AVOSCloud/AVObject.h>
+#import <AVOSCloud/AVOSCloud.h>
+
+//category
 #import "MBProgressHUD+MJ.h"
-#import "UIColor+IMHelper.h"
+#import "UIColor+Utils.h"
+
+//common
+#import "YZStaticString.h"
+#import "YZUserCenter.h"
 
 #endif /* PrefixHeader_pch */
