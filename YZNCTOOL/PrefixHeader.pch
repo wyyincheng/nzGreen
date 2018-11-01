@@ -38,6 +38,11 @@
 //#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
 
 #define YZDEBUG 1
+
+//glob method
+#define YZ_Weakify(oriInstance, weakInstance) __weak typeof(oriInstance) weakInstance = oriInstance;
+#define YZ_Strongify(weakInstance, strongInstance) __strong typeof(weakInstance) strongInstance = weakInstance;
+
 // 日志打印
 #if YZDEBUG
 #define YCLog(fmt, ...) NSLog((@"%@ : " fmt), NSStringFromClass([self class]), ##__VA_ARGS__)
@@ -117,6 +122,8 @@
 //#define NavigationColor [UIColor colorWithRed:28.0/255 green:27.0/255 blue:32.0/255 alpha:1.0]
 //#define NavigationBlackColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
 
+
+
 //AppInfo
 #define kYZAppVersion [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
 
@@ -126,11 +133,19 @@
 #import <AVOSCloud/AVOSCloud.h>
 
 //category
+#import "UIScrollView+EmptyDataSet.h"
+#import "UIImageView+WebCache.h"
+#import "NSDictionary+YZSafe.h"
+#import "UIImage+Placeholder.h"
+#import "NSString+YZImageUrl.h"
 #import "MBProgressHUD+MJ.h"
+#import "NSArray+YZSafe.h"
 #import "UIColor+Utils.h"
+#import <MJRefresh.h>
 
 //common
 #import "YZStaticString.h"
 #import "YZUserCenter.h"
+#import "YZNCNetAPI.h"
 
 #endif /* PrefixHeader_pch */

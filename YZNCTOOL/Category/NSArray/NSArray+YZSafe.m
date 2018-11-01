@@ -1,25 +1,25 @@
 //
-//  NSArray+YMMSafe.m
+//  NSArray+YZSafe.m
 //  GoodTransport
 //
 //  Created by 尹成 on 2017/12/26.
 //  Copyright © 2017年 Yunmanman. All rights reserved.
 //
 
-#import "NSArray+YMMSafe.h"
+#import "NSArray+YZSafe.h"
 
-@implementation NSArray (YMMSafe)
+@implementation NSArray (YZSafe)
 
-- (NSInteger)ymm_integerAtIndex:(NSUInteger)index {
-    id value = [self ymm_objectAtIndex:index];
+- (NSInteger)yz_integerAtIndex:(NSUInteger)index {
+    id value = [self yz_objectAtIndex:index];
     if (value && [value respondsToSelector:@selector(integerValue)]) {
         return [value integerValue];
     }
     return 0;
 }
 
-- (NSString *)ymm_stringAtIndex:(NSUInteger)index {
-    id value = [self ymm_objectAtIndex:index];
+- (NSString *)yz_stringAtIndex:(NSUInteger)index {
+    id value = [self yz_objectAtIndex:index];
     if (value && [value isKindOfClass:[NSString class]]) {
         return value;
     }
@@ -29,8 +29,8 @@
     return nil;
 }
 
-- (NSNumber *)ymm_numberAtIndex:(NSUInteger)index {
-    id value = [self ymm_objectAtIndex:index];
+- (NSNumber *)yz_numberAtIndex:(NSUInteger)index {
+    id value = [self yz_objectAtIndex:index];
     if (value) {
         if ([value isKindOfClass:[NSNumber class]]) {
             return value;
@@ -42,23 +42,23 @@
     return nil;
 }
 
-- (NSArray *)ymm_arrayAtIndex:(NSUInteger)index {
-    id value = [self ymm_objectAtIndex:index];
+- (NSArray *)yz_arrayAtIndex:(NSUInteger)index {
+    id value = [self yz_objectAtIndex:index];
     if (value && [value isKindOfClass:[NSArray class]]) {
         return value;
     }
     return nil;
 }
 
-- (NSDictionary *)ymm_dictAtIndex:(NSUInteger)index {
-    id value = [self ymm_objectAtIndex:index];
+- (NSDictionary *)yz_dictAtIndex:(NSUInteger)index {
+    id value = [self yz_objectAtIndex:index];
     if (value && [value isKindOfClass:[NSDictionary class]]) {
         return value;
     }
     return nil;
 }
 
-- (id)ymm_objectAtIndex:(NSUInteger)index {
+- (id)yz_objectAtIndex:(NSUInteger)index {
     //FIXME: for yc runtime 拦截过一次，是否需要再次拦截
     if (index < self.count) {
         id value = [self objectAtIndex:index];

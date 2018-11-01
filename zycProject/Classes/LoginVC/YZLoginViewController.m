@@ -41,6 +41,8 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     self.phoneTextField.delegate = self;
     self.pwdTextField.delegate = self;
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    
+    self.backBt.hidden = self.hiddenBackBt;
 }
 
 #pragma mark - action

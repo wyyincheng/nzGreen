@@ -12,7 +12,7 @@
 
 + (UIImage *)placeHolderImage;
 + (UIImage *)placeHolderImageWithSize:(CGSize)size;
-+ (UIImage *)yc_imageWithNamed:(NSString *)image backSize:(CGSize)size;
-+ (UIImage *)yc_imageWithNamed:(NSString *)imageName backSize:(CGSize)size backColor:(UIColor *)color;
++ (UIImage *)yz_imageWithNamed:(NSString *)image backSize:(CGSize)size;
++ (UIImage *)yz_imageWithNamed:(NSString *)imageName backSize:(CGSize)size backColor:(UIColor *)color;
 
 @end

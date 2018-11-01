@@ -10,11 +10,11 @@
 
 @implementation UIImage (Placeholder)
 
-+ (UIImage *)yc_imageWithNamed:(NSString *)imageName backSize:(CGSize)size {
-    return [UIImage yc_imageWithNamed:imageName backSize:size backColor:[UIColor whiteColor]];
++ (UIImage *)yz_imageWithNamed:(NSString *)imageName backSize:(CGSize)size {
+    return [UIImage yz_imageWithNamed:imageName backSize:size backColor:[UIColor whiteColor]];
 }
 
-+ (UIImage *)yc_imageWithNamed:(NSString *)imageName backSize:(CGSize)size backColor:(UIColor *)color {
++ (UIImage *)yz_imageWithNamed:(NSString *)imageName backSize:(CGSize)size backColor:(UIColor *)color {
     // 占位图的背景色
     UIColor *backgroundColor = color;
     // 中间LOGO图片
@@ -41,7 +41,7 @@
 }
 
 + (UIImage *)placeHolderImageWithSize:(CGSize)size {
-    return [UIImage yc_imageWithNamed:@"kCargoDetailBannerPlaceholder"
+    return [UIImage yz_imageWithNamed:@"kCargoDetailBannerPlaceholder"
                              backSize:size
                             backColor:[UIColor colorWithHex:0xEEEEEE]];
 }

@@ -6,28 +6,28 @@
 //  Copyright © 2017年 Yunmanman. All rights reserved.
 //
 
-#import "NSDictionary+YMMSafe.h"
+#import "NSDictionary+YZSafe.h"
 
-@implementation NSDictionary (YMMSafe)
+@implementation NSDictionary (YZSafe)
 
-- (NSDictionary *)ymm_dictForKey:(id)aKey {
-    id value = [self ymm_objectForKey:aKey];
+- (NSDictionary *)yz_dictForKey:(id)aKey {
+    id value = [self yz_objectForKey:aKey];
     if (value && [value isKindOfClass:[NSDictionary class]]) {
         return value;
     }
     return nil;
 }
 
-- (NSArray *)ymm_arrayForKey:(id)aKey {
-    id value = [self ymm_objectForKey:aKey];
+- (NSArray *)yz_arrayForKey:(id)aKey {
+    id value = [self yz_objectForKey:aKey];
     if (value && [value isKindOfClass:[NSArray class]]) {
         return value;
     }
     return nil;
 }
 
-- (NSNumber *)ymm_numberForKey:(id)aKey {
-    id value = [self ymm_objectForKey:aKey];
+- (NSNumber *)yz_numberForKey:(id)aKey {
+    id value = [self yz_objectForKey:aKey];
     if (value) {
         if ([value isKindOfClass:[NSNumber class]]) {
             return value;
@@ -39,8 +39,8 @@
     return nil;
 }
 
-- (NSString *)ymm_stringForKey:(id)aKey {
-    id value = [self ymm_objectForKey:aKey];
+- (NSString *)yz_stringForKey:(id)aKey {
+    id value = [self yz_objectForKey:aKey];
     if (value && [value isKindOfClass:[NSString class]]) {
         return value;
     }
@@ -50,15 +50,15 @@
     return nil;
 }
 
-- (NSInteger)ymm_integerForKey:(id)aKey {
-    id value = [self ymm_objectForKey:aKey];
+- (NSInteger)yz_integerForKey:(id)aKey {
+    id value = [self yz_objectForKey:aKey];
     if (value && [value respondsToSelector:@selector(integerValue)]) {
         return [value integerValue];
     }
     return 0;
 }
 
-- (id)ymm_objectForKey:(id)aKey {
+- (id)yz_objectForKey:(id)aKey {
     if(aKey == nil)
     return nil;
     id value = [self objectForKey:aKey];
