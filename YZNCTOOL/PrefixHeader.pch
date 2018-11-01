@@ -46,6 +46,11 @@
 
 #define kYZBackViewColor [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0]
 
+#define kTextColorNormal [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]
+#define kTextColor666 [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0]
+#define kTextColor999 [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]
+#define kTextColorGreen [UIColor colorWithRed:76/255.0 green:195/255.0 blue:106/255.0 alpha:1.0]
+
 
 //#define IBZPlaceImage [UIImage imageNamed:@"imageD1"]
 //
@@ -110,6 +115,7 @@
 //#define NavigationColor [UIColor colorWithRed:28.0/255 green:27.0/255 blue:32.0/255 alpha:1.0]
 //#define NavigationBlackColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
 
-
+#import "MBProgressHUD+MJ.h"
+#import "UIColor+IMHelper.h"
 
 #endif /* PrefixHeader_pch */

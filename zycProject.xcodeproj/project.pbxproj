@@ -18,6 +18,24 @@
 		5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5896297721886348008EFDD8 /* icon_nav_back_white@3x.png */; };
 		5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896297B21886381008EFDD8 /* YZFirstViewController.m */; };
 		5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5896297C21886381008EFDD8 /* YZFirstViewController.xib */; };
+		5896298221886897008EFDD8 /* YZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896298021886897008EFDD8 /* YZLoginViewController.m */; };
+		5896298321886897008EFDD8 /* YZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5896298121886897008EFDD8 /* YZLoginViewController.xib */; };
+		58962986218869A9008EFDD8 /* icon_nav_back_radio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */; };
+		58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */; };
+		5896298E218872BB008EFDD8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962989218872BB008EFDD8 /* MBProgressHUD.m */; };
+		5896298F218872BB008EFDD8 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896298C218872BB008EFDD8 /* MBProgressHUD+MJ.m */; };
+		58962990218872BB008EFDD8 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5896298D218872BB008EFDD8 /* MBProgressHUD.bundle */; };
+		589629AC218873E6008EFDD8 /* UIImage+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962994218873E6008EFDD8 /* UIImage+Placeholder.m */; };
+		589629AD218873E6008EFDD8 /* NSDictionary+YMMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962996218873E6008EFDD8 /* NSDictionary+YMMSafe.m */; };
+		589629AE218873E6008EFDD8 /* UIColor+IMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58962999218873E6008EFDD8 /* UIColor+IMHelper.m */; };
+		589629AF218873E6008EFDD8 /* NSString+NZCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896299C218873E6008EFDD8 /* NSString+NZCheck.m */; };
+		589629B0218873E6008EFDD8 /* NSArray+YMMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629A0218873E6008EFDD8 /* NSArray+YMMSafe.m */; };
+		589629B1218873E6008EFDD8 /* UINavigationBar+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629A2218873E6008EFDD8 /* UINavigationBar+Alpha.m */; };
+		589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629A3218873E6008EFDD8 /* UIView+NZCorner.m */; };
+		589629B3218873E6008EFDD8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629A7218873E6008EFDD8 /* MBProgressHUD.m */; };
+		589629B4218873E6008EFDD8 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629AA218873E6008EFDD8 /* MBProgressHUD+MJ.m */; };
+		589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 589629AB218873E6008EFDD8 /* MBProgressHUD.bundle */; };
+		589629B92188746E008EFDD8 /* NZTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629B82188746E008EFDD8 /* NZTipView.m */; };
 		78CAD97803F4FEAD6036FCE4 /* libPods-zycProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A717BB25F481332515EE13 /* libPods-zycProject.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +61,37 @@
 		5896297A21886381008EFDD8 /* YZFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZFirstViewController.h; sourceTree = "<group>"; };
 		5896297B21886381008EFDD8 /* YZFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZFirstViewController.m; sourceTree = "<group>"; };
 		5896297C21886381008EFDD8 /* YZFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZFirstViewController.xib; sourceTree = "<group>"; };
+		5896297F21886897008EFDD8 /* YZLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLoginViewController.h; sourceTree = "<group>"; };
+		5896298021886897008EFDD8 /* YZLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLoginViewController.m; sourceTree = "<group>"; };
+		5896298121886897008EFDD8 /* YZLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZLoginViewController.xib; sourceTree = "<group>"; };
+		58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_nav_back_radio@3x.png"; sourceTree = "<group>"; };
+		58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_nav_back_radio@2x.png"; sourceTree = "<group>"; };
+		58962989218872BB008EFDD8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		5896298A218872BB008EFDD8 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		5896298B218872BB008EFDD8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		5896298C218872BB008EFDD8 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		5896298D218872BB008EFDD8 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		58962993218873E6008EFDD8 /* UIImage+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Placeholder.h"; sourceTree = "<group>"; };
+		58962994218873E6008EFDD8 /* UIImage+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Placeholder.m"; sourceTree = "<group>"; };
+		58962996218873E6008EFDD8 /* NSDictionary+YMMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YMMSafe.m"; sourceTree = "<group>"; };
+		58962997218873E6008EFDD8 /* NSDictionary+YMMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YMMSafe.h"; sourceTree = "<group>"; };
+		58962999218873E6008EFDD8 /* UIColor+IMHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IMHelper.m"; sourceTree = "<group>"; };
+		5896299A218873E6008EFDD8 /* UIColor+IMHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IMHelper.h"; sourceTree = "<group>"; };
+		5896299C218873E6008EFDD8 /* NSString+NZCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NZCheck.m"; sourceTree = "<group>"; };
+		5896299D218873E6008EFDD8 /* NSString+NZCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NZCheck.h"; sourceTree = "<group>"; };
+		5896299F218873E6008EFDD8 /* NSArray+YMMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YMMSafe.h"; sourceTree = "<group>"; };
+		589629A0218873E6008EFDD8 /* NSArray+YMMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YMMSafe.m"; sourceTree = "<group>"; };
+		589629A2218873E6008EFDD8 /* UINavigationBar+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Alpha.m"; sourceTree = "<group>"; };
+		589629A3218873E6008EFDD8 /* UIView+NZCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NZCorner.m"; sourceTree = "<group>"; };
+		589629A4218873E6008EFDD8 /* UINavigationBar+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Alpha.h"; sourceTree = "<group>"; };
+		589629A5218873E6008EFDD8 /* UIView+NZCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NZCorner.h"; sourceTree = "<group>"; };
+		589629A7218873E6008EFDD8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		589629A8218873E6008EFDD8 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		589629A9218873E6008EFDD8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		589629AA218873E6008EFDD8 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		589629AB218873E6008EFDD8 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		589629B72188746E008EFDD8 /* NZTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZTipView.h; sourceTree = "<group>"; };
+		589629B82188746E008EFDD8 /* NZTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZTipView.m; sourceTree = "<group>"; };
 		6446A18C3C1BF941303405CD /* Pods-zycProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zycProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-zycProject/Pods-zycProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +156,8 @@
 		5896296921885DBE008EFDD8 /* YZNCTOOL */ = {
 			isa = PBXGroup;
 			children = (
+				58962991218873E6008EFDD8 /* Category */,
+				58962988218872BB008EFDD8 /* MBProgressHUD */,
 				5896296A21885DEE008EFDD8 /* PrefixHeader.pch */,
 			);
 			path = YZNCTOOL;
@@ -135,6 +186,10 @@
 		5896296E218861CB008EFDD8 /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
+				589629B62188746E008EFDD8 /* view */,
+				5896297F21886897008EFDD8 /* YZLoginViewController.h */,
+				5896298021886897008EFDD8 /* YZLoginViewController.m */,
+				5896298121886897008EFDD8 /* YZLoginViewController.xib */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -167,10 +222,115 @@
 		5896297521886303008EFDD8 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */,
+				58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */,
 				5896297621886348008EFDD8 /* icon_nav_back_white@2x.png */,
 				5896297721886348008EFDD8 /* icon_nav_back_white@3x.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		58962988218872BB008EFDD8 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				58962989218872BB008EFDD8 /* MBProgressHUD.m */,
+				5896298A218872BB008EFDD8 /* MBProgressHUD+MJ.h */,
+				5896298B218872BB008EFDD8 /* MBProgressHUD.h */,
+				5896298C218872BB008EFDD8 /* MBProgressHUD+MJ.m */,
+				5896298D218872BB008EFDD8 /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		58962991218873E6008EFDD8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				58962992218873E6008EFDD8 /* UIImage */,
+				58962995218873E6008EFDD8 /* NSDictionary */,
+				58962998218873E6008EFDD8 /* UIColor */,
+				5896299B218873E6008EFDD8 /* NSString */,
+				5896299E218873E6008EFDD8 /* NSArray */,
+				589629A1218873E6008EFDD8 /* View */,
+				589629A6218873E6008EFDD8 /* MBProgressHUD */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		58962992218873E6008EFDD8 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				58962993218873E6008EFDD8 /* UIImage+Placeholder.h */,
+				58962994218873E6008EFDD8 /* UIImage+Placeholder.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		58962995218873E6008EFDD8 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				58962996218873E6008EFDD8 /* NSDictionary+YMMSafe.m */,
+				58962997218873E6008EFDD8 /* NSDictionary+YMMSafe.h */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		58962998218873E6008EFDD8 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				58962999218873E6008EFDD8 /* UIColor+IMHelper.m */,
+				5896299A218873E6008EFDD8 /* UIColor+IMHelper.h */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		5896299B218873E6008EFDD8 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				5896299C218873E6008EFDD8 /* NSString+NZCheck.m */,
+				5896299D218873E6008EFDD8 /* NSString+NZCheck.h */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		5896299E218873E6008EFDD8 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				5896299F218873E6008EFDD8 /* NSArray+YMMSafe.h */,
+				589629A0218873E6008EFDD8 /* NSArray+YMMSafe.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		589629A1218873E6008EFDD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				589629A2218873E6008EFDD8 /* UINavigationBar+Alpha.m */,
+				589629A3218873E6008EFDD8 /* UIView+NZCorner.m */,
+				589629A4218873E6008EFDD8 /* UINavigationBar+Alpha.h */,
+				589629A5218873E6008EFDD8 /* UIView+NZCorner.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		589629A6218873E6008EFDD8 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				589629A7218873E6008EFDD8 /* MBProgressHUD.m */,
+				589629A8218873E6008EFDD8 /* MBProgressHUD+MJ.h */,
+				589629A9218873E6008EFDD8 /* MBProgressHUD.h */,
+				589629AA218873E6008EFDD8 /* MBProgressHUD+MJ.m */,
+				589629AB218873E6008EFDD8 /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		589629B62188746E008EFDD8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				589629B72188746E008EFDD8 /* NZTipView.h */,
+				589629B82188746E008EFDD8 /* NZTipView.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		84EC094F8958FF34B0C0AAE5 /* Pods */ = {
@@ -243,9 +403,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5896297821886348008EFDD8 /* icon_nav_back_white@2x.png in Resources */,
+				5896298321886897008EFDD8 /* YZLoginViewController.xib in Resources */,
 				5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */,
+				589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */,
+				58962986218869A9008EFDD8 /* icon_nav_back_radio@3x.png in Resources */,
 				5896296021884C0A008EFDD8 /* LaunchScreen.storyboard in Resources */,
 				5896295D21884C0A008EFDD8 /* Assets.xcassets in Resources */,
+				58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */,
+				58962990218872BB008EFDD8 /* MBProgressHUD.bundle in Resources */,
 				5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */,
 				5896295B21884C09008EFDD8 /* Main.storyboard in Resources */,
 			);
@@ -318,10 +483,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5896295821884C09008EFDD8 /* ViewController.m in Sources */,
+				589629AC218873E6008EFDD8 /* UIImage+Placeholder.m in Sources */,
+				589629B1218873E6008EFDD8 /* UINavigationBar+Alpha.m in Sources */,
+				589629AF218873E6008EFDD8 /* NSString+NZCheck.m in Sources */,
+				589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */,
 				5896296321884C0A008EFDD8 /* main.m in Sources */,
 				5896297321886224008EFDD8 /* YZBaseViewController.m in Sources */,
+				5896298221886897008EFDD8 /* YZLoginViewController.m in Sources */,
+				589629B4218873E6008EFDD8 /* MBProgressHUD+MJ.m in Sources */,
+				589629AE218873E6008EFDD8 /* UIColor+IMHelper.m in Sources */,
+				589629B0218873E6008EFDD8 /* NSArray+YMMSafe.m in Sources */,
+				5896298F218872BB008EFDD8 /* MBProgressHUD+MJ.m in Sources */,
 				5896295521884C09008EFDD8 /* AppDelegate.m in Sources */,
+				589629AD218873E6008EFDD8 /* NSDictionary+YMMSafe.m in Sources */,
+				589629B92188746E008EFDD8 /* NZTipView.m in Sources */,
 				5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */,
+				5896298E218872BB008EFDD8 /* MBProgressHUD.m in Sources */,
+				589629B3218873E6008EFDD8 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
