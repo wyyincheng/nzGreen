@@ -92,6 +92,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc"
   install_resource "${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png"
@@ -105,6 +106,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc"
   install_resource "${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png"
