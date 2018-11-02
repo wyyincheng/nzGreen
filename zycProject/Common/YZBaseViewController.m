@@ -44,9 +44,11 @@
 
 - (void)gotoViewController:(NSString *)vcName lauchParams:(nullable NSDictionary *)lauchParams {
     if (vcName) {
-        id vc = [NSClassFromString(vcName) new];
-        if ([vc isKindOfClass:[YZBaseViewController class]]) {
-            ((YZBaseViewController *)vc).lauchParams = lauchParams;
+        id object = [NSClassFromString(vcName) new];
+        if ([object isKindOfClass:[YZBaseViewController class]]) {
+            YZBaseViewController *vc = object;
+            vc.lauchParams = lauchParams;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
     }
