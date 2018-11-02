@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    ShoppingCartType_Default = 0,
+    ShoppingCartType_Pass = 1,
+    ShoppingCartType_Merge = 2
+} ShoppingCartType;
+
 @interface YZShopCarViewController : YZBaseViewController
+
+@property (nonatomic, assign) ShoppingCartType type;
 
 @end
 

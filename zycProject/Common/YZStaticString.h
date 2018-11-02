@@ -15,6 +15,7 @@
 //notification name
 static NSString * const kYZWeixinPaySuccessPushFlag = @"WeixinPaySuccessPush";
 static NSString * const kYZWeixinPayFaliurePushFlag = @"WeixinPayFaliurePush";
+static NSString * const kYZNotification_HiddenKeyBoard = @"kYZNotification_HiddenKeyBoard";
 
 //third lib
 static NSString * const kYZLeanCloud_AppId = @"6n5w8re56d5GYFbVJGmnLQdp-gzGzoHsz";
