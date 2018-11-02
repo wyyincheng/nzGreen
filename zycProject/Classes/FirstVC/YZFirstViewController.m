@@ -60,7 +60,7 @@
     id nextVC = nil;
     if ([YZUserCenter shared].hasReviewed && ![YZUserCenter shared].userInfo) {
         YZLoginViewController *loginVC = [YZLoginViewController new];
-        loginVC.hiddenBackBt = YES;
+        loginVC.isLaunchLogin = YES;
         nextVC = loginVC;
     } else {
         nextVC = [YZMainViewController new];

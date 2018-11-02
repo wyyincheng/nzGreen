@@ -30,11 +30,13 @@
     [super viewDidLoad];
     
     [self initView];
-    [self refreshGoods:YES needLoading:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if (self.goodsArray.count == 0) {
+        [self refreshGoods:YES needLoading:YES];
+    }
     [self fetchGoodsListHeaderIcon];
 }
 

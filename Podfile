@@ -25,4 +25,5 @@ target 'zycProject' do
     pod 'WechatOpenSDK','1.8.3',:inhibit_warnings => true
     #leanCloud
     pod 'AVOSCloud',:inhibit_warnings => true # 数据存储、短信、云引擎调用等基础服务模块
+    pod 'YYModel',:inhibit_warnings => true
 end

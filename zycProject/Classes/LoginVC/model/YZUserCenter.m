@@ -38,6 +38,20 @@ static YZUserCenter *userCenter;
     return self.hasReviewed ? self.realUserInfo : self.reviewUserInfo;
 }
 
+- (void)setUserInfo:(YZUserModel *)userInfo {
+    if (userInfo) {
+        NSDictionary *dict = [NSDictionary yy_modelWithJSON:[userInfo yy_modelToJSONObject]];
+        if (self.hasReviewed) {
+            self.realUserInfo = userInfo;
+            [[NSUserDefaults standardUserDefaults] setObject:dict forKey:kYZUserDefault_UserInfoReal];
+        } else {
+            self.reviewUserInfo = userInfo;
+            [[NSUserDefaults standardUserDefaults] setObject:dict forKey:kYZUserDefault_UserInfoReview];
+        }
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
 - (YZUserModel *)realUserInfo {
     if (!_realUserInfo) {
         NSDictionary *userDict = [[NSUserDefaults standardUserDefaults] dictionaryForKey:kYZUserDefault_UserInfoReal];
@@ -108,18 +122,30 @@ static YZUserCenter *userCenter;
     
     [self clearLocalnUserInfo];
     
+    [MBProgressHUD showMessageAuto:@"当前登录失效，请重新登录"];
+    
+    //FIXME: 重复弹窗
     id topVC = [UIViewController currentVC];
     if (![topVC isKindOfClass:[YZLoginViewController class]]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
-                                                                       message:@"当前登录失效，请重新登录"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"好的"
-                                                  style:UIAlertActionStyleDefault
-                                                handler:^(UIAlertAction * _Nonnull action) {
-                                                    
-                                                }]];
-        [topVC presentViewController:alert animated:YES completion:nil];
+        [topVC presentViewController:[YZLoginViewController new]
+                            animated:YES
+                          completion:nil];
     }
+    
+    
+//    if (![topVC isKindOfClass:[YZLoginViewController class]]) {
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
+//                                                                       message:@"当前登录失效，请重新登录"
+//                                                                preferredStyle:UIAlertControllerStyleAlert];
+//        [alert addAction:[UIAlertAction actionWithTitle:@"好的"
+//                                                  style:UIAlertActionStyleDefault
+//                                                handler:^(UIAlertAction * _Nonnull action) {
+//                                                    [topVC presentViewController:[YZLoginViewController new]
+//                                                                        animated:YES
+//                                                                      completion:nil];
+//                                                }]];
+//        [topVC presentViewController:alert animated:YES completion:nil];
+//    }
     
 }
 
@@ -130,7 +156,7 @@ static YZUserCenter *userCenter;
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     //删除内存
-    _userInfo = nil;
+//    _userInfo = nil;
     _realUserInfo = nil;
     _reviewUserInfo = nil;
 }

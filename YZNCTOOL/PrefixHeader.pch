@@ -140,6 +140,7 @@
 #import "UIImage+Placeholder.h"
 #import "NSString+YZImageUrl.h"
 #import "MBProgressHUD+MJ.h"
+#import <YYModel/YYModel.h>
 #import "NSArray+YZSafe.h"
 #import "UIColor+Utils.h"
 #import <MJRefresh.h>

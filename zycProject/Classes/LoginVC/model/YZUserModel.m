@@ -16,9 +16,9 @@
 + (id)yc_objectWithKeyValues:(id)keyValues {
     YZUserModel *mode = [YZUserModel mj_objectWithKeyValues:keyValues];
     if ([keyValues isKindOfClass:[NSDictionary class]]) {
-        NSMutableDictionary *mDict = [NSMutableDictionary dictionaryWithDictionary:keyValues];
-        [mDict removeObjectForKey:@"token"];
-        mode.userInfoDict = mDict;
+//        NSMutableDictionary *mDict = [NSMutableDictionary dictionaryWithDictionary:keyValues];
+//        [mDict removeObjectForKey:@"token"];
+        mode.userInfoDict = keyValues;
     }
     return mode;
 }

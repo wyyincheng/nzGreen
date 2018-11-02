@@ -10,7 +10,7 @@
 
 @implementation YZBaseCollectionViewCell
 
-+ (instancetype)yc_createCellForCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
++ (instancetype)yz_createCellForCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     return [collectionView dequeueReusableCellWithReuseIdentifier:[self yz_cellIdentifiler]
                                                      forIndexPath:indexPath];
 }

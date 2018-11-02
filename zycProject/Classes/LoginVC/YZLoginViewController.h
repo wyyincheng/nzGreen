@@ -12,9 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YZLoginViewController : YZBaseViewController
 
-@property (nonatomic, assign) BOOL hiddenBackBt;
-
-@property (nonatomic, assign) BOOL dissMissLoginVC;
+/**
+ 是否是启动登录
+ 启动登录无法后退，登录成功后跳转主页；
+ 非启动登录可后退，登录成功后dismiss；
+ */
+@property (nonatomic, assign) BOOL isLaunchLogin;
+//
+//@property (nonatomic, assign) BOOL hiddenBackBt;
+//
+//@property (nonatomic, assign) BOOL dissMissLoginVC;
 
 @end
 

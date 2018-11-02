@@ -7,6 +7,8 @@
 //
 
 #import "YZLoginViewController.h"
+
+#import "YZMainViewController.h"
 #import "NSString+NZCheck.h"
 #import "NZTipView.h"
 
@@ -42,7 +44,7 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     self.pwdTextField.delegate = self;
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     
-    self.backBt.hidden = self.hiddenBackBt;
+    self.backBt.hidden = self.isLaunchLogin;
 }
 
 #pragma mark - action
@@ -112,6 +114,22 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     __weak typeof(self) weakSelf = self;
     [MBProgressHUD showMessage:@"加载中…"];
     
+    if ([YZUserCenter shared].hasReviewed || [self.phoneTextField.text isEqualToString:@"11111111111"]) {
+        //走nzGreens后台
+        [[YZNCNetAPI sharedAPI].userAPI loginWithPhone:self.phoneTextField.text
+                                              password:self.pwdTextField.text
+                                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                   [YZUserCenter shared].userInfo = [YZUserModel yz_objectWithKeyValues:responseObject];
+                                                   [weakSelf hiddenHUD];
+                                               } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                   [MBProgressHUD hideHUD];
+                                                   [NZTipView showError:error.msg onScreen:weakSelf.view];
+                                               }];
+    } else {
+        //走云后台
+        
+    }
+    
     //    if (self.isRegister) {
     //        if ([self.phoneTextField.text isEqualToString:@"11111111111"]) {
     //            [self performSelector:@selector(showRegisterError)
@@ -141,35 +159,22 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     
     //FIXME: network
     
-    //    [[YZNCNetAPI sharedAPI].userAPI loginWithPhone:self.phoneTextField.text
-    //                                          password:self.pwdTextField.text
-    //                                           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    //                                               [NZUserCenter shared].normalLogin = YES;
-    //                                               [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_normalLogin"];
-    //                                               [[NSUserDefaults standardUserDefaults] synchronize];
-    //                                               [NZUserCenter shared].userInfo = [UserModel yc_objectWithKeyValues:responseObject];
-    //                                               [weakSelf hiddenHUD];
-    //                                           } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
-    //                                               [MBProgressHUD hideHUD];
-    //                                               [NZTipView showError:error.msg onScreen:weakSelf.view];
-    //                                           }];
+
 }
 
 - (void)hiddenHUD {
     [MBProgressHUD hideHUD];
-    if (self.dissMissLoginVC) {
+    
+    if (self.isLaunchLogin) {
+        [self jumpToMainVC];
+    } else {
         [self dismissViewControllerAnimated:YES completion:nil];
-        return;
     }
-    [self jumpToMainVC];
 }
 
 - (void)jumpToMainVC {
-    //    if ([NZUserCenter shared].normalUser) {
-    [self performSegueWithIdentifier:@"mainVC" sender:nil];
-    //    } else {
-    //        [self performSegueWithIdentifier:@"testVC" sender:nil];
-    //    }
+    UIWindow *window =  [[UIApplication sharedApplication].delegate window];
+    window.rootViewController = [YZMainViewController new];
 }
 
 
