@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, YZVCIndex) {
+    YZVCIndex_Home = 0,
+    YZVCIndex_ShopCar,
+    YZVCIndex_UserCenter
+};
+
 @interface YZMainViewController : UITabBarController
+
+- (void)gotoIndexVC:(YZVCIndex)vcIndex;
 
 @end
 

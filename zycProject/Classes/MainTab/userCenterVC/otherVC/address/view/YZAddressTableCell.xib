@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="diy-EZ-PZM" customClass="YZAddressTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diy-EZ-PZM" id="CEW-tE-tF3">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人：及时的" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfZ-t1-zwA">
+                        <rect key="frame" x="10" y="16" width="128.5" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="YR3-sE-G2K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【默认地址】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-sG-YUq">
+                        <rect key="frame" x="10" y="49" width="86" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.29803921570000003" green="0.76470588240000004" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收获地址：放到沙发上地方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-ti-I79">
+                        <rect key="frame" x="96.5" y="49" width="171.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="18562578891" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoH-VO-J8f">
+                        <rect key="frame" x="214" y="16" width="90" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QE-dF-2vz">
+                        <rect key="frame" x="8" y="99.5" width="312" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="GTg-pq-yef"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6QE-dF-2vz" firstAttribute="leading" secondItem="CEW-tE-tF3" secondAttribute="leading" constant="8" id="2P1-GZ-8Re"/>
+                    <constraint firstItem="PfZ-t1-zwA" firstAttribute="top" secondItem="CEW-tE-tF3" secondAttribute="top" constant="16" id="50o-vn-zMR"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Lwh-ti-I79" secondAttribute="trailing" constant="-10" id="Iof-bh-cYN"/>
+                    <constraint firstItem="Lwh-ti-I79" firstAttribute="top" secondItem="PfZ-t1-zwA" secondAttribute="bottom" constant="8" id="Itt-kL-DCd"/>
+                    <constraint firstItem="PfZ-t1-zwA" firstAttribute="leading" secondItem="CEW-tE-tF3" secondAttribute="leading" constant="10" id="JD9-e9-BaT"/>
+                    <constraint firstAttribute="bottom" secondItem="6QE-dF-2vz" secondAttribute="bottom" id="SDP-7D-zgN"/>
+                    <constraint firstItem="WbS-sG-YUq" firstAttribute="leading" secondItem="CEW-tE-tF3" secondAttribute="leading" constant="10" id="Y37-PU-qgF"/>
+                    <constraint firstItem="FoH-VO-J8f" firstAttribute="centerY" secondItem="PfZ-t1-zwA" secondAttribute="centerY" id="g1m-CD-BjH"/>
+                    <constraint firstItem="Lwh-ti-I79" firstAttribute="leading" secondItem="CEW-tE-tF3" secondAttribute="leadingMargin" constant="80.5" id="iyt-ti-2kf"/>
+                    <constraint firstItem="WbS-sG-YUq" firstAttribute="top" secondItem="PfZ-t1-zwA" secondAttribute="bottom" constant="8" id="qQb-nK-CQr"/>
+                    <constraint firstAttribute="trailing" secondItem="6QE-dF-2vz" secondAttribute="trailing" id="u02-7r-4H9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="FoH-VO-J8f" secondAttribute="trailing" id="wMa-09-q52"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="EYF-9F-JZb"/>
+            <connections>
+                <outlet property="addresslb" destination="Lwh-ti-I79" id="RAb-Ui-R6Z"/>
+                <outlet property="defaultLb" destination="WbS-sG-YUq" id="Z2c-E6-keU"/>
+                <outlet property="leftGap" destination="iyt-ti-2kf" id="l8g-fK-c3D"/>
+                <outlet property="nameLb" destination="PfZ-t1-zwA" id="KHL-Xm-QY2"/>
+                <outlet property="phoneLb" destination="FoH-VO-J8f" id="ItU-n2-Wh3"/>
+            </connections>
+            <point key="canvasLocation" x="84" y="161.5"/>
+        </tableViewCell>
+    </objects>
+</document>

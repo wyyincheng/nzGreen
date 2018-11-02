@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "YZUserModel.h"
+#import "YZAccountModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,8 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (YZUserCenter *)shared;
 
 @property (nonatomic, strong) YZUserModel *userInfo;
-//@property (nonatomic, strong) AccountModel *demoUserInfo;
-//@property (nonatomic, strong) AccountModel *accountInfo;
+@property (nonatomic, strong) YZAccountModel *accountInfo;
 //@property (nonatomic, assign) BOOL normalUser;
 //@property (nonatomic, assign) BOOL canShowChongzhi;
 //@property (nonatomic, assign) BOOL forceLogin;

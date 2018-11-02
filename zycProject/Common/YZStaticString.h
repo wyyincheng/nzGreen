@@ -39,4 +39,8 @@ static NSString * const kYZUserDefault_UserInfoReview = @"kYZUserDefault_UserInf
 //AppInfo
 static NSString * const kYZUserDefault_AppReviewed = @"kYZUserDefault_AppReviewed";
 
+//other
+static NSString * const kYZDictionary_TitleKey = @"title";
+static NSString * const kYZDictionary_InfoKey = @"info";
+
 #endif /* YZStaticString_h */

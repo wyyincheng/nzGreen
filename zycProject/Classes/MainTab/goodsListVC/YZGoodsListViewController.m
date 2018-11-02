@@ -158,7 +158,7 @@
 
 //empty view
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
-    return [UIImage imageNamed:@"icon_goods_empty"];
+    return [UIImage imageNamed:kYZVCDefaultEmptyIcon];
 }
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {

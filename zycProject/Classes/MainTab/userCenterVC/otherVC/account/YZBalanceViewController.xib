@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YZBalanceViewController">
+            <connections>
+                <outlet property="tableView" destination="gFS-uk-wPJ" id="a8D-n1-anv"/>
+                <outlet property="view" destination="YHn-J5-cne" id="uV2-LS-wDu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YHn-J5-cne">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFS-uk-wPJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="vnG-0s-YBy"/>
+                        <outlet property="delegate" destination="-1" id="wOJ-Gw-bSy"/>
+                        <outlet property="emptyDataSetDelegate" destination="-1" id="gnw-IC-r1L"/>
+                        <outlet property="emptyDataSetSource" destination="-1" id="d1U-kg-V8v"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gFS-uk-wPJ" firstAttribute="leading" secondItem="tro-sT-J9f" secondAttribute="leading" id="LYz-kv-K6P"/>
+                <constraint firstItem="gFS-uk-wPJ" firstAttribute="bottom" secondItem="tro-sT-J9f" secondAttribute="bottom" id="Ora-yU-O9h"/>
+                <constraint firstItem="gFS-uk-wPJ" firstAttribute="trailing" secondItem="tro-sT-J9f" secondAttribute="trailing" id="Q0y-u4-h6V"/>
+                <constraint firstItem="gFS-uk-wPJ" firstAttribute="top" secondItem="YHn-J5-cne" secondAttribute="top" id="bzX-4W-rOh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="tro-sT-J9f"/>
+        </view>
+    </objects>
+</document>

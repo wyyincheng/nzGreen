@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="102" id="yAj-nd-9Gf" customClass="YZBalanceTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAj-nd-9Gf" id="FFh-xe-nFL">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="101.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三丰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDD-IZ-uuV">
+                        <rect key="frame" x="68" y="15" width="49" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-4-23   后台充值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzh-2M-Nno">
+                        <rect key="frame" x="68" y="38" width="122" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥324" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZS-as-Sr5">
+                        <rect key="frame" x="255.5" y="22" width="48.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.29803921570000003" green="0.76470588240000004" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_me_avart" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-Of-mNh">
+                        <rect key="frame" x="10" y="10" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="0AB-Qs-2Qm"/>
+                            <constraint firstAttribute="width" constant="48" id="Yl1-fu-X13"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PDD-IZ-uuV" firstAttribute="top" secondItem="m2F-Of-mNh" secondAttribute="top" constant="5" id="30V-MA-GGR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sZS-as-Sr5" secondAttribute="trailing" id="7F1-g1-9Tg"/>
+                    <constraint firstItem="sZS-as-Sr5" firstAttribute="centerY" secondItem="m2F-Of-mNh" secondAttribute="centerY" id="9La-o2-YxD"/>
+                    <constraint firstItem="m2F-Of-mNh" firstAttribute="leading" secondItem="FFh-xe-nFL" secondAttribute="leading" constant="10" id="F45-7t-6yX"/>
+                    <constraint firstItem="xzh-2M-Nno" firstAttribute="bottom" secondItem="m2F-Of-mNh" secondAttribute="bottom" constant="-5" id="GfS-vG-lCG"/>
+                    <constraint firstItem="PDD-IZ-uuV" firstAttribute="leading" secondItem="m2F-Of-mNh" secondAttribute="trailing" constant="10" id="W7K-oF-6cB"/>
+                    <constraint firstItem="m2F-Of-mNh" firstAttribute="top" secondItem="FFh-xe-nFL" secondAttribute="top" constant="10" id="goE-Gd-2uZ"/>
+                    <constraint firstItem="xzh-2M-Nno" firstAttribute="leading" secondItem="PDD-IZ-uuV" secondAttribute="leading" id="rKS-WL-SJD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KBz-rU-iB3"/>
+            <connections>
+                <outlet property="changDeslb" destination="xzh-2M-Nno" id="yBn-Hq-bYA"/>
+                <outlet property="priceChangeLb" destination="sZS-as-Sr5" id="DCf-Jx-761"/>
+                <outlet property="userIconVeiw" destination="m2F-Of-mNh" id="Hcb-oB-ohJ"/>
+                <outlet property="userNameLb" destination="PDD-IZ-uuV" id="Dog-t4-PfE"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="83"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_me_avart" width="16" height="16"/>
+    </resources>
+</document>

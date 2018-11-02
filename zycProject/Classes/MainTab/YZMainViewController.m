@@ -43,4 +43,11 @@
     self.viewControllers = @[goodsVC,shopCarVC,userCenterVC];
 }
 
+- (void)gotoIndexVC:(YZVCIndex)vcIndex {
+    for (UINavigationController *nv in self.viewControllers) {
+        [nv popToRootViewControllerAnimated:NO];
+    }
+    self.selectedIndex = vcIndex;
+}
+
 @end

@@ -38,4 +38,18 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)gotoViewController:(NSString *)vcName {
+    [self gotoViewController:vcName lauchParams:nil];
+}
+
+- (void)gotoViewController:(NSString *)vcName lauchParams:(nullable NSDictionary *)lauchParams {
+    if (vcName) {
+        id vc = [NSClassFromString(vcName) new];
+        if ([vc isKindOfClass:[YZBaseViewController class]]) {
+            ((YZBaseViewController *)vc).lauchParams = lauchParams;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
+}
+
 @end

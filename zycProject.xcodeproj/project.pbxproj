@@ -43,8 +43,8 @@
 		584FFE61218B035E008B2B61 /* YCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE60218B035E008B2B61 /* YCNetworkManager.m */; };
 		584FFE66218B0495008B2B61 /* YZOrderManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE65218B0495008B2B61 /* YZOrderManagerModel.m */; };
 		584FFE6A218B0598008B2B61 /* YZProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE69218B0598008B2B61 /* YZProductModel.m */; };
-		584FFE6D218B0C8A008B2B61 /* icon_goods_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE6B218B0C89008B2B61 /* icon_goods_empty@2x.png */; };
-		584FFE6E218B0C8A008B2B61 /* icon_goods_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE6C218B0C89008B2B61 /* icon_goods_empty@3x.png */; };
+		584FFE6D218B0C8A008B2B61 /* icon_vcdefault_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE6B218B0C89008B2B61 /* icon_vcdefault_empty@2x.png */; };
+		584FFE6E218B0C8A008B2B61 /* icon_vcdefault_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE6C218B0C89008B2B61 /* icon_vcdefault_empty@3x.png */; };
 		584FFE72218B1036008B2B61 /* UIViewController+YZUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFE71218B1036008B2B61 /* UIViewController+YZUtils.m */; };
 		584FFE7F218BFC17008B2B61 /* icon_tab_shopcar_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE73218BFC14008B2B61 /* icon_tab_shopcar_default@2x.png */; };
 		584FFE80218BFC17008B2B61 /* icon_tab_user_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE74218BFC15008B2B61 /* icon_tab_user_default@2x.png */; };
@@ -68,6 +68,63 @@
 		584FFE9D218C566C008B2B61 /* icon_shopcar_palceholder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE9B218C566C008B2B61 /* icon_shopcar_palceholder@3x.png */; };
 		584FFEA0218C58F0008B2B61 /* icon_shoppingcar_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE9E218C58EF008B2B61 /* icon_shoppingcar_empty@2x.png */; };
 		584FFEA1218C58F0008B2B61 /* icon_shoppingcar_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFE9F218C58F0008B2B61 /* icon_shoppingcar_empty@3x.png */; };
+		584FFEA6218C63D1008B2B61 /* YZUserCenterInfoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEA4218C63D1008B2B61 /* YZUserCenterInfoTableCell.m */; };
+		584FFEA7218C63D1008B2B61 /* YZUserCenterInfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEA5218C63D1008B2B61 /* YZUserCenterInfoTableCell.xib */; };
+		584FFEAB218C664F008B2B61 /* YZAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEAA218C664F008B2B61 /* YZAccountModel.m */; };
+		584FFEAE218C675C008B2B61 /* icon_me_avart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEAC218C675C008B2B61 /* icon_me_avart@2x.png */; };
+		584FFEAF218C675C008B2B61 /* icon_me_avart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEAD218C675C008B2B61 /* icon_me_avart@3x.png */; };
+		584FFEB2218C6783008B2B61 /* icon_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEB0218C6782008B2B61 /* icon_arrow_right@2x.png */; };
+		584FFEB3218C6783008B2B61 /* icon_arrow_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEB1218C6783008B2B61 /* icon_arrow_right@3x.png */; };
+		584FFEB7218C6898008B2B61 /* YZAgentMangerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEB5218C6898008B2B61 /* YZAgentMangerTableCell.m */; };
+		584FFEB8218C6898008B2B61 /* YZAgentMangerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEB6218C6898008B2B61 /* YZAgentMangerTableCell.xib */; };
+		584FFEBF218C6977008B2B61 /* icon_manager_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEB9218C6975008B2B61 /* icon_manager_user@2x.png */; };
+		584FFEC0218C6977008B2B61 /* icon_manager_user@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEBA218C6975008B2B61 /* icon_manager_user@3x.png */; };
+		584FFEC1218C6977008B2B61 /* icon_manager_order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEBB218C6976008B2B61 /* icon_manager_order@2x.png */; };
+		584FFEC2218C6977008B2B61 /* icon_manager_store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEBC218C6976008B2B61 /* icon_manager_store@2x.png */; };
+		584FFEC3218C6977008B2B61 /* icon_manager_order@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEBD218C6976008B2B61 /* icon_manager_order@3x.png */; };
+		584FFEC4218C6977008B2B61 /* icon_manager_store@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEBE218C6977008B2B61 /* icon_manager_store@3x.png */; };
+		584FFEC8218C6B8A008B2B61 /* YZSettingItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEC6218C6B8A008B2B61 /* YZSettingItemTableCell.m */; };
+		584FFEC9218C6B8A008B2B61 /* YZSettingItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEC7218C6B8A008B2B61 /* YZSettingItemTableCell.xib */; };
+		584FFEE8218C9B6F008B2B61 /* YZUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEDE218C9B6F008B2B61 /* YZUserInfoViewController.xib */; };
+		584FFEE9218C9B6F008B2B61 /* YZUserInfoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEE0218C9B6F008B2B61 /* YZUserInfoTableCell.m */; };
+		584FFEEA218C9B6F008B2B61 /* YZUserInfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEE1218C9B6F008B2B61 /* YZUserInfoTableCell.xib */; };
+		584FFEEB218C9B6F008B2B61 /* YZUserAvartTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEE4218C9B6F008B2B61 /* YZUserAvartTableCell.xib */; };
+		584FFEEC218C9B6F008B2B61 /* YZUserAvartTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEE5218C9B6F008B2B61 /* YZUserAvartTableCell.m */; };
+		584FFEED218C9B6F008B2B61 /* YZUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEE6218C9B6F008B2B61 /* YZUserInfoViewController.m */; };
+		584FFEF1218C9B85008B2B61 /* YZChangeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEEF218C9B85008B2B61 /* YZChangeNameViewController.m */; };
+		584FFEF2218C9B85008B2B61 /* YZChangeNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEF0218C9B85008B2B61 /* YZChangeNameViewController.xib */; };
+		584FFEF7218CA342008B2B61 /* YZBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEF5218CA342008B2B61 /* YZBalanceViewController.m */; };
+		584FFEF8218CA342008B2B61 /* YZBalanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEF6218CA342008B2B61 /* YZBalanceViewController.xib */; };
+		584FFEFD218CA578008B2B61 /* YZBalanceTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFEFB218CA578008B2B61 /* YZBalanceTableCell.m */; };
+		584FFEFE218CA578008B2B61 /* YZBalanceTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFEFC218CA578008B2B61 /* YZBalanceTableCell.xib */; };
+		584FFF02218CA618008B2B61 /* YZBalanceLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF01218CA618008B2B61 /* YZBalanceLogModel.m */; };
+		584FFF07218CA9AA008B2B61 /* YZOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF05218CA9AA008B2B61 /* YZOrderListViewController.m */; };
+		584FFF08218CA9AA008B2B61 /* YZOrderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF06218CA9AA008B2B61 /* YZOrderListViewController.xib */; };
+		584FFF10218CACBB008B2B61 /* YZOrderListChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF0E218CACBB008B2B61 /* YZOrderListChildViewController.m */; };
+		584FFF11218CACBB008B2B61 /* YZOrderListChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF0F218CACBB008B2B61 /* YZOrderListChildViewController.xib */; };
+		584FFF15218CAE15008B2B61 /* YMMTopTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF14218CAE15008B2B61 /* YMMTopTabbarView.m */; };
+		584FFF19218CAE2C008B2B61 /* YZOrderListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF17218CAE2C008B2B61 /* YZOrderListTableCell.m */; };
+		584FFF1A218CAE2C008B2B61 /* YZOrderListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF18218CAE2C008B2B61 /* YZOrderListTableCell.xib */; };
+		584FFF21218CB02F008B2B61 /* YZOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF20218CB02F008B2B61 /* YZOrderModel.m */; };
+		584FFF24218CB0E6008B2B61 /* YZAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF23218CB0E6008B2B61 /* YZAddressModel.m */; };
+		584FFF2A218CB375008B2B61 /* YZAgentOrderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF29218CB375008B2B61 /* YZAgentOrderDetailModel.m */; };
+		584FFF2F218CB5EC008B2B61 /* YZAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF2D218CB5EC008B2B61 /* YZAddressViewController.m */; };
+		584FFF30218CB5EC008B2B61 /* YZAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF2E218CB5EC008B2B61 /* YZAddressViewController.xib */; };
+		584FFF35218CB864008B2B61 /* YZAddressTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF33218CB864008B2B61 /* YZAddressTableCell.m */; };
+		584FFF36218CB864008B2B61 /* YZAddressTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF34218CB864008B2B61 /* YZAddressTableCell.xib */; };
+		584FFF39218CB9E8008B2B61 /* icon_address_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF37218CB9E8008B2B61 /* icon_address_empty@3x.png */; };
+		584FFF3A218CB9E8008B2B61 /* icon_address_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF38218CB9E8008B2B61 /* icon_address_empty@2x.png */; };
+		584FFF3F218CBADF008B2B61 /* YZAddressAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF3D218CBADF008B2B61 /* YZAddressAddViewController.m */; };
+		584FFF40218CBADF008B2B61 /* YZAddressAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF3E218CBADF008B2B61 /* YZAddressAddViewController.xib */; };
+		584FFF45218CBFDC008B2B61 /* YZSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF43218CBFDC008B2B61 /* YZSettingViewController.m */; };
+		584FFF46218CBFDC008B2B61 /* YZSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF44218CBFDC008B2B61 /* YZSettingViewController.xib */; };
+		584FFF4B218CC140008B2B61 /* YZSettingUserTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF49218CC140008B2B61 /* YZSettingUserTableCell.m */; };
+		584FFF4C218CC140008B2B61 /* YZSettingUserTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF4A218CC140008B2B61 /* YZSettingUserTableCell.xib */; };
+		584FFF4F218CC676008B2B61 /* UIView+YMMBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF4E218CC676008B2B61 /* UIView+YMMBorder.m */; };
+		584FFF52218CC6C5008B2B61 /* YMMBorderLineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF51218CC6C5008B2B61 /* YMMBorderLineProvider.m */; };
+		584FFF55218CC740008B2B61 /* UIView+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF54218CC73F008B2B61 /* UIView+Controller.m */; };
+		584FFF59218CC7BD008B2B61 /* YZOrderStatusTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */; };
+		584FFF5A218CC7BD008B2B61 /* YZOrderStatusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */; };
 		5896295521884C09008EFDD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896295421884C09008EFDD8 /* AppDelegate.m */; };
 		5896295821884C09008EFDD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896295721884C09008EFDD8 /* ViewController.m */; };
 		5896295B21884C09008EFDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5896295921884C09008EFDD8 /* Main.storyboard */; };
@@ -166,8 +223,8 @@
 		584FFE65218B0495008B2B61 /* YZOrderManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderManagerModel.m; sourceTree = "<group>"; };
 		584FFE68218B0598008B2B61 /* YZProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZProductModel.h; sourceTree = "<group>"; };
 		584FFE69218B0598008B2B61 /* YZProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZProductModel.m; sourceTree = "<group>"; };
-		584FFE6B218B0C89008B2B61 /* icon_goods_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_empty@2x.png"; sourceTree = "<group>"; };
-		584FFE6C218B0C89008B2B61 /* icon_goods_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_empty@3x.png"; sourceTree = "<group>"; };
+		584FFE6B218B0C89008B2B61 /* icon_vcdefault_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_vcdefault_empty@2x.png"; sourceTree = "<group>"; };
+		584FFE6C218B0C89008B2B61 /* icon_vcdefault_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_vcdefault_empty@3x.png"; sourceTree = "<group>"; };
 		584FFE70218B1036008B2B61 /* UIViewController+YZUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YZUtils.h"; sourceTree = "<group>"; };
 		584FFE71218B1036008B2B61 /* UIViewController+YZUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YZUtils.m"; sourceTree = "<group>"; };
 		584FFE73218BFC14008B2B61 /* icon_tab_shopcar_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_shopcar_default@2x.png"; sourceTree = "<group>"; };
@@ -194,6 +251,90 @@
 		584FFE9B218C566C008B2B61 /* icon_shopcar_palceholder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shopcar_palceholder@3x.png"; sourceTree = "<group>"; };
 		584FFE9E218C58EF008B2B61 /* icon_shoppingcar_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shoppingcar_empty@2x.png"; sourceTree = "<group>"; };
 		584FFE9F218C58F0008B2B61 /* icon_shoppingcar_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shoppingcar_empty@3x.png"; sourceTree = "<group>"; };
+		584FFEA3218C63D1008B2B61 /* YZUserCenterInfoTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZUserCenterInfoTableCell.h; sourceTree = "<group>"; };
+		584FFEA4218C63D1008B2B61 /* YZUserCenterInfoTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZUserCenterInfoTableCell.m; sourceTree = "<group>"; };
+		584FFEA5218C63D1008B2B61 /* YZUserCenterInfoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZUserCenterInfoTableCell.xib; sourceTree = "<group>"; };
+		584FFEA9218C664F008B2B61 /* YZAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAccountModel.h; sourceTree = "<group>"; };
+		584FFEAA218C664F008B2B61 /* YZAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAccountModel.m; sourceTree = "<group>"; };
+		584FFEAC218C675C008B2B61 /* icon_me_avart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_me_avart@2x.png"; sourceTree = "<group>"; };
+		584FFEAD218C675C008B2B61 /* icon_me_avart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_me_avart@3x.png"; sourceTree = "<group>"; };
+		584FFEB0218C6782008B2B61 /* icon_arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right@2x.png"; sourceTree = "<group>"; };
+		584FFEB1218C6783008B2B61 /* icon_arrow_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right@3x.png"; sourceTree = "<group>"; };
+		584FFEB4218C6898008B2B61 /* YZAgentMangerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAgentMangerTableCell.h; sourceTree = "<group>"; };
+		584FFEB5218C6898008B2B61 /* YZAgentMangerTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAgentMangerTableCell.m; sourceTree = "<group>"; };
+		584FFEB6218C6898008B2B61 /* YZAgentMangerTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZAgentMangerTableCell.xib; sourceTree = "<group>"; };
+		584FFEB9218C6975008B2B61 /* icon_manager_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_manager_user@2x.png"; sourceTree = "<group>"; };
+		584FFEBA218C6975008B2B61 /* icon_manager_user@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_manager_user@3x.png"; sourceTree = "<group>"; };
+		584FFEBB218C6976008B2B61 /* icon_manager_order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_manager_order@2x.png"; sourceTree = "<group>"; };
+		584FFEBC218C6976008B2B61 /* icon_manager_store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_manager_store@2x.png"; sourceTree = "<group>"; };
+		584FFEBD218C6976008B2B61 /* icon_manager_order@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_manager_order@3x.png"; sourceTree = "<group>"; };
+		584FFEBE218C6977008B2B61 /* icon_manager_store@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_manager_store@3x.png"; sourceTree = "<group>"; };
+		584FFEC5218C6B8A008B2B61 /* YZSettingItemTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSettingItemTableCell.h; sourceTree = "<group>"; };
+		584FFEC6218C6B8A008B2B61 /* YZSettingItemTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSettingItemTableCell.m; sourceTree = "<group>"; };
+		584FFEC7218C6B8A008B2B61 /* YZSettingItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSettingItemTableCell.xib; sourceTree = "<group>"; };
+		584FFEDD218C9B6F008B2B61 /* YZUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUserInfoViewController.h; sourceTree = "<group>"; };
+		584FFEDE218C9B6F008B2B61 /* YZUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZUserInfoViewController.xib; sourceTree = "<group>"; };
+		584FFEE0218C9B6F008B2B61 /* YZUserInfoTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUserInfoTableCell.m; sourceTree = "<group>"; };
+		584FFEE1218C9B6F008B2B61 /* YZUserInfoTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZUserInfoTableCell.xib; sourceTree = "<group>"; };
+		584FFEE2218C9B6F008B2B61 /* YZUserAvartTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUserAvartTableCell.h; sourceTree = "<group>"; };
+		584FFEE3218C9B6F008B2B61 /* YZUserInfoTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUserInfoTableCell.h; sourceTree = "<group>"; };
+		584FFEE4218C9B6F008B2B61 /* YZUserAvartTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZUserAvartTableCell.xib; sourceTree = "<group>"; };
+		584FFEE5218C9B6F008B2B61 /* YZUserAvartTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUserAvartTableCell.m; sourceTree = "<group>"; };
+		584FFEE6218C9B6F008B2B61 /* YZUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUserInfoViewController.m; sourceTree = "<group>"; };
+		584FFEEE218C9B85008B2B61 /* YZChangeNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZChangeNameViewController.h; sourceTree = "<group>"; };
+		584FFEEF218C9B85008B2B61 /* YZChangeNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZChangeNameViewController.m; sourceTree = "<group>"; };
+		584FFEF0218C9B85008B2B61 /* YZChangeNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZChangeNameViewController.xib; sourceTree = "<group>"; };
+		584FFEF4218CA342008B2B61 /* YZBalanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBalanceViewController.h; sourceTree = "<group>"; };
+		584FFEF5218CA342008B2B61 /* YZBalanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBalanceViewController.m; sourceTree = "<group>"; };
+		584FFEF6218CA342008B2B61 /* YZBalanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZBalanceViewController.xib; sourceTree = "<group>"; };
+		584FFEFA218CA578008B2B61 /* YZBalanceTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBalanceTableCell.h; sourceTree = "<group>"; };
+		584FFEFB218CA578008B2B61 /* YZBalanceTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBalanceTableCell.m; sourceTree = "<group>"; };
+		584FFEFC218CA578008B2B61 /* YZBalanceTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZBalanceTableCell.xib; sourceTree = "<group>"; };
+		584FFF00218CA618008B2B61 /* YZBalanceLogModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBalanceLogModel.h; sourceTree = "<group>"; };
+		584FFF01218CA618008B2B61 /* YZBalanceLogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBalanceLogModel.m; sourceTree = "<group>"; };
+		584FFF04218CA9AA008B2B61 /* YZOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderListViewController.h; sourceTree = "<group>"; };
+		584FFF05218CA9AA008B2B61 /* YZOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderListViewController.m; sourceTree = "<group>"; };
+		584FFF06218CA9AA008B2B61 /* YZOrderListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZOrderListViewController.xib; sourceTree = "<group>"; };
+		584FFF0D218CACBB008B2B61 /* YZOrderListChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderListChildViewController.h; sourceTree = "<group>"; };
+		584FFF0E218CACBB008B2B61 /* YZOrderListChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderListChildViewController.m; sourceTree = "<group>"; };
+		584FFF0F218CACBB008B2B61 /* YZOrderListChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZOrderListChildViewController.xib; sourceTree = "<group>"; };
+		584FFF13218CAE15008B2B61 /* YMMTopTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMTopTabbarView.h; sourceTree = "<group>"; };
+		584FFF14218CAE15008B2B61 /* YMMTopTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMMTopTabbarView.m; sourceTree = "<group>"; };
+		584FFF16218CAE2C008B2B61 /* YZOrderListTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderListTableCell.h; sourceTree = "<group>"; };
+		584FFF17218CAE2C008B2B61 /* YZOrderListTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderListTableCell.m; sourceTree = "<group>"; };
+		584FFF18218CAE2C008B2B61 /* YZOrderListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZOrderListTableCell.xib; sourceTree = "<group>"; };
+		584FFF1F218CB02F008B2B61 /* YZOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderModel.h; sourceTree = "<group>"; };
+		584FFF20218CB02F008B2B61 /* YZOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderModel.m; sourceTree = "<group>"; };
+		584FFF22218CB0E6008B2B61 /* YZAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAddressModel.h; sourceTree = "<group>"; };
+		584FFF23218CB0E6008B2B61 /* YZAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAddressModel.m; sourceTree = "<group>"; };
+		584FFF28218CB375008B2B61 /* YZAgentOrderDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAgentOrderDetailModel.h; sourceTree = "<group>"; };
+		584FFF29218CB375008B2B61 /* YZAgentOrderDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAgentOrderDetailModel.m; sourceTree = "<group>"; };
+		584FFF2C218CB5EC008B2B61 /* YZAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAddressViewController.h; sourceTree = "<group>"; };
+		584FFF2D218CB5EC008B2B61 /* YZAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAddressViewController.m; sourceTree = "<group>"; };
+		584FFF2E218CB5EC008B2B61 /* YZAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZAddressViewController.xib; sourceTree = "<group>"; };
+		584FFF32218CB864008B2B61 /* YZAddressTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAddressTableCell.h; sourceTree = "<group>"; };
+		584FFF33218CB864008B2B61 /* YZAddressTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAddressTableCell.m; sourceTree = "<group>"; };
+		584FFF34218CB864008B2B61 /* YZAddressTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZAddressTableCell.xib; sourceTree = "<group>"; };
+		584FFF37218CB9E8008B2B61 /* icon_address_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_address_empty@3x.png"; sourceTree = "<group>"; };
+		584FFF38218CB9E8008B2B61 /* icon_address_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_address_empty@2x.png"; sourceTree = "<group>"; };
+		584FFF3C218CBADF008B2B61 /* YZAddressAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAddressAddViewController.h; sourceTree = "<group>"; };
+		584FFF3D218CBADF008B2B61 /* YZAddressAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAddressAddViewController.m; sourceTree = "<group>"; };
+		584FFF3E218CBADF008B2B61 /* YZAddressAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZAddressAddViewController.xib; sourceTree = "<group>"; };
+		584FFF42218CBFDC008B2B61 /* YZSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSettingViewController.h; sourceTree = "<group>"; };
+		584FFF43218CBFDC008B2B61 /* YZSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSettingViewController.m; sourceTree = "<group>"; };
+		584FFF44218CBFDC008B2B61 /* YZSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSettingViewController.xib; sourceTree = "<group>"; };
+		584FFF48218CC140008B2B61 /* YZSettingUserTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSettingUserTableCell.h; sourceTree = "<group>"; };
+		584FFF49218CC140008B2B61 /* YZSettingUserTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSettingUserTableCell.m; sourceTree = "<group>"; };
+		584FFF4A218CC140008B2B61 /* YZSettingUserTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSettingUserTableCell.xib; sourceTree = "<group>"; };
+		584FFF4D218CC676008B2B61 /* UIView+YMMBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YMMBorder.h"; sourceTree = "<group>"; };
+		584FFF4E218CC676008B2B61 /* UIView+YMMBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YMMBorder.m"; sourceTree = "<group>"; };
+		584FFF50218CC6C4008B2B61 /* YMMBorderLineProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMBorderLineProvider.h; sourceTree = "<group>"; };
+		584FFF51218CC6C5008B2B61 /* YMMBorderLineProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMMBorderLineProvider.m; sourceTree = "<group>"; };
+		584FFF53218CC73F008B2B61 /* UIView+Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Controller.h"; sourceTree = "<group>"; };
+		584FFF54218CC73F008B2B61 /* UIView+Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Controller.m"; sourceTree = "<group>"; };
+		584FFF56218CC7BD008B2B61 /* YZOrderStatusTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderStatusTableCell.h; sourceTree = "<group>"; };
+		584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderStatusTableCell.m; sourceTree = "<group>"; };
+		584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZOrderStatusTableCell.xib; sourceTree = "<group>"; };
 		5896295021884C09008EFDD8 /* zycProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zycProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5896295321884C09008EFDD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5896295421884C09008EFDD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -265,6 +406,9 @@
 		584FFDE9218AB899008B2B61 /* userCenterVC */ = {
 			isa = PBXGroup;
 			children = (
+				584FFEDB218C9B6F008B2B61 /* otherVC */,
+				584FFEA8218C6639008B2B61 /* model */,
+				584FFEA2218C63BA008B2B61 /* view */,
 				584FFE62218B0485008B2B61 /* agent */,
 				584FFDF6218AB8F3008B2B61 /* YZUserCenterViewController.h */,
 				584FFDF7218AB8F3008B2B61 /* YZUserCenterViewController.m */,
@@ -456,6 +600,211 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		584FFEA2218C63BA008B2B61 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEA3218C63D1008B2B61 /* YZUserCenterInfoTableCell.h */,
+				584FFEA4218C63D1008B2B61 /* YZUserCenterInfoTableCell.m */,
+				584FFEA5218C63D1008B2B61 /* YZUserCenterInfoTableCell.xib */,
+				584FFEB4218C6898008B2B61 /* YZAgentMangerTableCell.h */,
+				584FFEB5218C6898008B2B61 /* YZAgentMangerTableCell.m */,
+				584FFEB6218C6898008B2B61 /* YZAgentMangerTableCell.xib */,
+				584FFEC5218C6B8A008B2B61 /* YZSettingItemTableCell.h */,
+				584FFEC6218C6B8A008B2B61 /* YZSettingItemTableCell.m */,
+				584FFEC7218C6B8A008B2B61 /* YZSettingItemTableCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		584FFEA8218C6639008B2B61 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEA9218C664F008B2B61 /* YZAccountModel.h */,
+				584FFEAA218C664F008B2B61 /* YZAccountModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		584FFEDB218C9B6F008B2B61 /* otherVC */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF41218CBFCD008B2B61 /* setting */,
+				584FFF3B218CBAB8008B2B61 /* addAddress */,
+				584FFF2B218CB59A008B2B61 /* address */,
+				584FFF03218CA997008B2B61 /* orderList */,
+				584FFEF3218CA320008B2B61 /* account */,
+				584FFEDC218C9B6F008B2B61 /* userInfo */,
+				584FFEE7218C9B6F008B2B61 /* changeName */,
+			);
+			path = otherVC;
+			sourceTree = "<group>";
+		};
+		584FFEDC218C9B6F008B2B61 /* userInfo */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEDD218C9B6F008B2B61 /* YZUserInfoViewController.h */,
+				584FFEE6218C9B6F008B2B61 /* YZUserInfoViewController.m */,
+				584FFEDE218C9B6F008B2B61 /* YZUserInfoViewController.xib */,
+				584FFEDF218C9B6F008B2B61 /* cell */,
+			);
+			path = userInfo;
+			sourceTree = "<group>";
+		};
+		584FFEDF218C9B6F008B2B61 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEE2218C9B6F008B2B61 /* YZUserAvartTableCell.h */,
+				584FFEE0218C9B6F008B2B61 /* YZUserInfoTableCell.m */,
+				584FFEE1218C9B6F008B2B61 /* YZUserInfoTableCell.xib */,
+				584FFEE3218C9B6F008B2B61 /* YZUserInfoTableCell.h */,
+				584FFEE5218C9B6F008B2B61 /* YZUserAvartTableCell.m */,
+				584FFEE4218C9B6F008B2B61 /* YZUserAvartTableCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		584FFEE7218C9B6F008B2B61 /* changeName */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEEE218C9B85008B2B61 /* YZChangeNameViewController.h */,
+				584FFEEF218C9B85008B2B61 /* YZChangeNameViewController.m */,
+				584FFEF0218C9B85008B2B61 /* YZChangeNameViewController.xib */,
+			);
+			path = changeName;
+			sourceTree = "<group>";
+		};
+		584FFEF3218CA320008B2B61 /* account */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEFF218CA5F5008B2B61 /* model */,
+				584FFEF9218CA553008B2B61 /* view */,
+				584FFEF4218CA342008B2B61 /* YZBalanceViewController.h */,
+				584FFEF5218CA342008B2B61 /* YZBalanceViewController.m */,
+				584FFEF6218CA342008B2B61 /* YZBalanceViewController.xib */,
+			);
+			path = account;
+			sourceTree = "<group>";
+		};
+		584FFEF9218CA553008B2B61 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				584FFEFA218CA578008B2B61 /* YZBalanceTableCell.h */,
+				584FFEFB218CA578008B2B61 /* YZBalanceTableCell.m */,
+				584FFEFC218CA578008B2B61 /* YZBalanceTableCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		584FFEFF218CA5F5008B2B61 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF00218CA618008B2B61 /* YZBalanceLogModel.h */,
+				584FFF01218CA618008B2B61 /* YZBalanceLogModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		584FFF03218CA997008B2B61 /* orderList */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF1B218CAF6D008B2B61 /* model */,
+				584FFF12218CAE15008B2B61 /* view */,
+				584FFF04218CA9AA008B2B61 /* YZOrderListViewController.h */,
+				584FFF05218CA9AA008B2B61 /* YZOrderListViewController.m */,
+				584FFF06218CA9AA008B2B61 /* YZOrderListViewController.xib */,
+				584FFF0D218CACBB008B2B61 /* YZOrderListChildViewController.h */,
+				584FFF0E218CACBB008B2B61 /* YZOrderListChildViewController.m */,
+				584FFF0F218CACBB008B2B61 /* YZOrderListChildViewController.xib */,
+			);
+			path = orderList;
+			sourceTree = "<group>";
+		};
+		584FFF12218CAE15008B2B61 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF53218CC73F008B2B61 /* UIView+Controller.h */,
+				584FFF54218CC73F008B2B61 /* UIView+Controller.m */,
+				584FFF4D218CC676008B2B61 /* UIView+YMMBorder.h */,
+				584FFF4E218CC676008B2B61 /* UIView+YMMBorder.m */,
+				584FFF13218CAE15008B2B61 /* YMMTopTabbarView.h */,
+				584FFF14218CAE15008B2B61 /* YMMTopTabbarView.m */,
+				584FFF16218CAE2C008B2B61 /* YZOrderListTableCell.h */,
+				584FFF17218CAE2C008B2B61 /* YZOrderListTableCell.m */,
+				584FFF18218CAE2C008B2B61 /* YZOrderListTableCell.xib */,
+				584FFF50218CC6C4008B2B61 /* YMMBorderLineProvider.h */,
+				584FFF51218CC6C5008B2B61 /* YMMBorderLineProvider.m */,
+				584FFF56218CC7BD008B2B61 /* YZOrderStatusTableCell.h */,
+				584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */,
+				584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		584FFF1B218CAF6D008B2B61 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF1F218CB02F008B2B61 /* YZOrderModel.h */,
+				584FFF20218CB02F008B2B61 /* YZOrderModel.m */,
+				584FFF22218CB0E6008B2B61 /* YZAddressModel.h */,
+				584FFF23218CB0E6008B2B61 /* YZAddressModel.m */,
+				584FFF28218CB375008B2B61 /* YZAgentOrderDetailModel.h */,
+				584FFF29218CB375008B2B61 /* YZAgentOrderDetailModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		584FFF2B218CB59A008B2B61 /* address */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF31218CB84A008B2B61 /* view */,
+				584FFF2C218CB5EC008B2B61 /* YZAddressViewController.h */,
+				584FFF2D218CB5EC008B2B61 /* YZAddressViewController.m */,
+				584FFF2E218CB5EC008B2B61 /* YZAddressViewController.xib */,
+			);
+			path = address;
+			sourceTree = "<group>";
+		};
+		584FFF31218CB84A008B2B61 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF32218CB864008B2B61 /* YZAddressTableCell.h */,
+				584FFF33218CB864008B2B61 /* YZAddressTableCell.m */,
+				584FFF34218CB864008B2B61 /* YZAddressTableCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		584FFF3B218CBAB8008B2B61 /* addAddress */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF3C218CBADF008B2B61 /* YZAddressAddViewController.h */,
+				584FFF3D218CBADF008B2B61 /* YZAddressAddViewController.m */,
+				584FFF3E218CBADF008B2B61 /* YZAddressAddViewController.xib */,
+			);
+			path = addAddress;
+			sourceTree = "<group>";
+		};
+		584FFF41218CBFCD008B2B61 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF47218CC106008B2B61 /* view */,
+				584FFF42218CBFDC008B2B61 /* YZSettingViewController.h */,
+				584FFF43218CBFDC008B2B61 /* YZSettingViewController.m */,
+				584FFF44218CBFDC008B2B61 /* YZSettingViewController.xib */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		584FFF47218CC106008B2B61 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				584FFF48218CC140008B2B61 /* YZSettingUserTableCell.h */,
+				584FFF49218CC140008B2B61 /* YZSettingUserTableCell.m */,
+				584FFF4A218CC140008B2B61 /* YZSettingUserTableCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		5896294721884C09008EFDD8 = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +925,18 @@
 		5896297521886303008EFDD8 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				584FFF38218CB9E8008B2B61 /* icon_address_empty@2x.png */,
+				584FFF37218CB9E8008B2B61 /* icon_address_empty@3x.png */,
+				584FFEBB218C6976008B2B61 /* icon_manager_order@2x.png */,
+				584FFEBD218C6976008B2B61 /* icon_manager_order@3x.png */,
+				584FFEBC218C6976008B2B61 /* icon_manager_store@2x.png */,
+				584FFEBE218C6977008B2B61 /* icon_manager_store@3x.png */,
+				584FFEB9218C6975008B2B61 /* icon_manager_user@2x.png */,
+				584FFEBA218C6975008B2B61 /* icon_manager_user@3x.png */,
+				584FFEB0218C6782008B2B61 /* icon_arrow_right@2x.png */,
+				584FFEB1218C6783008B2B61 /* icon_arrow_right@3x.png */,
+				584FFEAC218C675C008B2B61 /* icon_me_avart@2x.png */,
+				584FFEAD218C675C008B2B61 /* icon_me_avart@3x.png */,
 				584FFE9E218C58EF008B2B61 /* icon_shoppingcar_empty@2x.png */,
 				584FFE9F218C58F0008B2B61 /* icon_shoppingcar_empty@3x.png */,
 				584FFE9A218C566C008B2B61 /* icon_shopcar_palceholder@2x.png */,
@@ -583,8 +944,8 @@
 				584FFE94218C556C008B2B61 /* btn_radio_selected.png */,
 				584FFE97218C559C008B2B61 /* btn_radio_default@2x.png */,
 				584FFE96218C559C008B2B61 /* btn_radio_default@3x.png */,
-				584FFE6B218B0C89008B2B61 /* icon_goods_empty@2x.png */,
-				584FFE6C218B0C89008B2B61 /* icon_goods_empty@3x.png */,
+				584FFE6B218B0C89008B2B61 /* icon_vcdefault_empty@2x.png */,
+				584FFE6C218B0C89008B2B61 /* icon_vcdefault_empty@3x.png */,
 				584FFE0D218AE75D008B2B61 /* icon_app_83.5@2x.png */,
 				58962985218869A9008EFDD8 /* icon_nav_back_radio@2x.png */,
 				58962984218869A9008EFDD8 /* icon_nav_back_radio@3x.png */,
@@ -771,42 +1132,72 @@
 			files = (
 				584FFE14218AF46D008B2B61 /* YZHomeGoodsCollectionCell.xib in Resources */,
 				584FFE8A218BFC17008B2B61 /* icon_tab_home_default@3x.png in Resources */,
+				584FFEF2218C9B85008B2B61 /* YZChangeNameViewController.xib in Resources */,
 				584FFE88218BFC17008B2B61 /* icon_tab_home_selected@2x.png in Resources */,
+				584FFEC0218C6977008B2B61 /* icon_manager_user@3x.png in Resources */,
+				584FFEFE218CA578008B2B61 /* YZBalanceTableCell.xib in Resources */,
+				584FFF40218CBADF008B2B61 /* YZAddressAddViewController.xib in Resources */,
 				584FFE95218C556C008B2B61 /* btn_radio_selected.png in Resources */,
 				5896297821886348008EFDD8 /* icon_nav_back_white@2x.png in Resources */,
 				584FFE7F218BFC17008B2B61 /* icon_tab_shopcar_default@2x.png in Resources */,
 				584FFE89218BFC17008B2B61 /* icon_tab_shopcar_selected@2x.png in Resources */,
 				584FFE86218BFC17008B2B61 /* icon_tab_user_selected@2x.png in Resources */,
+				584FFEEA218C9B6F008B2B61 /* YZUserInfoTableCell.xib in Resources */,
+				584FFF1A218CAE2C008B2B61 /* YZOrderListTableCell.xib in Resources */,
 				584FFE93218C2723008B2B61 /* YZShopCarTableCell.xib in Resources */,
 				5896298321886897008EFDD8 /* YZLoginViewController.xib in Resources */,
 				584FFE84218BFC17008B2B61 /* icon_tab_home_default@2x.png in Resources */,
 				584FFE9C218C566C008B2B61 /* icon_shopcar_palceholder@2x.png in Resources */,
 				5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */,
+				584FFEAF218C675C008B2B61 /* icon_me_avart@3x.png in Resources */,
+				584FFEC3218C6977008B2B61 /* icon_manager_order@3x.png in Resources */,
 				589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */,
+				584FFEC1218C6977008B2B61 /* icon_manager_order@2x.png in Resources */,
+				584FFEF8218CA342008B2B61 /* YZBalanceViewController.xib in Resources */,
 				584FFE85218BFC17008B2B61 /* icon_tab_shopcar_default@3x.png in Resources */,
 				584FFE80218BFC17008B2B61 /* icon_tab_user_default@2x.png in Resources */,
 				584FFE98218C559C008B2B61 /* btn_radio_default@3x.png in Resources */,
-				584FFE6D218B0C8A008B2B61 /* icon_goods_empty@2x.png in Resources */,
+				584FFEB2218C6783008B2B61 /* icon_arrow_right@2x.png in Resources */,
+				584FFE6D218B0C8A008B2B61 /* icon_vcdefault_empty@2x.png in Resources */,
+				584FFEC9218C6B8A008B2B61 /* YZSettingItemTableCell.xib in Resources */,
+				584FFF46218CBFDC008B2B61 /* YZSettingViewController.xib in Resources */,
 				58962986218869A9008EFDD8 /* icon_nav_back_radio@3x.png in Resources */,
 				584FFE9D218C566C008B2B61 /* icon_shopcar_palceholder@3x.png in Resources */,
 				5896296021884C0A008EFDD8 /* LaunchScreen.storyboard in Resources */,
+				584FFEBF218C6977008B2B61 /* icon_manager_user@2x.png in Resources */,
+				584FFF4C218CC140008B2B61 /* YZSettingUserTableCell.xib in Resources */,
+				584FFEA7218C63D1008B2B61 /* YZUserCenterInfoTableCell.xib in Resources */,
 				5896295D21884C0A008EFDD8 /* Assets.xcassets in Resources */,
-				584FFE6E218B0C8A008B2B61 /* icon_goods_empty@3x.png in Resources */,
+				584FFE6E218B0C8A008B2B61 /* icon_vcdefault_empty@3x.png in Resources */,
+				584FFEAE218C675C008B2B61 /* icon_me_avart@2x.png in Resources */,
 				584FFE87218BFC17008B2B61 /* icon_tab_user_selected@3x.png in Resources */,
+				584FFEC4218C6977008B2B61 /* icon_manager_store@3x.png in Resources */,
 				584FFDFA218AB8F3008B2B61 /* YZUserCenterViewController.xib in Resources */,
 				584FFDF0218AB8D5008B2B61 /* YZGoodsListViewController.xib in Resources */,
 				584FFE81218BFC17008B2B61 /* icon_tab_user_default@3x.png in Resources */,
 				584FFEA1218C58F0008B2B61 /* icon_shoppingcar_empty@3x.png in Resources */,
+				584FFF08218CA9AA008B2B61 /* YZOrderListViewController.xib in Resources */,
 				584FFE0E218AE75D008B2B61 /* icon_app_83.5@2x.png in Resources */,
+				584FFF39218CB9E8008B2B61 /* icon_address_empty@3x.png in Resources */,
 				58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */,
+				584FFEC2218C6977008B2B61 /* icon_manager_store@2x.png in Resources */,
+				584FFEB3218C6783008B2B61 /* icon_arrow_right@3x.png in Resources */,
+				584FFEE8218C9B6F008B2B61 /* YZUserInfoViewController.xib in Resources */,
+				584FFF3A218CB9E8008B2B61 /* icon_address_empty@2x.png in Resources */,
+				584FFF30218CB5EC008B2B61 /* YZAddressViewController.xib in Resources */,
 				584FFE99218C559C008B2B61 /* btn_radio_default@2x.png in Resources */,
 				584FFE23218AFB19008B2B61 /* YZHomeGoodsCollectionHeaderView.xib in Resources */,
 				5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */,
+				584FFF5A218CC7BD008B2B61 /* YZOrderStatusTableCell.xib in Resources */,
 				584FFDF5218AB8E3008B2B61 /* YZShopCarViewController.xib in Resources */,
+				584FFEB8218C6898008B2B61 /* YZAgentMangerTableCell.xib in Resources */,
 				584FFE82218BFC17008B2B61 /* icon_tab_home_selected@3x.png in Resources */,
 				584FFEA0218C58F0008B2B61 /* icon_shoppingcar_empty@2x.png in Resources */,
 				5896295B21884C09008EFDD8 /* Main.storyboard in Resources */,
 				584FFE83218BFC17008B2B61 /* icon_tab_shopcar_selected@3x.png in Resources */,
+				584FFF11218CACBB008B2B61 /* YZOrderListChildViewController.xib in Resources */,
+				584FFF36218CB864008B2B61 /* YZAddressTableCell.xib in Resources */,
+				584FFEEB218C9B6F008B2B61 /* YZUserAvartTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,46 +1275,73 @@
 				584FFE5A218B00F1008B2B61 /* NSData+AES256.m in Sources */,
 				584FFE1E218AF827008B2B61 /* YZGoodsFreightModel.m in Sources */,
 				589629AC218873E6008EFDD8 /* UIImage+Placeholder.m in Sources */,
+				584FFF4B218CC140008B2B61 /* YZSettingUserTableCell.m in Sources */,
+				584FFF2A218CB375008B2B61 /* YZAgentOrderDetailModel.m in Sources */,
 				584FFE53218B00F1008B2B61 /* PurchaseModel.m in Sources */,
+				584FFF35218CB864008B2B61 /* YZAddressTableCell.m in Sources */,
 				584FFDFF218ACDE2008B2B61 /* YZBaseModel.m in Sources */,
 				584FFE4C218B00F1008B2B61 /* YZNCNetAPI.m in Sources */,
+				584FFF4F218CC676008B2B61 /* UIView+YMMBorder.m in Sources */,
+				584FFF59218CC7BD008B2B61 /* YZOrderStatusTableCell.m in Sources */,
 				589629B1218873E6008EFDD8 /* UINavigationBar+Alpha.m in Sources */,
 				584FFE61218B035E008B2B61 /* YCNetworkManager.m in Sources */,
+				584FFF07218CA9AA008B2B61 /* YZOrderListViewController.m in Sources */,
 				589629AF218873E6008EFDD8 /* NSString+NZCheck.m in Sources */,
 				589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */,
+				584FFF3F218CBADF008B2B61 /* YZAddressAddViewController.m in Sources */,
 				584FFDF9218AB8F3008B2B61 /* YZUserCenterViewController.m in Sources */,
 				584FFE55218B00F1008B2B61 /* OrderAPI.m in Sources */,
+				584FFEB7218C6898008B2B61 /* YZAgentMangerTableCell.m in Sources */,
 				584FFE05218AD872008B2B61 /* YZUserCenter.m in Sources */,
+				584FFEF1218C9B85008B2B61 /* YZChangeNameViewController.m in Sources */,
+				584FFEF7218CA342008B2B61 /* YZBalanceViewController.m in Sources */,
 				5896296321884C0A008EFDD8 /* main.m in Sources */,
+				584FFEED218C9B6F008B2B61 /* YZUserInfoViewController.m in Sources */,
+				584FFEEC218C9B6F008B2B61 /* YZUserAvartTableCell.m in Sources */,
 				5896297321886224008EFDD8 /* YZBaseViewController.m in Sources */,
 				584FFE22218AFB19008B2B61 /* YZHomeGoodsCollectionHeaderView.m in Sources */,
 				5896298221886897008EFDD8 /* YZLoginViewController.m in Sources */,
 				589629B4218873E6008EFDD8 /* MBProgressHUD+MJ.m in Sources */,
 				584FFE92218C2723008B2B61 /* YZShopCarTableCell.m in Sources */,
+				584FFEC8218C6B8A008B2B61 /* YZSettingItemTableCell.m in Sources */,
+				584FFF15218CAE15008B2B61 /* YMMTopTabbarView.m in Sources */,
+				584FFEE9218C9B6F008B2B61 /* YZUserInfoTableCell.m in Sources */,
 				584FFE26218AFBA6008B2B61 /* YZBaseCollectionView.m in Sources */,
+				584FFF02218CA618008B2B61 /* YZBalanceLogModel.m in Sources */,
 				589629AE218873E6008EFDD8 /* UIColor+Utils.m in Sources */,
+				584FFF2F218CB5EC008B2B61 /* YZAddressViewController.m in Sources */,
 				584FFE50218B00F1008B2B61 /* MessageClass.m in Sources */,
 				584FFE4D218B00F1008B2B61 /* CompanyModel.m in Sources */,
+				584FFF19218CAE2C008B2B61 /* YZOrderListTableCell.m in Sources */,
 				589629B0218873E6008EFDD8 /* NSArray+YZSafe.m in Sources */,
 				584FFE56218B00F1008B2B61 /* YNCZBaseService.m in Sources */,
+				584FFF24218CB0E6008B2B61 /* YZAddressModel.m in Sources */,
+				584FFF10218CACBB008B2B61 /* YZOrderListChildViewController.m in Sources */,
 				584FFE6A218B0598008B2B61 /* YZProductModel.m in Sources */,
+				584FFF52218CC6C5008B2B61 /* YMMBorderLineProvider.m in Sources */,
+				584FFF55218CC740008B2B61 /* UIView+Controller.m in Sources */,
 				584FFDE8218AB7FE008B2B61 /* YZMainViewController.m in Sources */,
 				584FFE13218AF46D008B2B61 /* YZHomeGoodsCollectionCell.m in Sources */,
 				584FFDEF218AB8D5008B2B61 /* YZGoodsListViewController.m in Sources */,
 				584FFE02218ACE5C008B2B61 /* YZUserModel.m in Sources */,
 				584FFE57218B00F1008B2B61 /* ProductAPI.m in Sources */,
+				584FFF21218CB02F008B2B61 /* YZOrderModel.m in Sources */,
+				584FFEFD218CA578008B2B61 /* YZBalanceTableCell.m in Sources */,
 				5896295521884C09008EFDD8 /* AppDelegate.m in Sources */,
 				584FFE54218B00F1008B2B61 /* SpotGoodsModel.m in Sources */,
 				584FFE5B218B00F1008B2B61 /* Security.m in Sources */,
+				584FFEA6218C63D1008B2B61 /* YZUserCenterInfoTableCell.m in Sources */,
 				584FFDF4218AB8E3008B2B61 /* YZShopCarViewController.m in Sources */,
 				584FFE17218AF67D008B2B61 /* YZBaseCollectionViewCell.m in Sources */,
 				584FFE4E218B00F1008B2B61 /* OrderModel.m in Sources */,
 				589629AD218873E6008EFDD8 /* NSDictionary+YZSafe.m in Sources */,
 				584FFE1B218AF734008B2B61 /* YZGoodsModel.m in Sources */,
+				584FFEAB218C664F008B2B61 /* YZAccountModel.m in Sources */,
 				584FFE72218B1036008B2B61 /* UIViewController+YZUtils.m in Sources */,
 				584FFE08218AE145008B2B61 /* NSString+YZImageUrl.m in Sources */,
 				584FFE66218B0495008B2B61 /* YZOrderManagerModel.m in Sources */,
 				589629B92188746E008EFDD8 /* NZTipView.m in Sources */,
+				584FFF45218CBFDC008B2B61 /* YZSettingViewController.m in Sources */,
 				5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */,
 				589629B3218873E6008EFDD8 /* MBProgressHUD.m in Sources */,
 				584FFE58218B00F1008B2B61 /* YZUserAPI.m in Sources */,

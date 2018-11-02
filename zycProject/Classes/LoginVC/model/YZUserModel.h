@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, UserType) {
 /**
  用户类型,1:普通用户 2:代理
  */
-@property (assign, nonatomic) NSInteger userType;
+@property (assign, nonatomic) UserType userType;
 
 @property (assign, nonatomic) BOOL testMode;
 
