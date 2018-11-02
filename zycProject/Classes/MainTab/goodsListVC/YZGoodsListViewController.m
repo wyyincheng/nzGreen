@@ -33,6 +33,11 @@
     [self refreshGoods:YES needLoading:YES];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self fetchGoodsListHeaderIcon];
+}
+
 #pragma mark - init
 - (void)initView {
     //FIXME: 正式版本顶部有搜索框
@@ -56,18 +61,41 @@
         [weakSelf refreshGoods:NO needLoading:NO];
     }];
     
-    self.collectionView.emptyDataSetSource = self;
-    self.collectionView.emptyDataSetDelegate = self;
-    //    self.collectionView.tag = kCollectionViewTag;
-    
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
 }
 
 #pragma mark - private
 
 #pragma mark network
-- (void)refreshGoods:(BOOL)refresh needLoading:(BOOL)needLoading{
-    
+- (void)refreshGoods:(BOOL)refresh needLoading:(BOOL)needLoading {
+
+    pageIndex = refresh ? 1 : pageIndex + 1;
+    __weak typeof(self) weakSelf = self;
+    if (refresh && needLoading) {
+        [MBProgressHUD showMessage:@""];
+    }
+    if (refresh) {
+        [self.collectionView.mj_footer resetNoMoreData];
+    }
+    [[YZNCNetAPI sharedAPI].productAPI getProductListWithPageIndex:pageIndex
+                                                           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                               [weakSelf.collectionView.mj_header endRefreshing];
+                                                               [weakSelf.collectionView.mj_footer endRefreshing];
+                                                               NSArray *userArray = [YZGoodsModel yz_objectArrayWithKeyValuesArray:[responseObject yz_arrayForKey:@"records"]];
+                                                               if (refresh) {
+                                                                   weakSelf.goodsArray = [userArray mutableCopy];
+                                                               } else {
+                                                                   [weakSelf.goodsArray  addObjectsFromArray:userArray];
+                                                               }
+                                                               if ([responseObject yz_integerForKey:@"hasNext"] == 0 && weakSelf.goodsArray.count > 0) {
+                                                                   [weakSelf.collectionView.mj_footer endRefreshingWithNoMoreData];
+                                                               }
+                                                               [weakSelf.collectionView reloadData];
+                                                           } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                               [weakSelf.collectionView.mj_header endRefreshing];
+                                                               [weakSelf.collectionView.mj_footer endRefreshing];
+                                                               [MBProgressHUD showMessageAuto:error.msg];
+                                                           }];
 }
 
 - (void)fetchGoodsListHeaderIcon {
@@ -128,7 +156,7 @@
 
 //empty view
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
-    return [UIImage imageNamed:@"icon_goodslist_empty"];
+    return [UIImage imageNamed:@"icon_goods_empty"];
 }
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {

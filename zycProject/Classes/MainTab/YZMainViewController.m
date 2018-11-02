@@ -21,9 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.viewControllers = @[[YZGoodsListViewController new],
-                             [YZShopCarViewController new],
-                             [YZUserCenterViewController new]];
+    self.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:[YZGoodsListViewController new]],
+                             [[UINavigationController alloc] initWithRootViewController:[YZShopCarViewController new]],
+                             [[UINavigationController alloc] initWithRootViewController:[YZUserCenterViewController new]]];
 }
 
 

@@ -8,6 +8,8 @@
 
 #import "YZUserCenter.h"
 
+#import "YZLoginViewController.h"
+
 @interface YZUserCenter ()
 
 @property (nonatomic, strong) YZUserModel *realUserInfo;
@@ -101,19 +103,36 @@ static YZUserCenter *userCenter;
 //    [[NSUserDefaults standardUserDefaults] setBool:_canShowChongzhi forKey:@"_canShowChongzhi"];
 //    [[NSUserDefaults standardUserDefaults] synchronize];
 //}
-//
-//- (void)logOut {
-//    _userInfo = nil;
-//    _forceLogin = YES;
-//    _normalLogin = NO;
-//    [[AMKeychainManager defaultManager] removeKeychainEntryForKey:userToken];
-//
-//    YZNCLoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"loginVC"];
-//
-//    if (![[[UIApplication sharedApplication].keyWindow currentViewController] isKindOfClass:[YZNCLoginViewController class]]) {
-//        [[[UIApplication sharedApplication].keyWindow currentViewController] presentViewController:loginVC
-//                                                                                          animated:YES completion:nil];
-//    }
-//}
+
+- (void)logOut {
+    
+    [self clearLocalnUserInfo];
+    
+    id topVC = [UIViewController currentVC];
+    if (![topVC isKindOfClass:[YZLoginViewController class]]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
+                                                                       message:@"当前登录失效，请重新登录"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"好的"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * _Nonnull action) {
+                                                    
+                                                }]];
+        [topVC presentViewController:alert animated:YES completion:nil];
+    }
+    
+}
+
+- (void)clearLocalnUserInfo {
+    //删除本地
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kYZUserDefault_UserInfoReview];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kYZUserDefault_UserInfoReal];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    //删除内存
+    _userInfo = nil;
+    _realUserInfo = nil;
+    _reviewUserInfo = nil;
+}
 
 @end

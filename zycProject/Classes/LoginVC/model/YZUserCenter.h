@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) YZUserModel *userInfo;
 //@property (nonatomic, strong) AccountModel *demoUserInfo;
 //@property (nonatomic, strong) AccountModel *accountInfo;
-@property (nonatomic, assign) BOOL normalUser;
-@property (nonatomic, assign) BOOL canShowChongzhi;
-@property (nonatomic, assign) BOOL forceLogin;
-@property (nonatomic, assign) BOOL normalLogin;
+//@property (nonatomic, assign) BOOL normalUser;
+//@property (nonatomic, assign) BOOL canShowChongzhi;
+//@property (nonatomic, assign) BOOL forceLogin;
+//@property (nonatomic, assign) BOOL normalLogin;
 
 /**
  AppStore是否审核通过
