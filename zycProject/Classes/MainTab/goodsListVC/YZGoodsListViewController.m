@@ -10,6 +10,7 @@
 
 #import "YZGoodsModel.h"
 #import "YZHomeGoodsCollectionCell.h"
+#import "YZGoodsDetailViewController.h"
 #import "YZHomeGoodsCollectionHeaderView.h"
 
 @interface YZGoodsListViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
@@ -152,6 +153,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     id model = [self.goodsArray yz_objectAtIndex:indexPath.row];
     if ([model isKindOfClass:[YZGoodsModel class]]) {
+        [self gotoViewController:NSStringFromClass([YZGoodsDetailViewController class])
+                     lauchParams:@{kYZLauchParams_GoodsId:((YZGoodsModel *)model).goodsId}];
         [self performSegueWithIdentifier:@"detailVC" sender:((YZGoodsModel *)model).goodsId];
     }
 }

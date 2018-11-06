@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YZGoodsDetailViewController">
+            <connections>
+                <outlet property="addToShoppingCartBt" destination="Ut4-vd-jL6" id="9Xj-sf-94G"/>
+                <outlet property="backButton" destination="gtV-Bk-Uuj" id="Krt-yo-k4r"/>
+                <outlet property="buyNowBt" destination="Des-2G-ldd" id="Mr1-5w-gtv"/>
+                <outlet property="shoppingCartButton" destination="qs7-n3-eGf" id="B6E-1Q-6tA"/>
+                <outlet property="tableView" destination="mrE-3d-tWJ" id="1qZ-mH-i8x"/>
+                <outlet property="tableViewBottom" destination="j1C-5C-oJu" id="pcE-wz-hQG"/>
+                <outlet property="view" destination="eHz-Pn-Vzg" id="Cwy-kc-GgW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eHz-Pn-Vzg">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-3d-tWJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gFm-5h-2Rt"/>
+                        <outlet property="delegate" destination="-1" id="XL6-LQ-5tF"/>
+                        <outlet property="emptyDataSetDelegate" destination="-1" id="N4k-i2-GcB"/>
+                        <outlet property="emptyDataSetSource" destination="-1" id="Jlj-RZ-DLQ"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut4-vd-jL6">
+                    <rect key="frame" x="0.0" y="618" width="187.5" height="49"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="FS8-Hv-148"/>
+                    </constraints>
+                    <state key="normal" title="加入购物车">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Des-2G-ldd">
+                    <rect key="frame" x="187.5" y="618" width="187.5" height="49"/>
+                    <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="立即购买">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-Bk-Uuj">
+                    <rect key="frame" x="15" y="38" width="16" height="22"/>
+                    <state key="normal" image="icon_nav_back">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs7-n3-eGf">
+                    <rect key="frame" x="344" y="38" width="16" height="22"/>
+                    <state key="normal" image="icon_nav_shopcar">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mrE-3d-tWJ" firstAttribute="leading" secondItem="VZb-3F-VDP" secondAttribute="leading" id="0pp-YT-Qk3"/>
+                <constraint firstItem="VZb-3F-VDP" firstAttribute="bottom" secondItem="Ut4-vd-jL6" secondAttribute="bottom" id="29g-17-282"/>
+                <constraint firstItem="qs7-n3-eGf" firstAttribute="bottom" secondItem="gtV-Bk-Uuj" secondAttribute="bottom" id="2ec-vR-HXG"/>
+                <constraint firstItem="gtV-Bk-Uuj" firstAttribute="top" secondItem="VZb-3F-VDP" secondAttribute="top" constant="18" id="AMc-2H-rqw"/>
+                <constraint firstItem="Ut4-vd-jL6" firstAttribute="leading" secondItem="VZb-3F-VDP" secondAttribute="leading" id="FVj-DF-vMK"/>
+                <constraint firstItem="mrE-3d-tWJ" firstAttribute="top" secondItem="eHz-Pn-Vzg" secondAttribute="top" id="an1-bx-WMC"/>
+                <constraint firstItem="Ut4-vd-jL6" firstAttribute="top" secondItem="mrE-3d-tWJ" secondAttribute="bottom" id="j1C-5C-oJu"/>
+                <constraint firstItem="gtV-Bk-Uuj" firstAttribute="leading" secondItem="VZb-3F-VDP" secondAttribute="leading" constant="15" id="jQt-bo-J7p"/>
+                <constraint firstItem="Des-2G-ldd" firstAttribute="trailing" secondItem="VZb-3F-VDP" secondAttribute="trailing" id="mZF-TG-dJq"/>
+                <constraint firstItem="Des-2G-ldd" firstAttribute="leading" secondItem="Ut4-vd-jL6" secondAttribute="trailing" id="poX-u6-UUg"/>
+                <constraint firstItem="mrE-3d-tWJ" firstAttribute="trailing" secondItem="VZb-3F-VDP" secondAttribute="trailing" id="qhX-F9-jqA"/>
+                <constraint firstItem="Des-2G-ldd" firstAttribute="height" secondItem="Ut4-vd-jL6" secondAttribute="height" id="qiY-bI-EKU"/>
+                <constraint firstItem="VZb-3F-VDP" firstAttribute="trailing" secondItem="qs7-n3-eGf" secondAttribute="trailing" constant="15" id="rd0-Vq-SQL"/>
+                <constraint firstItem="Des-2G-ldd" firstAttribute="bottom" secondItem="VZb-3F-VDP" secondAttribute="bottom" id="xix-h4-NvE"/>
+                <constraint firstItem="Des-2G-ldd" firstAttribute="width" secondItem="Ut4-vd-jL6" secondAttribute="width" id="zvR-en-UOi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VZb-3F-VDP"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_nav_back" width="16" height="16"/>
+        <image name="icon_nav_shopcar" width="16" height="16"/>
+    </resources>
+</document>

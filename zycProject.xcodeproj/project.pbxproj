@@ -151,6 +151,33 @@
 		589629B4218873E6008EFDD8 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629AA218873E6008EFDD8 /* MBProgressHUD+MJ.m */; };
 		589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 589629AB218873E6008EFDD8 /* MBProgressHUD.bundle */; };
 		589629B92188746E008EFDD8 /* NZTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589629B82188746E008EFDD8 /* NZTipView.m */; };
+		58A572FD21919E500086F8F3 /* YZGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A572FB21919E500086F8F3 /* YZGoodsDetailViewController.m */; };
+		58A572FE21919E500086F8F3 /* YZGoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A572FC21919E500086F8F3 /* YZGoodsDetailViewController.xib */; };
+		58A573032191A0CD0086F8F3 /* YZBuyNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573012191A0CD0086F8F3 /* YZBuyNowViewController.m */; };
+		58A573042191A0CD0086F8F3 /* YZBuyNowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A573022191A0CD0086F8F3 /* YZBuyNowViewController.xib */; };
+		58A573092191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573072191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.m */; };
+		58A5730A2191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A573082191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.xib */; };
+		58A5730E2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A5730C2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.m */; };
+		58A5730F2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A5730D2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.xib */; };
+		58A573132191A2E80086F8F3 /* YZGoodsServiceTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573112191A2E80086F8F3 /* YZGoodsServiceTableCell.m */; };
+		58A573142191A2E80086F8F3 /* YZGoodsServiceTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A573122191A2E80086F8F3 /* YZGoodsServiceTableCell.xib */; };
+		58A573172191A3990086F8F3 /* YZGoodsSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573162191A3990086F8F3 /* YZGoodsSelectView.m */; };
+		58A5731B2191A4750086F8F3 /* YZGoodsIconTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573192191A4750086F8F3 /* YZGoodsIconTableCell.m */; };
+		58A5731C2191A4750086F8F3 /* YZGoodsIconTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A5731A2191A4750086F8F3 /* YZGoodsIconTableCell.xib */; };
+		58A573202191A5180086F8F3 /* YZGoodsCountTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A5731E2191A5180086F8F3 /* YZGoodsCountTableCell.m */; };
+		58A573212191A5180086F8F3 /* YZGoodsCountTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A5731F2191A5180086F8F3 /* YZGoodsCountTableCell.xib */; };
+		58A573242191AE220086F8F3 /* YZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573232191AE220086F8F3 /* YZWebViewController.m */; };
+		58A573282191AE800086F8F3 /* YZGoodsWeightTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A573262191AE800086F8F3 /* YZGoodsWeightTableCell.m */; };
+		58A573292191AE800086F8F3 /* YZGoodsWeightTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A573272191AE800086F8F3 /* YZGoodsWeightTableCell.xib */; };
+		58A5732D2191AF040086F8F3 /* YZSwitchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A5732B2191AF040086F8F3 /* YZSwitchTableCell.m */; };
+		58A5732E2191AF040086F8F3 /* YZSwitchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A5732C2191AF040086F8F3 /* YZSwitchTableCell.xib */; };
+		58A88DC42191B48500A3A2D8 /* YZCommentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A88DC22191B48500A3A2D8 /* YZCommentTableCell.m */; };
+		58A88DC52191B48500A3A2D8 /* YZCommentTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DC32191B48500A3A2D8 /* YZCommentTableCell.xib */; };
+		58A88DC92191B52400A3A2D8 /* YZCommentEmptyTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A88DC72191B52400A3A2D8 /* YZCommentEmptyTableCell.m */; };
+		58A88DCA2191B52400A3A2D8 /* YZCommentEmptyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DC82191B52400A3A2D8 /* YZCommentEmptyTableCell.xib */; };
+		58FAD8722191B39200E5F24D /* YZCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD8712191B39200E5F24D /* YZCommentModel.m */; };
+		58FAD8762191B3F900E5F24D /* YZWebTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD8742191B3F900E5F24D /* YZWebTableCell.m */; };
+		58FAD8772191B3F900E5F24D /* YZWebTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FAD8752191B3F900E5F24D /* YZWebTableCell.xib */; };
 		78CAD97803F4FEAD6036FCE4 /* libPods-zycProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A717BB25F481332515EE13 /* libPods-zycProject.a */; };
 /* End PBXBuildFile section */
 
@@ -380,6 +407,48 @@
 		589629AB218873E6008EFDD8 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		589629B72188746E008EFDD8 /* NZTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZTipView.h; sourceTree = "<group>"; };
 		589629B82188746E008EFDD8 /* NZTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZTipView.m; sourceTree = "<group>"; };
+		58A572FA21919E500086F8F3 /* YZGoodsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsDetailViewController.h; sourceTree = "<group>"; };
+		58A572FB21919E500086F8F3 /* YZGoodsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsDetailViewController.m; sourceTree = "<group>"; };
+		58A572FC21919E500086F8F3 /* YZGoodsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsDetailViewController.xib; sourceTree = "<group>"; };
+		58A573002191A0CD0086F8F3 /* YZBuyNowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBuyNowViewController.h; sourceTree = "<group>"; };
+		58A573012191A0CD0086F8F3 /* YZBuyNowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBuyNowViewController.m; sourceTree = "<group>"; };
+		58A573022191A0CD0086F8F3 /* YZBuyNowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZBuyNowViewController.xib; sourceTree = "<group>"; };
+		58A573062191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsSpecificationsTableCell.h; sourceTree = "<group>"; };
+		58A573072191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsSpecificationsTableCell.m; sourceTree = "<group>"; };
+		58A573082191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsSpecificationsTableCell.xib; sourceTree = "<group>"; };
+		58A5730B2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsDetailInfoTableCell.h; sourceTree = "<group>"; };
+		58A5730C2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsDetailInfoTableCell.m; sourceTree = "<group>"; };
+		58A5730D2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsDetailInfoTableCell.xib; sourceTree = "<group>"; };
+		58A573102191A2E80086F8F3 /* YZGoodsServiceTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsServiceTableCell.h; sourceTree = "<group>"; };
+		58A573112191A2E80086F8F3 /* YZGoodsServiceTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsServiceTableCell.m; sourceTree = "<group>"; };
+		58A573122191A2E80086F8F3 /* YZGoodsServiceTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsServiceTableCell.xib; sourceTree = "<group>"; };
+		58A573152191A3990086F8F3 /* YZGoodsSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsSelectView.h; sourceTree = "<group>"; };
+		58A573162191A3990086F8F3 /* YZGoodsSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsSelectView.m; sourceTree = "<group>"; };
+		58A573182191A4750086F8F3 /* YZGoodsIconTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsIconTableCell.h; sourceTree = "<group>"; };
+		58A573192191A4750086F8F3 /* YZGoodsIconTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsIconTableCell.m; sourceTree = "<group>"; };
+		58A5731A2191A4750086F8F3 /* YZGoodsIconTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsIconTableCell.xib; sourceTree = "<group>"; };
+		58A5731D2191A5180086F8F3 /* YZGoodsCountTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsCountTableCell.h; sourceTree = "<group>"; };
+		58A5731E2191A5180086F8F3 /* YZGoodsCountTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsCountTableCell.m; sourceTree = "<group>"; };
+		58A5731F2191A5180086F8F3 /* YZGoodsCountTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsCountTableCell.xib; sourceTree = "<group>"; };
+		58A573222191AE220086F8F3 /* YZWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZWebViewController.h; sourceTree = "<group>"; };
+		58A573232191AE220086F8F3 /* YZWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZWebViewController.m; sourceTree = "<group>"; };
+		58A573252191AE800086F8F3 /* YZGoodsWeightTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsWeightTableCell.h; sourceTree = "<group>"; };
+		58A573262191AE800086F8F3 /* YZGoodsWeightTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsWeightTableCell.m; sourceTree = "<group>"; };
+		58A573272191AE800086F8F3 /* YZGoodsWeightTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsWeightTableCell.xib; sourceTree = "<group>"; };
+		58A5732A2191AF040086F8F3 /* YZSwitchTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSwitchTableCell.h; sourceTree = "<group>"; };
+		58A5732B2191AF040086F8F3 /* YZSwitchTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSwitchTableCell.m; sourceTree = "<group>"; };
+		58A5732C2191AF040086F8F3 /* YZSwitchTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSwitchTableCell.xib; sourceTree = "<group>"; };
+		58A88DC12191B48500A3A2D8 /* YZCommentTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCommentTableCell.h; sourceTree = "<group>"; };
+		58A88DC22191B48500A3A2D8 /* YZCommentTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCommentTableCell.m; sourceTree = "<group>"; };
+		58A88DC32191B48500A3A2D8 /* YZCommentTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZCommentTableCell.xib; sourceTree = "<group>"; };
+		58A88DC62191B52400A3A2D8 /* YZCommentEmptyTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCommentEmptyTableCell.h; sourceTree = "<group>"; };
+		58A88DC72191B52400A3A2D8 /* YZCommentEmptyTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCommentEmptyTableCell.m; sourceTree = "<group>"; };
+		58A88DC82191B52400A3A2D8 /* YZCommentEmptyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZCommentEmptyTableCell.xib; sourceTree = "<group>"; };
+		58FAD8702191B39200E5F24D /* YZCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCommentModel.h; sourceTree = "<group>"; };
+		58FAD8712191B39200E5F24D /* YZCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCommentModel.m; sourceTree = "<group>"; };
+		58FAD8732191B3F900E5F24D /* YZWebTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZWebTableCell.h; sourceTree = "<group>"; };
+		58FAD8742191B3F900E5F24D /* YZWebTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZWebTableCell.m; sourceTree = "<group>"; };
+		58FAD8752191B3F900E5F24D /* YZWebTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZWebTableCell.xib; sourceTree = "<group>"; };
 		6446A18C3C1BF941303405CD /* Pods-zycProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zycProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-zycProject/Pods-zycProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -421,6 +490,7 @@
 		584FFDEA218AB899008B2B61 /* goodsListVC */ = {
 			isa = PBXGroup;
 			children = (
+				58A572F921919E380086F8F3 /* ohter */,
 				584FFE18218AF728008B2B61 /* model */,
 				584FFE0F218AF441008B2B61 /* view */,
 				584FFDEC218AB8D5008B2B61 /* YZGoodsListViewController.h */,
@@ -434,6 +504,7 @@
 		584FFDEB218AB899008B2B61 /* shopCarVC */ = {
 			isa = PBXGroup;
 			children = (
+				58A572FF2191A0BF0086F8F3 /* other */,
 				584FFE8E218C270E008B2B61 /* view */,
 				584FFE67218B0587008B2B61 /* model */,
 				584FFDF1218AB8E3008B2B61 /* YZShopCarViewController.h */,
@@ -1061,6 +1132,78 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		58A572F921919E380086F8F3 /* ohter */ = {
+			isa = PBXGroup;
+			children = (
+				58FAD86F2191B37F00E5F24D /* model */,
+				58A573052191A1120086F8F3 /* view */,
+				58A572FA21919E500086F8F3 /* YZGoodsDetailViewController.h */,
+				58A572FB21919E500086F8F3 /* YZGoodsDetailViewController.m */,
+				58A572FC21919E500086F8F3 /* YZGoodsDetailViewController.xib */,
+				58A573222191AE220086F8F3 /* YZWebViewController.h */,
+				58A573232191AE220086F8F3 /* YZWebViewController.m */,
+			);
+			path = ohter;
+			sourceTree = "<group>";
+		};
+		58A572FF2191A0BF0086F8F3 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				58A573002191A0CD0086F8F3 /* YZBuyNowViewController.h */,
+				58A573012191A0CD0086F8F3 /* YZBuyNowViewController.m */,
+				58A573022191A0CD0086F8F3 /* YZBuyNowViewController.xib */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		58A573052191A1120086F8F3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58A573062191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.h */,
+				58A573072191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.m */,
+				58A573082191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.xib */,
+				58A5730B2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.h */,
+				58A5730C2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.m */,
+				58A5730D2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.xib */,
+				58A573102191A2E80086F8F3 /* YZGoodsServiceTableCell.h */,
+				58A573112191A2E80086F8F3 /* YZGoodsServiceTableCell.m */,
+				58A573122191A2E80086F8F3 /* YZGoodsServiceTableCell.xib */,
+				58A573152191A3990086F8F3 /* YZGoodsSelectView.h */,
+				58A573162191A3990086F8F3 /* YZGoodsSelectView.m */,
+				58A573182191A4750086F8F3 /* YZGoodsIconTableCell.h */,
+				58A573192191A4750086F8F3 /* YZGoodsIconTableCell.m */,
+				58A5731A2191A4750086F8F3 /* YZGoodsIconTableCell.xib */,
+				58A5731D2191A5180086F8F3 /* YZGoodsCountTableCell.h */,
+				58A5731E2191A5180086F8F3 /* YZGoodsCountTableCell.m */,
+				58A5731F2191A5180086F8F3 /* YZGoodsCountTableCell.xib */,
+				58A573252191AE800086F8F3 /* YZGoodsWeightTableCell.h */,
+				58A573262191AE800086F8F3 /* YZGoodsWeightTableCell.m */,
+				58A573272191AE800086F8F3 /* YZGoodsWeightTableCell.xib */,
+				58A5732A2191AF040086F8F3 /* YZSwitchTableCell.h */,
+				58A5732B2191AF040086F8F3 /* YZSwitchTableCell.m */,
+				58A5732C2191AF040086F8F3 /* YZSwitchTableCell.xib */,
+				58FAD8732191B3F900E5F24D /* YZWebTableCell.h */,
+				58FAD8742191B3F900E5F24D /* YZWebTableCell.m */,
+				58FAD8752191B3F900E5F24D /* YZWebTableCell.xib */,
+				58A88DC12191B48500A3A2D8 /* YZCommentTableCell.h */,
+				58A88DC22191B48500A3A2D8 /* YZCommentTableCell.m */,
+				58A88DC32191B48500A3A2D8 /* YZCommentTableCell.xib */,
+				58A88DC62191B52400A3A2D8 /* YZCommentEmptyTableCell.h */,
+				58A88DC72191B52400A3A2D8 /* YZCommentEmptyTableCell.m */,
+				58A88DC82191B52400A3A2D8 /* YZCommentEmptyTableCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		58FAD86F2191B37F00E5F24D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				58FAD8702191B39200E5F24D /* YZCommentModel.h */,
+				58FAD8712191B39200E5F24D /* YZCommentModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		84EC094F8958FF34B0C0AAE5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1140,9 +1283,12 @@
 				584FFE95218C556C008B2B61 /* btn_radio_selected.png in Resources */,
 				5896297821886348008EFDD8 /* icon_nav_back_white@2x.png in Resources */,
 				584FFE7F218BFC17008B2B61 /* icon_tab_shopcar_default@2x.png in Resources */,
+				58A573292191AE800086F8F3 /* YZGoodsWeightTableCell.xib in Resources */,
 				584FFE89218BFC17008B2B61 /* icon_tab_shopcar_selected@2x.png in Resources */,
 				584FFE86218BFC17008B2B61 /* icon_tab_user_selected@2x.png in Resources */,
+				58A88DC52191B48500A3A2D8 /* YZCommentTableCell.xib in Resources */,
 				584FFEEA218C9B6F008B2B61 /* YZUserInfoTableCell.xib in Resources */,
+				58A5730F2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.xib in Resources */,
 				584FFF1A218CAE2C008B2B61 /* YZOrderListTableCell.xib in Resources */,
 				584FFE93218C2723008B2B61 /* YZShopCarTableCell.xib in Resources */,
 				5896298321886897008EFDD8 /* YZLoginViewController.xib in Resources */,
@@ -1151,7 +1297,9 @@
 				5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */,
 				584FFEAF218C675C008B2B61 /* icon_me_avart@3x.png in Resources */,
 				584FFEC3218C6977008B2B61 /* icon_manager_order@3x.png in Resources */,
+				58A5732E2191AF040086F8F3 /* YZSwitchTableCell.xib in Resources */,
 				589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */,
+				58A573142191A2E80086F8F3 /* YZGoodsServiceTableCell.xib in Resources */,
 				584FFEC1218C6977008B2B61 /* icon_manager_order@2x.png in Resources */,
 				584FFEF8218CA342008B2B61 /* YZBalanceViewController.xib in Resources */,
 				584FFE85218BFC17008B2B61 /* icon_tab_shopcar_default@3x.png in Resources */,
@@ -1162,6 +1310,7 @@
 				584FFEC9218C6B8A008B2B61 /* YZSettingItemTableCell.xib in Resources */,
 				584FFF46218CBFDC008B2B61 /* YZSettingViewController.xib in Resources */,
 				58962986218869A9008EFDD8 /* icon_nav_back_radio@3x.png in Resources */,
+				58A572FE21919E500086F8F3 /* YZGoodsDetailViewController.xib in Resources */,
 				584FFE9D218C566C008B2B61 /* icon_shopcar_palceholder@3x.png in Resources */,
 				5896296021884C0A008EFDD8 /* LaunchScreen.storyboard in Resources */,
 				584FFEBF218C6977008B2B61 /* icon_manager_user@2x.png in Resources */,
@@ -1176,8 +1325,12 @@
 				584FFDF0218AB8D5008B2B61 /* YZGoodsListViewController.xib in Resources */,
 				584FFE81218BFC17008B2B61 /* icon_tab_user_default@3x.png in Resources */,
 				584FFEA1218C58F0008B2B61 /* icon_shoppingcar_empty@3x.png in Resources */,
+				58A573042191A0CD0086F8F3 /* YZBuyNowViewController.xib in Resources */,
+				58A5730A2191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.xib in Resources */,
 				584FFF08218CA9AA008B2B61 /* YZOrderListViewController.xib in Resources */,
+				58A573212191A5180086F8F3 /* YZGoodsCountTableCell.xib in Resources */,
 				584FFE0E218AE75D008B2B61 /* icon_app_83.5@2x.png in Resources */,
+				58A88DCA2191B52400A3A2D8 /* YZCommentEmptyTableCell.xib in Resources */,
 				584FFF39218CB9E8008B2B61 /* icon_address_empty@3x.png in Resources */,
 				58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */,
 				584FFEC2218C6977008B2B61 /* icon_manager_store@2x.png in Resources */,
@@ -1194,7 +1347,9 @@
 				584FFE82218BFC17008B2B61 /* icon_tab_home_selected@3x.png in Resources */,
 				584FFEA0218C58F0008B2B61 /* icon_shoppingcar_empty@2x.png in Resources */,
 				5896295B21884C09008EFDD8 /* Main.storyboard in Resources */,
+				58A5731C2191A4750086F8F3 /* YZGoodsIconTableCell.xib in Resources */,
 				584FFE83218BFC17008B2B61 /* icon_tab_shopcar_selected@3x.png in Resources */,
+				58FAD8772191B3F900E5F24D /* YZWebTableCell.xib in Resources */,
 				584FFF11218CACBB008B2B61 /* YZOrderListChildViewController.xib in Resources */,
 				584FFF36218CB864008B2B61 /* YZAddressTableCell.xib in Resources */,
 				584FFEEB218C9B6F008B2B61 /* YZUserAvartTableCell.xib in Resources */,
@@ -1278,18 +1433,26 @@
 				584FFF4B218CC140008B2B61 /* YZSettingUserTableCell.m in Sources */,
 				584FFF2A218CB375008B2B61 /* YZAgentOrderDetailModel.m in Sources */,
 				584FFE53218B00F1008B2B61 /* PurchaseModel.m in Sources */,
+				58A573132191A2E80086F8F3 /* YZGoodsServiceTableCell.m in Sources */,
 				584FFF35218CB864008B2B61 /* YZAddressTableCell.m in Sources */,
+				58FAD8762191B3F900E5F24D /* YZWebTableCell.m in Sources */,
 				584FFDFF218ACDE2008B2B61 /* YZBaseModel.m in Sources */,
 				584FFE4C218B00F1008B2B61 /* YZNCNetAPI.m in Sources */,
+				58A573242191AE220086F8F3 /* YZWebViewController.m in Sources */,
 				584FFF4F218CC676008B2B61 /* UIView+YMMBorder.m in Sources */,
 				584FFF59218CC7BD008B2B61 /* YZOrderStatusTableCell.m in Sources */,
 				589629B1218873E6008EFDD8 /* UINavigationBar+Alpha.m in Sources */,
+				58A573092191A12B0086F8F3 /* YZGoodsSpecificationsTableCell.m in Sources */,
 				584FFE61218B035E008B2B61 /* YCNetworkManager.m in Sources */,
 				584FFF07218CA9AA008B2B61 /* YZOrderListViewController.m in Sources */,
 				589629AF218873E6008EFDD8 /* NSString+NZCheck.m in Sources */,
+				58A88DC92191B52400A3A2D8 /* YZCommentEmptyTableCell.m in Sources */,
+				58A5732D2191AF040086F8F3 /* YZSwitchTableCell.m in Sources */,
 				589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */,
 				584FFF3F218CBADF008B2B61 /* YZAddressAddViewController.m in Sources */,
+				58A573172191A3990086F8F3 /* YZGoodsSelectView.m in Sources */,
 				584FFDF9218AB8F3008B2B61 /* YZUserCenterViewController.m in Sources */,
+				58FAD8722191B39200E5F24D /* YZCommentModel.m in Sources */,
 				584FFE55218B00F1008B2B61 /* OrderAPI.m in Sources */,
 				584FFEB7218C6898008B2B61 /* YZAgentMangerTableCell.m in Sources */,
 				584FFE05218AD872008B2B61 /* YZUserCenter.m in Sources */,
@@ -1303,9 +1466,11 @@
 				5896298221886897008EFDD8 /* YZLoginViewController.m in Sources */,
 				589629B4218873E6008EFDD8 /* MBProgressHUD+MJ.m in Sources */,
 				584FFE92218C2723008B2B61 /* YZShopCarTableCell.m in Sources */,
+				58A572FD21919E500086F8F3 /* YZGoodsDetailViewController.m in Sources */,
 				584FFEC8218C6B8A008B2B61 /* YZSettingItemTableCell.m in Sources */,
 				584FFF15218CAE15008B2B61 /* YMMTopTabbarView.m in Sources */,
 				584FFEE9218C9B6F008B2B61 /* YZUserInfoTableCell.m in Sources */,
+				58A88DC42191B48500A3A2D8 /* YZCommentTableCell.m in Sources */,
 				584FFE26218AFBA6008B2B61 /* YZBaseCollectionView.m in Sources */,
 				584FFF02218CA618008B2B61 /* YZBalanceLogModel.m in Sources */,
 				589629AE218873E6008EFDD8 /* UIColor+Utils.m in Sources */,
@@ -1328,6 +1493,7 @@
 				584FFF21218CB02F008B2B61 /* YZOrderModel.m in Sources */,
 				584FFEFD218CA578008B2B61 /* YZBalanceTableCell.m in Sources */,
 				5896295521884C09008EFDD8 /* AppDelegate.m in Sources */,
+				58A5730E2191A1C40086F8F3 /* YZGoodsDetailInfoTableCell.m in Sources */,
 				584FFE54218B00F1008B2B61 /* SpotGoodsModel.m in Sources */,
 				584FFE5B218B00F1008B2B61 /* Security.m in Sources */,
 				584FFEA6218C63D1008B2B61 /* YZUserCenterInfoTableCell.m in Sources */,
@@ -1338,13 +1504,17 @@
 				584FFE1B218AF734008B2B61 /* YZGoodsModel.m in Sources */,
 				584FFEAB218C664F008B2B61 /* YZAccountModel.m in Sources */,
 				584FFE72218B1036008B2B61 /* UIViewController+YZUtils.m in Sources */,
+				58A573202191A5180086F8F3 /* YZGoodsCountTableCell.m in Sources */,
 				584FFE08218AE145008B2B61 /* NSString+YZImageUrl.m in Sources */,
 				584FFE66218B0495008B2B61 /* YZOrderManagerModel.m in Sources */,
 				589629B92188746E008EFDD8 /* NZTipView.m in Sources */,
 				584FFF45218CBFDC008B2B61 /* YZSettingViewController.m in Sources */,
 				5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */,
+				58A573032191A0CD0086F8F3 /* YZBuyNowViewController.m in Sources */,
 				589629B3218873E6008EFDD8 /* MBProgressHUD.m in Sources */,
 				584FFE58218B00F1008B2B61 /* YZUserAPI.m in Sources */,
+				58A573282191AE800086F8F3 /* YZGoodsWeightTableCell.m in Sources */,
+				58A5731B2191A4750086F8F3 /* YZGoodsIconTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

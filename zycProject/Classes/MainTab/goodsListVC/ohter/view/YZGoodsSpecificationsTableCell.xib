@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="kNZGoodsServiceCellIdentifiler" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="V60-2w-e91" customClass="YZGoodsSpecificationsTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V60-2w-e91" id="MO8-zV-lNZ">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="规格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEV-Tc-Atx">
+                        <rect key="frame" x="10" y="15" width="25" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择 数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vza-SX-Le0">
+                        <rect key="frame" x="50" y="15" width="52.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <color key="highlightedColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vza-SX-Le0" firstAttribute="leading" secondItem="xEV-Tc-Atx" secondAttribute="trailing" constant="15" id="AmB-an-LKW"/>
+                    <constraint firstItem="xEV-Tc-Atx" firstAttribute="top" secondItem="MO8-zV-lNZ" secondAttribute="top" constant="15" id="Vdm-mn-td2"/>
+                    <constraint firstItem="xEV-Tc-Atx" firstAttribute="leading" secondItem="MO8-zV-lNZ" secondAttribute="leading" constant="10" id="YwN-hT-zlM"/>
+                    <constraint firstItem="vza-SX-Le0" firstAttribute="top" secondItem="xEV-Tc-Atx" secondAttribute="top" id="fIb-Te-GYP"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="vza-SX-Le0" secondAttribute="trailing" constant="15" id="hgM-IN-cfx"/>
+                    <constraint firstItem="vza-SX-Le0" firstAttribute="centerY" secondItem="xEV-Tc-Atx" secondAttribute="centerY" id="wIh-lM-Ys7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="h6D-9r-oJo"/>
+        </tableViewCell>
+    </objects>
+</document>
