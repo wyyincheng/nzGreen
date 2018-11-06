@@ -38,11 +38,11 @@
         YZGoodsModel *goodsModel = model;
         self.nowPriceLb.text = [NSString stringWithFormat:@"¥%.2f",[goodsModel.sellingPrice floatValue]];
         self.oldPriceLb.text = [NSString stringWithFormat:@"%.2f",[goodsModel.costPrice floatValue]];
-        self.leftCountLb.text = [YZUserCenter shared].hasReviewed ? [NSString stringWithFormat:@"库存量：%@件",goodsModel.stock] : nil;
+        self.leftCountLb.text = [NSString stringWithFormat:@"库存量：%@件",goodsModel.stock];
         self.nameLb.text = goodsModel.title;
-        self.freightLb.text = [YZUserCenter shared].hasReviewed ? [NSString stringWithFormat:@"快递：%@",goodsModel.freight] : nil;
-        self.saleCountLb.text = [YZUserCenter shared].hasReviewed ? [NSString stringWithFormat:@"%ld人付款",(long)goodsModel.salesVolume] : nil;
-        self.brandLb.text = [YZUserCenter shared].hasReviewed ? goodsModel.brand : nil;
+        self.freightLb.text = [NSString stringWithFormat:@"快递：%@",goodsModel.freight];
+        self.saleCountLb.text = [NSString stringWithFormat:@"%ld人付款",(long)goodsModel.salesVolume];
+        self.brandLb.text = goodsModel.brand;
     }
 }
 
@@ -53,7 +53,7 @@
                                                          options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
                                                       attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]}
                                                          context:nil].size.height;
-        CGFloat deliverInfoHeight = [YZUserCenter shared].hasReviewed ? 48 : 12;
+        CGFloat deliverInfoHeight = 48;
         height = 58 + height + deliverInfoHeight;
         return height;
     }

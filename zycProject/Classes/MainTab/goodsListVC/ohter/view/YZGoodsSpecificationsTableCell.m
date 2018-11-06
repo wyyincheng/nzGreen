@@ -22,11 +22,10 @@
 }
 
 + (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
-    return [YZUserCenter shared].hasReviewed ? 47.0f : 0.0f;
+    return 47.0f;
 }
 
 - (void)yz_configWithModel:(id)model {
-    self.contentView.hidden = ![YZUserCenter shared].hasReviewed;
     if ([model isKindOfClass:[YZGoodsModel class]]) {
         YZGoodsModel *goods = model;
         

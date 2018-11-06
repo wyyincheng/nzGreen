@@ -55,14 +55,14 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-Bk-Uuj">
-                    <rect key="frame" x="15" y="38" width="16" height="22"/>
-                    <state key="normal" image="icon_nav_back">
+                    <rect key="frame" x="15" y="38" width="30" height="30"/>
+                    <state key="normal" image="icon_nav_back_radio.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs7-n3-eGf">
-                    <rect key="frame" x="344" y="38" width="16" height="22"/>
-                    <state key="normal" image="icon_nav_shopcar">
+                    <rect key="frame" x="330" y="38" width="30" height="30"/>
+                    <state key="normal" image="icon_shopcar_radio.png">
                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
@@ -86,10 +86,11 @@
                 <constraint firstItem="Des-2G-ldd" firstAttribute="width" secondItem="Ut4-vd-jL6" secondAttribute="width" id="zvR-en-UOi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VZb-3F-VDP"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_nav_back" width="16" height="16"/>
-        <image name="icon_nav_shopcar" width="16" height="16"/>
+        <image name="icon_nav_back_radio.png" width="30" height="30"/>
+        <image name="icon_shopcar_radio.png" width="30" height="30"/>
     </resources>
 </document>

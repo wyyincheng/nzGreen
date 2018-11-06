@@ -143,10 +143,10 @@ static NSInteger kSelectViewTag = 1001;
     [tempView addSubview:self.tempWebView];
     [self.view addSubview:tempView];
     
-    self.addToShoppingCartBt.hidden = ![YZUserCenter shared].hasReviewed;
-    self.shoppingCartButton.hidden = ![YZUserCenter shared].hasReviewed;
-    self.buyNowBt.hidden = ![YZUserCenter shared].hasReviewed;
-    self.tableViewBottom.constant = [YZUserCenter shared].hasReviewed ? 0 : -49;
+//    self.addToShoppingCartBt.hidden = ![YZUserCenter shared].hasReviewed;
+//    self.shoppingCartButton.hidden = ![YZUserCenter shared].hasReviewed;
+//    self.buyNowBt.hidden = ![YZUserCenter shared].hasReviewed;
+//    self.tableViewBottom.constant = [YZUserCenter shared].hasReviewed ? 0 : -49;
 }
 
 - (void)loadWebView {
@@ -339,7 +339,7 @@ static NSInteger kSelectViewTag = 1001;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (kSelectViewTag == tableView.tag || section == 3 || (![YZUserCenter shared].hasReviewed && (section == 2 || section == 1))) {
+    if (kSelectViewTag == tableView.tag || section == 3) {
         return 0.0f;
     }
     return 8.0f;

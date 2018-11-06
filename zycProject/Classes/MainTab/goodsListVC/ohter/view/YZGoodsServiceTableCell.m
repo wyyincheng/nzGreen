@@ -34,7 +34,7 @@
 - (void)yz_configWithModel:(id)model {
     if ([model isKindOfClass:[YZGoodsModel class]]) {
         YZGoodsModel *goods = model;
-        self.serviceLb.text = [YZUserCenter shared].hasReviewed ? goods.service : @"提供最新的代购资讯，详情咨询QQ：610538007";
+        self.serviceLb.text = goods.service;
     }
 }
 

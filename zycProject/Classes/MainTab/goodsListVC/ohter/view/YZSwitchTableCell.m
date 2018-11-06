@@ -31,11 +31,10 @@
 }
 
 + (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
-    return [YZUserCenter shared].hasReviewed ? 48 : 0;
+    return 48;
 }
 
 - (void)yz_configWithModel:(id)model {
-    self.contentView.hidden = ![YZUserCenter shared].hasReviewed;
     self.contentView.clipsToBounds = YES;
 }
 

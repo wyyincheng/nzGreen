@@ -155,7 +155,6 @@
     if ([model isKindOfClass:[YZGoodsModel class]]) {
         [self gotoViewController:NSStringFromClass([YZGoodsDetailViewController class])
                      lauchParams:@{kYZLauchParams_GoodsId:((YZGoodsModel *)model).goodsId}];
-        [self performSegueWithIdentifier:@"detailVC" sender:((YZGoodsModel *)model).goodsId];
     }
 }
 

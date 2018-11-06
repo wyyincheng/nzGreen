@@ -19,11 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="207.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_comment_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-s0-Cfq">
-                        <rect key="frame" x="152" y="76" width="16" height="16"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_comment_empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-s0-Cfq">
+                        <rect key="frame" x="110" y="39" width="100" height="90"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前暂无评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-XB-JTM">
-                        <rect key="frame" x="111" y="112" width="98" height="19.5"/>
+                        <rect key="frame" x="111" y="149" width="98" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -41,6 +41,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_comment_placeholder" width="16" height="16"/>
+        <image name="icon_comment_empty.png" width="100" height="90"/>
     </resources>
 </document>

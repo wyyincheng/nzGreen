@@ -19,14 +19,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="273.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kCargoDetailBannerPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-eh-Oic">
-                        <rect key="frame" x="152" y="51" width="16" height="16"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_goods_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-eh-Oic">
+                        <rect key="frame" x="116" y="51" width="88" height="88"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="hk3-eh-Oic" secondAttribute="height" multiplier="1:1" id="gvm-AS-gJA"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Eq-b4-b8z">
-                        <rect key="frame" x="130.5" y="75" width="59.5" height="33"/>
+                        <rect key="frame" x="130.5" y="147" width="59.5" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="0gb-w4-b3G"/>
                         </constraints>
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7f-sf-wH9">
-                        <rect key="frame" x="0.0" y="136.5" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="208.5" width="320" height="1"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="5bb-33-pYh"/>
@@ -63,6 +63,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="kCargoDetailBannerPlaceholder" width="16" height="16"/>
+        <image name="icon_goods_default.png" width="80" height="88"/>
     </resources>
 </document>
