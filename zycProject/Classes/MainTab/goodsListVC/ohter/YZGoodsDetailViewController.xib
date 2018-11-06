@@ -45,6 +45,9 @@
                     <state key="normal" title="加入购物车">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="addShopCar:" destination="-1" eventType="touchUpInside" id="E7V-ZW-FJB"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Des-2G-ldd">
                     <rect key="frame" x="187.5" y="618" width="187.5" height="49"/>
@@ -53,18 +56,27 @@
                     <state key="normal" title="立即购买">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="buyGoodsAction:" destination="-1" eventType="touchUpInside" id="rif-Rr-hTM"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-Bk-Uuj">
                     <rect key="frame" x="15" y="38" width="30" height="30"/>
                     <state key="normal" image="icon_nav_back_radio.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="goback:" destination="-1" eventType="touchUpInside" id="jxJ-pm-Twi"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs7-n3-eGf">
                     <rect key="frame" x="330" y="38" width="30" height="30"/>
                     <state key="normal" image="icon_shopcar_radio.png">
                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="goShoprCar:" destination="-1" eventType="touchUpInside" id="qNS-pv-3WZ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
