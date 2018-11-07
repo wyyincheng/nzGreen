@@ -17,6 +17,7 @@
 #import "YZAgentMangerTableCell.h"
 #import "YZSettingItemTableCell.h"
 #import "UINavigationBar+Alpha.h"
+#import "YZAboutViewController.h"
 
 @interface YZUserCenterViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -155,31 +156,20 @@
     switch (indexPath.section) {
         case 0: {
             if (indexPath.row == 0) {
+                if (![YZUserCenter shared].userInfo) {
+                    [[YZUserCenter shared] logOut];
+                    return;
+                }
                 [self gotoViewController:NSStringFromClass([YZUserInfoViewController class])];
             }
         }
             break;
-//        case 1: {
-//            if (indexPath.row == 0) {
-//                //TODO:
-////                if ([YZUserCenter shared].canShowChongzhi) {
-////                    [self performSegueWithIdentifier:@"chongzhiVC" sender:nil];
-////                } else {
-////                    [self performSegueWithIdentifier:@"balanceVC" sender:nil];
-////                }
-//            } else {
-//                [self performSegueWithIdentifier:@"myOrderVC" sender:nil];
-//            }
-//        }
-//            break;
-//        case 2:
-//            [self performSegueWithIdentifier:@"addressVC" sender:nil];
-//            break;
-//        case 3:
-//            [self performSegueWithIdentifier:@"settingVC" sender:nil];
-//            break;
             
         default: {
+            if (![YZUserCenter shared].userInfo) {
+                [[YZUserCenter shared] logOut];
+                return;
+            }
             NSDictionary *settingItem = [[self.settingItemArray yz_arrayAtIndex:indexPath.section - 1] yz_dictAtIndex:indexPath.row];
             [self gotoViewController:[settingItem yz_stringForKey:kYZVCClassName]];
         }
@@ -237,7 +227,9 @@
                                   @[@{kYZDictionary_TitleKey:@"收货地址",
                                       kYZVCClassName:NSStringFromClass([YZAddressViewController class])}],
                                   @[@{kYZDictionary_TitleKey:@"设置",
-                                      kYZVCClassName:NSStringFromClass([YZSettingViewController class])}]
+                                      kYZVCClassName:NSStringFromClass([YZSettingViewController class])}],
+                                  @[@{kYZDictionary_TitleKey:@"关于",
+                                      kYZVCClassName:NSStringFromClass([YZAboutViewController class])}]
                                   ];
     
     NSArray *reviewSettingItems = @[
@@ -246,7 +238,9 @@
                                     @[@{kYZDictionary_TitleKey:@"收货地址",
                                         kYZVCClassName:NSStringFromClass([YZAddressViewController class])}],
                                     @[@{kYZDictionary_TitleKey:@"设置",
-                                        kYZVCClassName:NSStringFromClass([YZSettingViewController class])}]
+                                        kYZVCClassName:NSStringFromClass([YZSettingViewController class])}],
+                                    @[@{kYZDictionary_TitleKey:@"关于",
+                                        kYZVCClassName:NSStringFromClass([YZAboutViewController class])}]
                                     ];
     
     return [YZUserCenter shared].hasReviewed ? realSettingItems : reviewSettingItems;

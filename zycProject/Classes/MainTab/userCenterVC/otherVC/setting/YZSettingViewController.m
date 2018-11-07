@@ -12,8 +12,11 @@
 #import "YZSettingUserTableCell.h"
 
 #import "YZMainViewController.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface YZSettingViewController () <UITableViewDelegate,UITableViewDataSource>
+static NSString * const kYZSettingUserTableCellIdentifiler = @"YZSettingUserTableCellForSettingVC";
+
+@interface YZSettingViewController () <UITableViewDelegate,UITableViewDataSource,MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *itemArray;
 @property (nonatomic, strong) UIButton *logoutButton;
@@ -30,12 +33,13 @@
 }
 
 - (void)initViews {
+    
     self.tableView.backgroundColor = [UIColor colorWithHex:0xf4f4f4];
     [self.view addSubview:self.logoutButton];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZSettingUserTableCell class])
                                                bundle:nil]
-         forCellReuseIdentifier:[YZSettingUserTableCell yz_cellIdentifiler]];
+         forCellReuseIdentifier:kYZSettingUserTableCellIdentifiler];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZSettingItemTableCell class])
                                                bundle:nil]
          forCellReuseIdentifier:[YZSettingItemTableCell yz_cellIdentifiler]];
@@ -65,7 +69,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        YZSettingUserTableCell *cell = [tableView dequeueReusableCellWithIdentifier:[YZSettingUserTableCell yz_cellIdentifiler]];
+        YZSettingUserTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kYZSettingUserTableCellIdentifiler];
+        cell.rightArrowIcon.hidden = YES;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell yz_configWithModel:[YZUserCenter shared].accountInfo];
         return cell;
     } else {
@@ -88,6 +95,26 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 1:
+            //先清除内存中的图片缓存
+            [[SDImageCache sharedImageCache] clearMemory];
+            //清除磁盘的缓存
+            [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
+            
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+//        case 2:
+//
+//            break;
+        case 2:
+            [self sendByEmail];
+            break;
+            
+        default:
+            break;
+    }
     NSDictionary *item = [[self.itemArray yz_arrayAtIndex:indexPath.section - 1] yz_dictAtIndex:indexPath.row];
     [self gotoViewController:[item yz_stringForKey:kYZVCClassName]];
 }
@@ -95,6 +122,49 @@
 - (void)logoutAction {
     [[YZUserCenter shared] custom_logOut];
     [(YZMainViewController *)self.tabBarController gotoIndexVC:YZVCIndex_UserCenter];
+}
+
+- (void)sendByEmail{
+    MFMailComposeViewController *mailSender = [[MFMailComposeViewController alloc]init];
+    mailSender.mailComposeDelegate = self;
+    [mailSender setSubject:@"意见反馈"];
+    [mailSender setMessageBody:@"" isHTML:NO];
+    [mailSender setToRecipients:[NSArray arrayWithObjects:@"wyyincheng@yeah.net", nil]];
+//    [mailSender addAttachmentData:datamimeType:mimeTypefileName:fileName];
+    [self presentViewController:mailSender animated:YES completion:nil];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    NSString *string = nil;
+    switch(result) {
+        case MFMailComposeResultCancelled:
+        {
+            string = @"发送取消";
+        }
+            break;
+        case MFMailComposeResultSaved:
+        {
+            string = @"存储成功";
+        }
+            break;
+        case MFMailComposeResultSent:
+        {
+            string = @"发送成功";
+        }
+            break;
+        case MFMailComposeResultFailed:
+        {
+            string = @"发送失败";
+        }
+            break;
+    }
+    
+    [controller dismissViewControllerAnimated:YES completion:^{
+        if (string) {
+            [MBProgressHUD showMessageAuto:string];
+        }
+    }];
 }
 
 #pragma mark - property
@@ -114,29 +184,15 @@
 }
 
 - (NSArray *)itemArray {
+    
+    CGFloat cacheSize = [[SDImageCache sharedImageCache] getSize] / 1024 / 1024;
+    NSString *size = cacheSize > 0 ? [NSString stringWithFormat:@"%.2fM",cacheSize] : @" ";
+    
     return @[
-             @[@{kYZDictionary_TitleKey:@"收货地址"}],
-             @[@{kYZDictionary_TitleKey:@"修改密码"}],
-             @[@{kYZDictionary_TitleKey:@"关于"}]
+             @[@{kYZDictionary_TitleKey:@"清除缓存",kYZDictionary_InfoKey:size}],
+//             @[@{kYZDictionary_TitleKey:@"修改密码"}],
+             @[@{kYZDictionary_TitleKey:@"联系我们"}]
              ];
-
-    //TODO:
-//    switch (indexPath.section) {
-//        case 0:
-//            [self performSegueWithIdentifier:@"userInfoVC" sender:nil];
-//            break;
-//        case 1:
-//            [self performSegueWithIdentifier:@"addressListVC" sender:nil];
-//            break;
-//        case 2:
-//            [self performSegueWithIdentifier:@"changePwdVC" sender:nil];
-//            break;
-//        case 3:
-//            [self performSegueWithIdentifier:@"aboutVC" sender:nil];
-//            break;
-//        default:
-//            break;
-//    }
 }
 
 @end

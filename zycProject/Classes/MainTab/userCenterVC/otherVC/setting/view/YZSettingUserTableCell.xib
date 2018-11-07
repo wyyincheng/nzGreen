@@ -62,6 +62,7 @@
             <connections>
                 <outlet property="iconView" destination="61m-P2-f0D" id="WWy-9y-5I7"/>
                 <outlet property="nameLb" destination="SdL-ta-tdI" id="bg6-vg-Sz8"/>
+                <outlet property="rightArrowIcon" destination="kfn-ev-6sM" id="sy2-pG-Azy"/>
                 <outlet property="userNumberLb" destination="Xln-1s-DQv" id="K7G-CP-D5S"/>
             </connections>
             <point key="canvasLocation" x="-9.5" y="6.5"/>
