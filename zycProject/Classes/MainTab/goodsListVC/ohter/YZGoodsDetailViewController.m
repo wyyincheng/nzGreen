@@ -26,6 +26,8 @@
 #import "YZCommentTableCell.h"
 #import "YZCommentEmptyTableCell.h"
 
+#import "YZShopCarViewController.h"
+#import "YZBuyNowViewController.h"
 //#import "MJRefreshBackNormalFooter.h"
 
 @interface YZGoodsDetailViewController () <UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate,UIWebViewDelegate> {
@@ -233,15 +235,15 @@ static NSInteger kSelectViewTag = 1001;
 }
 
 - (IBAction)goShoprCar:(id)sender {
-    if (![YZUserCenter shared].hasReviewed) {
+    if (![YZUserCenter shared].userInfo) {
         [[YZUserCenter shared] logOut];
         return;
     }
-    [self performSegueWithIdentifier:@"shopcarVC" sender:nil];
+    [self gotoViewController:NSStringFromClass([YZShopCarViewController class])];
 }
 
 - (IBAction)addShopCar:(id)sender {
-    if (![YZUserCenter shared].hasReviewed) {
+    if (![YZUserCenter shared].userInfo) {
         [[YZUserCenter shared] logOut];
         return;
     }
@@ -270,7 +272,7 @@ static NSInteger kSelectViewTag = 1001;
 }
 
 - (IBAction)buyGoodsAction:(id)sender {
-    if (![YZUserCenter shared].hasReviewed) {
+    if (![YZUserCenter shared].userInfo) {
         [[YZUserCenter shared] logOut];
         return;
     }
@@ -281,7 +283,8 @@ static NSInteger kSelectViewTag = 1001;
         [self showSelectView];
         return;
     }
-    [self performSegueWithIdentifier:@"buynowVC" sender:self.goodsModel];
+    [self gotoViewController:NSStringFromClass([YZBuyNowViewController class])
+                 lauchParams:@{kYZLauchParams_GoodsModel:self.goodsModel}];
 }
 
 - (void)showSelectView {
@@ -295,7 +298,8 @@ static NSInteger kSelectViewTag = 1001;
     self.selectView.hidden = YES;
     self.selectBkView.hidden = YES;
     self.closeSelectViewBt.hidden = YES;
-    [[NSNotificationCenter defaultCenter] postNotificationName:kYZNotification_HiddenKeyBoard object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kYZNotification_HiddenKeyBoard
+                                                        object:nil];
 }
 
 #pragma mark - jump

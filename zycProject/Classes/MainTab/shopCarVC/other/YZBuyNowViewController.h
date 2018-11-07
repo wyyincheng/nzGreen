@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString * const kYZLauchParams_GoodsModel = @"kYZLauchParams_GoodsModel";
+static NSString * const kYZLauchParams_GoodsDict = @"kYZLauchParams_GoodsDict";
+
 @interface YZBuyNowViewController : YZBaseViewController
 
 @end

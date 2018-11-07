@@ -8,7 +8,12 @@
 
 #import "YZBuyNowViewController.h"
 
+#import "YZGoodsModel.h"
+
 @interface YZBuyNowViewController ()
+
+@property (nonatomic, strong) NSDictionary *goodsDict;
+@property (nonatomic, strong) YZGoodsModel *goodsModel;
 
 @end
 
@@ -19,14 +24,18 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (YZGoodsModel *)goodsModel {
+    if (!_goodsModel) {
+        _goodsModel = [self.lauchParams yz_objectForKey:kYZLauchParams_GoodsModel];
+    }
+    return _goodsModel;
 }
-*/
+
+- (NSDictionary *)goodsDict {
+    if (!_goodsDict) {
+        _goodsDict = [self.lauchParams yz_objectForKey:kYZLauchParams_GoodsDict];
+    }
+    return _goodsDict;
+}
 
 @end
