@@ -35,6 +35,10 @@
                          placeholderImage:[UIImage imageNamed:@"icon_me_avart"]];
         self.nameLb.text = user.nickname;
         self.idLb.text = [NSString stringWithFormat:@"ID：%@",user.userId];
+    } else {
+        self.iconView.image = [UIImage imageNamed:@"icon_me_avart"];
+        self.nameLb.text = @"新西兰优品";
+        self.idLb.text = @"ID:8888";
     }
 }
 

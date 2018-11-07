@@ -39,7 +39,7 @@
     return 0.0f;
 }
 
-- (void)yc_configWithModel:(id)model {
+- (void)yz_configWithModel:(id)model {
     if ([model isKindOfClass:[YZBalanceLogModel class]]) {
         YZBalanceLogModel *logModel = model;
         [self.userIconVeiw sd_setImageWithURL:[NSURL URLWithString:logModel.avatar]

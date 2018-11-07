@@ -77,7 +77,12 @@
 
 - (IBAction)addAddressAction:(id)sender {
     self.needRefresh = YES;
-    [self gotoViewController:NSStringFromClass([YZAddressAddViewController class])];
+    YZ_Weakify(self, weakSelf);
+    YZAddressAddViewController *vc = [[YZAddressAddViewController alloc] init];
+    vc.refreshAddressBlock = ^{
+        weakSelf.needRefresh = YES;
+    };
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)refreshAddress:(BOOL)isRefresh {
@@ -151,6 +156,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     YZAddressModel *addressModel = [self.addressArray yz_objectAtIndex:indexPath.row];
     if (self.needSelectAddress) {
         //        self.addressModel = addressModel;
@@ -159,8 +165,14 @@
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }
-    [self gotoViewController:NSStringFromClass([YZAddressAddViewController class])
-                 lauchParams:@{kYZLauchParams_AddressModel:addressModel}];
+    YZAddressAddViewController *vc = [[YZAddressAddViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    YZ_Weakify(self, weakSelf);
+    vc.refreshAddressBlock = ^{
+        weakSelf.needRefresh = YES;
+    };
+    vc.addressModel = addressModel;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 //empty view
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
@@ -197,18 +209,6 @@
                                                                           }];
     return @[deleteAction];
 }
-
-////jump
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"addAddressVC"]) {
-//        __weak typeof(self) weakSelf = self;
-//        NZAddAddressViewController *vc = segue.destinationViewController;
-//        vc.addressModel = sender;
-//        vc.refreshAddressBlock = ^{
-//            weakSelf.needRefresh = YES;
-//        };
-//    }
-//}
 
 #pragma mark - property
 - (NSMutableArray *)addressArray {

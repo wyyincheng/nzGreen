@@ -30,6 +30,8 @@ static NSString * const kYZVCDefaultEmptyIcon = @"icon_vcdefault_empty";
 - (void)gotoViewController:(NSString *)vcName
                lauchParams:(nullable NSDictionary *)lauchParams;
 
+- (void)yz_goBack;
+
 @end
 
 NS_ASSUME_NONNULL_END

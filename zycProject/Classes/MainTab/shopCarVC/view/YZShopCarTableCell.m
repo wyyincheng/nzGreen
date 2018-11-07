@@ -73,6 +73,11 @@ static NSInteger maxCount = 999;
         ((YZProductModel *)self.goodsModel).productNumber = [countStr integerValue];
         YCLog(@"选择商品数量 ： %ld",(long)(((YZProductModel *)self.goodsModel).productNumber = [countStr integerValue]));
     }
+    if (((YZProductModel *)self.goodsModel).productNumber > maxCount) {
+        [MBProgressHUD showMessageAuto:@"数量超出范围"];
+        ((YZProductModel *)self.goodsModel).productNumber = maxCount / 10;
+        return NO;
+    }
     return YES;
 }
 
@@ -132,7 +137,7 @@ static NSInteger maxCount = 999;
     NSString *countStr = self.goodsCountTF.text;
     if ([countStr respondsToSelector:@selector(integerValue)]) {
         NSInteger count = [countStr integerValue];
-        if (count < maxCount + 1) {
+        if (count < maxCount) {
             count = count + 1;
             self.goodsCountTF.text = [NSString stringWithFormat:@"%ld",(long)count];
             

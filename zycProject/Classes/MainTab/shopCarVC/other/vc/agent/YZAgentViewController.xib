@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YZAgentViewController">
+            <connections>
+                <outlet property="allPriceLb" destination="Ld4-0Y-Oad" id="jFx-uA-1eM"/>
+                <outlet property="bottomGap" destination="Gi8-0N-EVi" id="ZQR-0B-R3e"/>
+                <outlet property="managerBt" destination="XnV-3Z-j9Y" id="Qde-qX-zXv"/>
+                <outlet property="mergeItem" destination="D0M-Hs-XWY" id="mWU-Fj-EPb"/>
+                <outlet property="passBt" destination="Gfz-cw-fQG" id="RFT-BJ-dyo"/>
+                <outlet property="selectAllBt" destination="qGn-jL-owr" id="VK8-Y2-c5A"/>
+                <outlet property="tableView" destination="ZwN-aJ-TqM" id="9pd-nl-GsQ"/>
+                <outlet property="view" destination="zBS-bq-HuT" id="NU2-SZ-Rfq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zBS-bq-HuT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZwN-aJ-TqM">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ycd-E7-M50"/>
+                        <outlet property="delegate" destination="-1" id="hfA-1L-t1n"/>
+                        <outlet property="emptyDataSetDelegate" destination="-1" id="eeY-k6-eEJ"/>
+                        <outlet property="emptyDataSetSource" destination="-1" id="cJl-Ex-4V3"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dny-Vu-gQV">
+                    <rect key="frame" x="0.0" y="667" width="375" height="49"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnV-3Z-j9Y">
+                            <rect key="frame" x="255" y="0.0" width="120" height="49"/>
+                            <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="6ZZ-jE-qH4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="通过">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计：¥0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-0Y-Oad">
+                            <rect key="frame" x="164" y="14" width="73" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.29803921570000003" green="0.76470588240000004" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGn-jL-owr">
+                            <rect key="frame" x="18" y="15.5" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="hsi-57-UAL"/>
+                                <constraint firstAttribute="width" secondItem="qGn-jL-owr" secondAttribute="height" multiplier="1:1" id="kO8-09-1be"/>
+                            </constraints>
+                            <state key="normal" title="全选" image="btn_radio_default"/>
+                            <state key="selected" title="全选" image="btn_radio_selected"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全选" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2a-gk-TUu">
+                            <rect key="frame" x="41" y="16" width="29" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v24-r3-tp4">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="w7L-5s-UHs"/>
+                            </constraints>
+                            <connections>
+                                <action selector="selectAll:" destination="-1" eventType="touchUpInside" id="y3a-LW-GIx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ld4-0Y-Oad" firstAttribute="centerY" secondItem="Dny-Vu-gQV" secondAttribute="centerY" id="0gF-Bb-FNw"/>
+                        <constraint firstItem="v24-r3-tp4" firstAttribute="top" secondItem="Dny-Vu-gQV" secondAttribute="top" id="2I0-Jy-NPx"/>
+                        <constraint firstItem="qGn-jL-owr" firstAttribute="centerY" secondItem="Dny-Vu-gQV" secondAttribute="centerY" id="8AJ-Jx-mWY"/>
+                        <constraint firstAttribute="bottom" secondItem="XnV-3Z-j9Y" secondAttribute="bottom" id="HdW-h9-Azp"/>
+                        <constraint firstItem="qGn-jL-owr" firstAttribute="leading" secondItem="Dny-Vu-gQV" secondAttribute="leadingMargin" constant="10" id="INw-cJ-isT"/>
+                        <constraint firstAttribute="height" constant="49" id="TvY-nU-mEa"/>
+                        <constraint firstItem="N2a-gk-TUu" firstAttribute="centerY" secondItem="qGn-jL-owr" secondAttribute="centerY" id="Xpt-XC-srb"/>
+                        <constraint firstItem="v24-r3-tp4" firstAttribute="leading" secondItem="Dny-Vu-gQV" secondAttribute="leading" id="jJa-gB-rXR"/>
+                        <constraint firstItem="XnV-3Z-j9Y" firstAttribute="leading" secondItem="Ld4-0Y-Oad" secondAttribute="trailing" constant="18" id="lqy-JC-zm8"/>
+                        <constraint firstAttribute="bottom" secondItem="v24-r3-tp4" secondAttribute="bottom" id="m9f-sw-bTG"/>
+                        <constraint firstItem="N2a-gk-TUu" firstAttribute="leading" secondItem="qGn-jL-owr" secondAttribute="trailing" constant="5" id="oe2-lP-CEJ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="pXl-IG-g6d"/>
+                        <constraint firstItem="XnV-3Z-j9Y" firstAttribute="top" secondItem="Dny-Vu-gQV" secondAttribute="top" id="xjE-63-Idl"/>
+                        <constraint firstAttribute="trailing" secondItem="XnV-3Z-j9Y" secondAttribute="trailing" id="zLE-1c-vzQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Dny-Vu-gQV" firstAttribute="top" secondItem="ZwN-aJ-TqM" secondAttribute="bottom" id="49Z-x8-ilH"/>
+                <constraint firstItem="ZwN-aJ-TqM" firstAttribute="trailing" secondItem="bBK-fV-hqm" secondAttribute="trailing" id="4qv-2w-tYb"/>
+                <constraint firstItem="ZwN-aJ-TqM" firstAttribute="bottom" secondItem="bBK-fV-hqm" secondAttribute="bottom" id="Gi8-0N-EVi"/>
+                <constraint firstItem="ZwN-aJ-TqM" firstAttribute="leading" secondItem="bBK-fV-hqm" secondAttribute="leading" id="Mxw-C3-gCH"/>
+                <constraint firstItem="Dny-Vu-gQV" firstAttribute="trailing" secondItem="bBK-fV-hqm" secondAttribute="trailing" id="X6N-aN-4mz"/>
+                <constraint firstItem="ZwN-aJ-TqM" firstAttribute="top" secondItem="bBK-fV-hqm" secondAttribute="top" id="e3d-iL-2gw"/>
+                <constraint firstItem="Dny-Vu-gQV" firstAttribute="leading" secondItem="bBK-fV-hqm" secondAttribute="leading" id="w1V-5i-BLf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bBK-fV-hqm"/>
+        </view>
+        <navigationItem title="订单管理" id="y6n-Bv-MHz">
+            <barButtonItem key="backBarButtonItem" title=" " id="2QW-JX-C02"/>
+            <rightBarButtonItems>
+                <barButtonItem title="合并" id="D0M-Hs-XWY">
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="mergeOrdersAction:" destination="-1" id="Ox5-Ya-wEm"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="通过" id="Gfz-cw-fQG">
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="passOrdersAction:" destination="-1" id="gAS-jp-Vxf"/>
+                    </connections>
+                </barButtonItem>
+            </rightBarButtonItems>
+        </navigationItem>
+    </objects>
+    <resources>
+        <image name="btn_radio_default" width="16" height="16"/>
+        <image name="btn_radio_selected" width="16" height="16"/>
+    </resources>
+</document>

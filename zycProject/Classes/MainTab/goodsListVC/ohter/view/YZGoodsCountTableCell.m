@@ -55,6 +55,11 @@ static NSInteger maxCount = 999;
     NSString *countStr = string.length > 0 ? [NSString stringWithFormat:@"%@%@",textField.text,string] : [textField.text substringToIndex:(textField.text.length - 1)];
     self.goodsModel.count = [countStr integerValue];
     NSLog(@"选择商品数量 ： %ld",(long)self.goodsModel.count);
+    if (self.goodsModel.count > maxCount) {
+        self.goodsModel.count = self.goodsModel.count / 10;
+        [MBProgressHUD showMessageAuto:@"数量超出范围"];
+        return NO;
+    }
     return YES;
 }
 
@@ -64,7 +69,7 @@ static NSInteger maxCount = 999;
 }
 
 + (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
-    return 24 * 2 + 20;
+    return 24 * 2 + 30;
 }
 
 - (void)yz_configWithModel:(id)model {
@@ -93,7 +98,7 @@ static NSInteger maxCount = 999;
     NSString *countStr = self.countTF.text;
     if ([countStr respondsToSelector:@selector(integerValue)]) {
         NSInteger count = [countStr integerValue];
-        if (count < maxCount + 1) {
+        if (count < maxCount) {
             count = count + 1;
             if (self.changCountBlock) {
                 self.changCountBlock(count);

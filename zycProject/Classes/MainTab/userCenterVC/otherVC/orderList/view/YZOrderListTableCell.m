@@ -60,7 +60,7 @@
     return 0;
 }
 
-- (void)yc_configWithModel:(id)model {
+- (void)yz_configWithModel:(id)model {
     if ([model isKindOfClass:[YZOrderItemModel class]]) {
         YZOrderItemModel *order = model;
         self.itemModel = order;

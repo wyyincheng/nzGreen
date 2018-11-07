@@ -9,7 +9,6 @@
 #import "YZAddressAddViewController.h"
 
 #import <BRPickerView.h>
-#import "YZAddressModel.h"
 
 @interface YZAddressAddViewController () <UITextViewDelegate,UITextFieldDelegate>
 
@@ -18,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *cityLb;
 @property (weak, nonatomic) IBOutlet UITextView *addressLb;
 @property (weak, nonatomic) IBOutlet UISwitch *defaultBt;
-
-@property (nonatomic, strong) YZAddressModel *addressModel;
 
 @end
 
@@ -33,7 +30,9 @@ NSString *AddressPlaceHolder = @"请输入详细地址信息，如道路、门�
     
     [self initViews];
     
-    self.addressModel = [self.lauchParams yz_objectForKey:kYZLauchParams_AddressModel];
+    if (!self.addressModel) {
+        self.addressModel = [self.lauchParams yz_objectForKey:kYZLauchParams_AddressModel];
+    }
 }
 
 - (void)initViews {

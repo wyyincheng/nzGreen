@@ -8,7 +8,7 @@
 
 #import "YZChangeNameViewController.h"
 
-@interface YZChangeNameViewController ()
+@interface YZChangeNameViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
 @property (nonatomic, strong) UIButton *saveBt;

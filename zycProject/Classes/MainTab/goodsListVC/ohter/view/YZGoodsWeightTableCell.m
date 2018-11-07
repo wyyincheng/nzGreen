@@ -31,13 +31,20 @@
 }
 
 +  (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
-    return 96.0f;
+    if ([model isKindOfClass:[YZGoodsModel class]]) {
+        YZGoodsModel *goods = model;
+        return goods.weight > 0 ? 96 : 0;
+    }
+    return 0.0f;
 }
 
 - (void)yz_configWithModel:(id)model {
     if ([model isKindOfClass:[YZGoodsModel class]]) {
         YZGoodsModel *goods = model;
         [self.weightBt setTitle:[NSString stringWithFormat:@"%ldg",(long)goods.weight] forState:UIControlStateNormal];
+        self.contentView.hidden = (goods.weight == 0);
+    } else {
+        self.contentView.hidden = YES;
     }
 }
 

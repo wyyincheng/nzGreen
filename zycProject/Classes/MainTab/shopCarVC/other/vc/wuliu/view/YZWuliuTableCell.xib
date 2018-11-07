@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="232" id="v2X-TT-CX5" customClass="YZWuliuTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v2X-TT-CX5" id="fDZ-og-9Fv">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="231.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wuliu_placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bo4-nc-Hpi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="231.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Bo4-nc-Hpi" secondAttribute="bottom" id="06U-jw-rBd"/>
+                    <constraint firstItem="Bo4-nc-Hpi" firstAttribute="top" secondItem="fDZ-og-9Fv" secondAttribute="top" id="L4i-iY-Pki"/>
+                    <constraint firstAttribute="trailing" secondItem="Bo4-nc-Hpi" secondAttribute="trailing" id="TvO-Py-b2v"/>
+                    <constraint firstItem="Bo4-nc-Hpi" firstAttribute="leading" secondItem="fDZ-og-9Fv" secondAttribute="leading" id="wKb-Qu-O6Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="a9T-hv-w40"/>
+            <connections>
+                <outlet property="iconView" destination="Bo4-nc-Hpi" id="6hQ-A4-jFV"/>
+            </connections>
+            <point key="canvasLocation" x="30" y="159"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_wuliu_placeholder.png" width="160" height="92"/>
+    </resources>
+</document>

@@ -118,6 +118,10 @@ static YZUserCenter *userCenter;
 //    [[NSUserDefaults standardUserDefaults] synchronize];
 //}
 
+- (void)custom_logOut {
+    [self clearLocalnUserInfo];
+}
+
 - (void)logOut {
     
     [self clearLocalnUserInfo];
@@ -159,6 +163,7 @@ static YZUserCenter *userCenter;
 //    _userInfo = nil;
     _realUserInfo = nil;
     _reviewUserInfo = nil;
+    _accountInfo = nil;
 }
 
 @end

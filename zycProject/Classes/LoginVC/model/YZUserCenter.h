@@ -31,6 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)logOut;
 
+/**
+ 用户手动退出登录
+ */
+- (void)custom_logOut;
+
 @end
 
 NS_ASSUME_NONNULL_END

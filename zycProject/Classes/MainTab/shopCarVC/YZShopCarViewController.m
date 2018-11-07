@@ -12,6 +12,9 @@
 #import "YZShopCarTableCell.h"
 #import "YZProductModel.h"
 
+#import "YZBuyNowViewController.h"
+#import "YZGoodsDetailViewController.h"
+
 @interface YZShopCarViewController () <UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate> {
     NSInteger pageIndex;
 }
@@ -80,7 +83,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self refreshGoods:YES];
+    if ([YZUserCenter shared].userInfo) {
+        [self refreshGoods:YES];
+    } else {
+        self.goodsArray = nil;
+        [self.tableView reloadData];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -256,7 +264,8 @@
             NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
             [tempDict setValue:mArray forKey:@"list"];
             [tempDict setValue:@(ShoppingCartType_Merge) forKey:@"type"];
-            [self performSegueWithIdentifier:@"buynowVC" sender:tempDict];
+            [self gotoViewController:NSStringFromClass([YZBuyNowViewController class])
+                         lauchParams:@{kYZLauchParams_GoodsDict:tempDict}];
         }
             break;
         default: {
@@ -276,7 +285,8 @@
                     NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
                     [tempDict setValue:mArray forKey:@"list"];
                     [tempDict setValue:@(ShoppingCartType_Default) forKey:@"type"];
-                    [self performSegueWithIdentifier:@"buynowVC" sender:tempDict];
+                    [self gotoViewController:NSStringFromClass([YZBuyNowViewController class])
+                                 lauchParams:@{kYZLauchParams_GoodsDict:tempDict}];
                 } else if (error) {
                     [MBProgressHUD showError:error.msg];
                 }
@@ -409,7 +419,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.type == ShoppingCartType_Default) {
         YZProductModel *model = [self.goodsArray yz_objectAtIndex:indexPath.row];
-        [self performSegueWithIdentifier:@"detailVC" sender:model.productId];
+        [self gotoViewController:NSStringFromClass([YZGoodsDetailViewController class])
+                     lauchParams:@{kYZLauchParams_GoodsId:model.productId}];
     }
 }
 
@@ -434,7 +445,7 @@
 }
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
-    NSString *text = @"哎呀，购物车竟然是空的！";
+    NSString *text = [YZUserCenter shared].userInfo ? @"哎呀，购物车竟然是空的！" : @"您未登录，快去登录看看吧！";
     
     NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:16.0f],
                                  NSForegroundColorAttributeName: [UIColor colorWithHex:0x999999]};
@@ -443,18 +454,6 @@
 
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {
     return YES;
-}
-
-//jump
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //TODO:
-//    if ([segue.identifier isEqualToString:@"buynowVC"]) {
-//        YZBuyNowViewController *vc = segue.destinationViewController;
-//        vc.goodsDict = sender;
-//    } else if ([segue.identifier isEqualToString:@"detailVC"]) {
-//        NZGoodsDetailViewController *vc = segue.destinationViewController;
-//        vc.goodsId = sender;
-//    }
 }
 
 #pragma mark - property

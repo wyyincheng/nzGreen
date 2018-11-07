@@ -8,6 +8,8 @@
 
 #import "YZBaseViewController.h"
 
+#import "YZAddressModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^RefreshAddressListBlock)(void);
@@ -16,7 +18,8 @@ static NSString * const kYZLauchParams_AddressModel = @"kYZLauchParams_AddressMo
 
 @interface YZAddressAddViewController : YZBaseViewController
 
-//@property (nonatomic, strong) YZAddressModel *addressModel;
+@property (nonatomic, strong) YZAddressModel *addressModel;
+
 @property (nonatomic, copy) RefreshAddressListBlock refreshAddressBlock;
 
 @end

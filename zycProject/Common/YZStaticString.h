@@ -9,6 +9,18 @@
 #ifndef YZStaticString_h
 #define YZStaticString_h
 
+/**
+ 普通用户：-1：已驳回 0：待确认 3：已处理
+ 代理用户：-1：已驳回 0：待确认 1：待发货 2：已完成
+ */
+typedef NS_ENUM(NSInteger, UserOrderStatus) {
+    UserOrderStatus_Reject = -1,
+    UserOrderStatus_WaitConfirm = 0,
+    UserOrderStatus_WaitSend = 1,
+    UserOrderStatus_Finished = 2,
+    UserOrderStatus_Dealed = 3
+};
+
 //This App Info
 
 

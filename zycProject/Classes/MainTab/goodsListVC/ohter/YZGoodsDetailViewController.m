@@ -112,7 +112,7 @@ static NSInteger kSelectViewTag = 1001;
         make.bottom.mas_equalTo(self.addToShoppingCartBt.mas_top);
     }];
     
-    CGFloat height = [YZGoodsIconTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth] + [YZGoodsWeightTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth] + [YZGoodsCountTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth];
+    CGFloat height = [YZGoodsIconTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth] + [YZGoodsWeightTableCell yz_heightForCellWithModel:self.goodsModel contentWidth:kScreenWidth] + [YZGoodsCountTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth];
     [self.selectView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.addToShoppingCartBt.mas_top).offset(10);
@@ -168,6 +168,7 @@ static NSInteger kSelectViewTag = 1001;
         [[YZNCNetAPI sharedAPI].productAPI getProductDetailWithGoodsId:self.goodsId
                                                                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                                    weakSelf.goodsModel = [YZGoodsModel yz_objectWithKeyValues:responseObject];
+                                                                   [weakSelf updateSelectView];
                                                                    weakSelf.goodsModel.count = 1;
                                                                    [weakSelf reloadDetailVC];
                                                                } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
@@ -221,6 +222,13 @@ static NSInteger kSelectViewTag = 1001;
 }
 
 #pragma mark - private
+- (void)updateSelectView {
+    CGFloat height = [YZGoodsIconTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth] + [YZGoodsWeightTableCell yz_heightForCellWithModel:self.goodsModel contentWidth:kScreenWidth] + [YZGoodsCountTableCell yz_heightForCellWithModel:@[] contentWidth:kScreenWidth];
+    [self.selectView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(height);
+    }];
+}
+
 - (void)reloadDetailVC {
     self.tableView.hidden = NO;
     [self.tableView reloadData];
@@ -284,7 +292,8 @@ static NSInteger kSelectViewTag = 1001;
         return;
     }
     [self gotoViewController:NSStringFromClass([YZBuyNowViewController class])
-                 lauchParams:@{kYZLauchParams_GoodsModel:self.goodsModel}];
+                 lauchParams:@{kYZLauchParams_GoodsModel:self.goodsModel,
+                               kYZLauchParams_GoodsDict:@{@"type":@(BuyType_GoodsDetail)}}];
 }
 
 - (void)showSelectView {

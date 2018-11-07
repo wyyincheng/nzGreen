@@ -11,6 +11,8 @@
 #import "YZSettingItemTableCell.h"
 #import "YZSettingUserTableCell.h"
 
+#import "YZMainViewController.h"
+
 @interface YZSettingViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *itemArray;
@@ -34,9 +36,9 @@
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZSettingUserTableCell class])
                                                bundle:nil]
          forCellReuseIdentifier:[YZSettingUserTableCell yz_cellIdentifiler]];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZSettingUserTableCell class])
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZSettingItemTableCell class])
                                                bundle:nil]
-         forCellReuseIdentifier:[YZSettingUserTableCell yz_cellIdentifiler]];
+         forCellReuseIdentifier:[YZSettingItemTableCell yz_cellIdentifiler]];
 }
 
 #pragma mark - Table view data source
@@ -91,7 +93,8 @@
 }
 
 - (void)logoutAction {
-    [[YZUserCenter shared] logOut];
+    [[YZUserCenter shared] custom_logOut];
+    [(YZMainViewController *)self.tabBarController gotoIndexVC:YZVCIndex_UserCenter];
 }
 
 #pragma mark - property

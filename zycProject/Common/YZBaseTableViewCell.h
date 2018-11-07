@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (YZBaseTableViewCell *)yz_createCellForTableView:(UITableView *)tableView;
 
-+ (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width;
++ (CGFloat)yz_heightForCellWithModel:(nullable id)model contentWidth:(CGFloat)width;
 
-- (void)yz_configWithModel:(id)model;
+- (void)yz_configWithModel:(nullable id)model;
 
 + (NSString *)yz_cellIdentifiler;
 

@@ -20,11 +20,11 @@
     return cell;
 }
 
-+ (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
++ (CGFloat)yz_heightForCellWithModel:(nullable id)model contentWidth:(CGFloat)width {
     return 0.0f;
 }
 
-- (void)yz_configWithModel:(id)model {
+- (void)yz_configWithModel:(nullable id)model {
     
 }
 

@@ -37,13 +37,17 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    __weak typeof(self) weakSelf = self;
-    [[YZNCNetAPI sharedAPI].userAPI getUserInfoWithSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [YZUserCenter shared].accountInfo = [YZAccountModel yz_objectWithKeyValues:responseObject];
-        [weakSelf.tableView reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
-        
-    }];
+    if ([YZUserCenter shared].userInfo) {
+        __weak typeof(self) weakSelf = self;
+        [[YZNCNetAPI sharedAPI].userAPI getUserInfoWithSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [YZUserCenter shared].accountInfo = [YZAccountModel yz_objectWithKeyValues:responseObject];
+            [weakSelf.tableView reloadData];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+            
+        }];
+    } else {
+        [self.tableView reloadData];
+    }
 }
 
 - (void)initViews {

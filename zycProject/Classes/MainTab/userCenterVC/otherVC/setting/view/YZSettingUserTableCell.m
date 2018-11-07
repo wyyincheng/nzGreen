@@ -29,11 +29,11 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)yc_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
++ (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
     return 100;
 }
 
-- (void)yc_configWithModel:(id)model {
+- (void)yz_configWithModel:(id)model {
     if ([model isKindOfClass:[YZAccountModel class]]) {
         YZAccountModel *user = model;
         [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.avatar]
