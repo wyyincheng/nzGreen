@@ -13,6 +13,11 @@
 #import "YZOrderListTableCell.h"
 #import "YZOrderStatusTableCell.h"
 
+#import "YZWuliuViewController.h"
+#import "YZBuyNowViewController.h"
+#import "YZCommentViewController.h"
+#import "YZOrderDetailViewController.h"
+
 @interface YZOrderListChildViewController () <UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
     NSInteger pageIndex;
 }
@@ -26,7 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self initViews];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -102,11 +108,11 @@
                                                          }];
 }
 
-//TODO: 评价vc
 - (void)gotoPingjiaVC:(YZOrderItemModel *)itemModel {
-    //    NZPingjiaViewController *pingjiaVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"pingjiaVC"];
-    //    pingjiaVC.orderModel = itemModel;
-    //    [self.navigationController pushViewController:pingjiaVC animated:YES];
+    YZCommentViewController *pingjiaVC = [[YZCommentViewController alloc] init];
+    pingjiaVC.orderModel = itemModel;
+    pingjiaVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:pingjiaVC animated:YES];
 }
 
 - (void)reSubmitOrder:(id)order {
@@ -115,26 +121,22 @@
         YZOrderModel *orderModel = order;
         
         if (orderModel.canResend) {
-            //TODO: 立即购买
-            //            NZBuyNowViewController *buynowVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"buynowVC"];
-            //            NSMutableDictionary *mdict = [NSMutableDictionary dictionary];
-            //            [mdict setValue:orderModel.orderNumber forKey:@"orderNumber"];
-            //            [mdict setValue:@(BuyType_ReSubmit) forKey:@"type"];
-            //            buynowVC.goodsDict = mdict;
-            //
-            //            [self.navigationController pushViewController:buynowVC animated:YES];
-            
+            YZBuyNowViewController *buynowVC = [YZBuyNowViewController new];
+            NSMutableDictionary *mdict = [NSMutableDictionary dictionary];
+            [mdict setValue:orderModel.orderNumber forKey:@"orderNumber"];
+            [mdict setValue:@(BuyType_ReSubmit) forKey:@"type"];
+            [self gotoViewController:NSStringFromClass([YZBuyNowViewController class])
+                         lauchParams:@{kYZLauchParams_GoodsDict:mdict}];
             return;
         }
         if ([YZUserCenter shared].userInfo.userType == UserType_Agent && orderModel.userOrderStatus == 2) {
             
-            //TODO: 物流页面
-            //            NZWuliuViewController *wuliuVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"wuliuVC"];
-            //            wuliuVC.orderNumber = orderModel.orderNumber;
-            //            wuliuVC.logisticsCompany = orderModel.logisticsCompany;
-            //            wuliuVC.logisticsNumber = orderModel.logisticsNumber;
-            //            [self.navigationController pushViewController:wuliuVC animated:YES];
-            
+            YZWuliuViewController *wuliuVC = [YZWuliuViewController new];
+            wuliuVC.orderNumber = orderModel.orderNumber;
+            wuliuVC.logisticsCompany = orderModel.logisticsCompany;
+            wuliuVC.logisticsNumber = orderModel.logisticsNumber;
+            [self.navigationController pushViewController:wuliuVC animated:YES];
+
             return;
 #warning for yc 如何展示物流信息 ？？？
             [[YZNCNetAPI sharedAPI].orderAPI getDeliveInfoWithOrderNumber:orderModel.orderNumber
@@ -230,10 +232,9 @@
     //    }
     YZOrderModel *orderModel = [self.orderListArray objectAtIndex:indexPath.section];
     if (orderModel) {
-        //TODO: goto
-        //        NZOrderDetailViewController *detailVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"orderDetailVC"];
-        //        detailVC.orderNumber = orderModel.orderNumber;
-        //        [self.navigationController pushViewController:detailVC animated:YES];
+        YZOrderDetailViewController *detailVC = [YZOrderDetailViewController new];
+        detailVC.orderNumber = orderModel.orderNumber;
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
 }
 
@@ -253,17 +254,6 @@
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {
     return YES;
 }
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"buynowVC"]) {
-//        NZBuyNowViewController *vc = segue.destinationViewController;
-//        NSMutableDictionary *mdict = [NSMutableDictionary dictionary];
-////        [mdict setValue:sender forKey:@"list"];
-//        [mdict setValue:sender forKey:@"orderNumber"];
-//        [mdict setValue:@(BuyType_ReSubmit) forKey:@"type"];
-//        vc.goodsDict = mdict;
-//    }
-//}
 
 - (NSMutableArray *)orderListArray {
     if (!_orderListArray) {

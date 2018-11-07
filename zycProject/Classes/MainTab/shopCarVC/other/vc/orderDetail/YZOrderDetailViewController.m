@@ -42,6 +42,8 @@ typedef NS_ENUM(NSUInteger, OrderAction) {
 
 @end
 
+static NSString * const kYZAddressTableCellIdentifiler = @"kYZAddressTableCellIdentifilerForOrderDetailVC";
+
 @implementation YZOrderDetailViewController
 
 - (void)viewDidLoad {
@@ -56,7 +58,7 @@ typedef NS_ENUM(NSUInteger, OrderAction) {
          forCellReuseIdentifier:[YZOrderDetailStatusTableCell yz_cellIdentifiler]];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZAddressTableCell class])
                                                bundle:nil]
-         forCellReuseIdentifier:[YZAddressTableCell yz_cellIdentifiler]];
+         forCellReuseIdentifier:kYZAddressTableCellIdentifiler];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YZOrderListTableCell class])
                                                bundle:nil]
          forCellReuseIdentifier:[YZOrderListTableCell yz_cellIdentifiler]];
@@ -297,8 +299,8 @@ typedef NS_ENUM(NSUInteger, OrderAction) {
             [cell yz_configWithModel:(self.orderType == OrderTyp_Agent ? self.agentDetailModel : self.detailModel)];
             return cell;
         }
-        YZAddressTableCell *cell = [tableView dequeueReusableCellWithIdentifier:[YZAddressTableCell yz_cellIdentifiler]];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        YZAddressTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kYZAddressTableCellIdentifiler];
+        cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell yz_configWithModel:(self.orderType == OrderTyp_Agent ? self.agentDetailModel.addressItem : self.detailModel.addressItem)];
         return cell;

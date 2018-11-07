@@ -132,6 +132,9 @@
         case 0: {
             ZLPhotoActionSheet *ac = [[ZLPhotoActionSheet alloc] init];
             
+            ac.configuration.allowRecordVideo = NO;
+            ac.configuration.allowSelectVideo = NO;
+            
             //相册参数配置，configuration有默认值，可直接使用并对其属性进行修改
             ac.configuration.maxSelectCount = 1;
             ac.configuration.maxPreviewCount = 0;
