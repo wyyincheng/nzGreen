@@ -40,7 +40,7 @@ static YZUserCenter *userCenter;
 
 - (void)setUserInfo:(YZUserModel *)userInfo {
     if (userInfo) {
-        NSDictionary *dict = [NSDictionary yy_modelWithJSON:[userInfo yy_modelToJSONObject]];
+        NSDictionary *dict = [userInfo yy_modelToJSONObject];
         if (self.hasReviewed) {
             self.realUserInfo = userInfo;
             [[NSUserDefaults standardUserDefaults] setObject:dict forKey:kYZUserDefault_UserInfoReal];
