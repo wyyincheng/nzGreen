@@ -65,6 +65,12 @@
 		58497DC72193532F005F53A3 /* YZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58497DC52193532F005F53A3 /* YZAboutViewController.xib */; };
 		584BC475219828FF00FCCBBD /* YZPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584BC473219828FF00FCCBBD /* YZPrivacyViewController.m */; };
 		584BC476219828FF00FCCBBD /* YZPrivacyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584BC474219828FF00FCCBBD /* YZPrivacyViewController.xib */; };
+		584BC47B2198314800FCCBBD /* YZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584BC4792198314800FCCBBD /* YZCategoryViewController.m */; };
+		584BC47C2198314800FCCBBD /* YZCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584BC47A2198314800FCCBBD /* YZCategoryViewController.xib */; };
+		584BC481219836D600FCCBBD /* YZCategoryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584BC47F219836D600FCCBBD /* YZCategoryTableCell.m */; };
+		584BC482219836D600FCCBBD /* YZCategoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584BC480219836D600FCCBBD /* YZCategoryTableCell.xib */; };
+		584BC4862198372A00FCCBBD /* YZCategoryCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584BC4842198372A00FCCBBD /* YZCategoryCollectionCell.m */; };
+		584BC4872198372A00FCCBBD /* YZCategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584BC4852198372A00FCCBBD /* YZCategoryCollectionCell.xib */; };
 		584FFDE8218AB7FE008B2B61 /* YZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDE7218AB7FE008B2B61 /* YZMainViewController.m */; };
 		584FFDEF218AB8D5008B2B61 /* YZGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFDED218AB8D5008B2B61 /* YZGoodsListViewController.m */; };
 		584FFDF0218AB8D5008B2B61 /* YZGoodsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFDEE218AB8D5008B2B61 /* YZGoodsListViewController.xib */; };
@@ -334,6 +340,15 @@
 		584BC472219828FF00FCCBBD /* YZPrivacyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZPrivacyViewController.h; sourceTree = "<group>"; };
 		584BC473219828FF00FCCBBD /* YZPrivacyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZPrivacyViewController.m; sourceTree = "<group>"; };
 		584BC474219828FF00FCCBBD /* YZPrivacyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZPrivacyViewController.xib; sourceTree = "<group>"; };
+		584BC4782198314800FCCBBD /* YZCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCategoryViewController.h; sourceTree = "<group>"; };
+		584BC4792198314800FCCBBD /* YZCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCategoryViewController.m; sourceTree = "<group>"; };
+		584BC47A2198314800FCCBBD /* YZCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZCategoryViewController.xib; sourceTree = "<group>"; };
+		584BC47E219836D600FCCBBD /* YZCategoryTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCategoryTableCell.h; sourceTree = "<group>"; };
+		584BC47F219836D600FCCBBD /* YZCategoryTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCategoryTableCell.m; sourceTree = "<group>"; };
+		584BC480219836D600FCCBBD /* YZCategoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZCategoryTableCell.xib; sourceTree = "<group>"; };
+		584BC4832198372A00FCCBBD /* YZCategoryCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCategoryCollectionCell.h; sourceTree = "<group>"; };
+		584BC4842198372A00FCCBBD /* YZCategoryCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCategoryCollectionCell.m; sourceTree = "<group>"; };
+		584BC4852198372A00FCCBBD /* YZCategoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZCategoryCollectionCell.xib; sourceTree = "<group>"; };
 		584FFDE6218AB7FE008B2B61 /* YZMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZMainViewController.h; sourceTree = "<group>"; };
 		584FFDE7218AB7FE008B2B61 /* YZMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZMainViewController.m; sourceTree = "<group>"; };
 		584FFDEC218AB8D5008B2B61 /* YZGoodsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsListViewController.h; sourceTree = "<group>"; };
@@ -798,6 +813,30 @@
 				584BC474219828FF00FCCBBD /* YZPrivacyViewController.xib */,
 			);
 			path = privacy;
+			sourceTree = "<group>";
+		};
+		584BC477219830D700FCCBBD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				584BC47D219836C500FCCBBD /* view */,
+				584BC4782198314800FCCBBD /* YZCategoryViewController.h */,
+				584BC4792198314800FCCBBD /* YZCategoryViewController.m */,
+				584BC47A2198314800FCCBBD /* YZCategoryViewController.xib */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		584BC47D219836C500FCCBBD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				584BC47E219836D600FCCBBD /* YZCategoryTableCell.h */,
+				584BC47F219836D600FCCBBD /* YZCategoryTableCell.m */,
+				584BC480219836D600FCCBBD /* YZCategoryTableCell.xib */,
+				584BC4832198372A00FCCBBD /* YZCategoryCollectionCell.h */,
+				584BC4842198372A00FCCBBD /* YZCategoryCollectionCell.m */,
+				584BC4852198372A00FCCBBD /* YZCategoryCollectionCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		584FFDE9218AB899008B2B61 /* userCenterVC */ = {
@@ -1273,6 +1312,7 @@
 		5896296D218861CB008EFDD8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				584BC477219830D700FCCBBD /* Category */,
 				584FFDEA218AB899008B2B61 /* goodsListVC */,
 				584FFDEB218AB899008B2B61 /* shopCarVC */,
 				584FFDE9218AB899008B2B61 /* userCenterVC */,
@@ -1671,6 +1711,7 @@
 				58497DBB21932DF1005F53A3 /* icon_wuliu_placeholder@2x.png in Resources */,
 				58497D7A2192E25D005F53A3 /* YZOrderDetailStatusTableCell.xib in Resources */,
 				584FFE88218BFC17008B2B61 /* icon_tab_home_selected@2x.png in Resources */,
+				584BC4872198372A00FCCBBD /* YZCategoryCollectionCell.xib in Resources */,
 				584FFEC0218C6977008B2B61 /* icon_manager_user@3x.png in Resources */,
 				584FFEFE218CA578008B2B61 /* YZBalanceTableCell.xib in Resources */,
 				584FFF40218CBADF008B2B61 /* YZAddressAddViewController.xib in Resources */,
@@ -1700,6 +1741,7 @@
 				5896297921886348008EFDD8 /* icon_nav_back_white@3x.png in Resources */,
 				584FFEAF218C675C008B2B61 /* icon_me_avart@3x.png in Resources */,
 				584FFEC3218C6977008B2B61 /* icon_manager_order@3x.png in Resources */,
+				584BC482219836D600FCCBBD /* YZCategoryTableCell.xib in Resources */,
 				58A5732E2191AF040086F8F3 /* YZSwitchTableCell.xib in Resources */,
 				589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */,
 				58A573142191A2E80086F8F3 /* YZGoodsServiceTableCell.xib in Resources */,
@@ -1760,6 +1802,7 @@
 				584FFEE8218C9B6F008B2B61 /* YZUserInfoViewController.xib in Resources */,
 				58497DB22193021B005F53A3 /* YZOrderSelectTableCell.xib in Resources */,
 				58497D9B2192EDF9005F53A3 /* icon_start_default@3x.png in Resources */,
+				584BC47C2198314800FCCBBD /* YZCategoryViewController.xib in Resources */,
 				584FFF3A218CB9E8008B2B61 /* icon_address_empty@2x.png in Resources */,
 				584FFF30218CB5EC008B2B61 /* YZAddressViewController.xib in Resources */,
 				58497D832192E39E005F53A3 /* YZOrderDetailCountTableCell.xib in Resources */,
@@ -1886,6 +1929,7 @@
 				58A88DC92191B52400A3A2D8 /* YZCommentEmptyTableCell.m in Sources */,
 				58497DC021932E8E005F53A3 /* YZWuliuInfoTableCell.m in Sources */,
 				58A5732D2191AF040086F8F3 /* YZSwitchTableCell.m in Sources */,
+				584BC47B2198314800FCCBBD /* YZCategoryViewController.m in Sources */,
 				58E31E5921944926004E8931 /* YZSMSConfirmViewController.m in Sources */,
 				589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */,
 				584FFF3F218CBADF008B2B61 /* YZAddressAddViewController.m in Sources */,
@@ -1921,6 +1965,7 @@
 				584FFF02218CA618008B2B61 /* YZBalanceLogModel.m in Sources */,
 				58497D732192E0EF005F53A3 /* YZOrderDetailViewController.m in Sources */,
 				589629AE218873E6008EFDD8 /* UIColor+Utils.m in Sources */,
+				584BC4862198372A00FCCBBD /* YZCategoryCollectionCell.m in Sources */,
 				584FFF2F218CB5EC008B2B61 /* YZAddressViewController.m in Sources */,
 				584FFE50218B00F1008B2B61 /* MessageClass.m in Sources */,
 				58497D872192E88B005F53A3 /* YZOrderDetailInfoTableCell.m in Sources */,
@@ -1953,6 +1998,7 @@
 				584FFE4E218B00F1008B2B61 /* OrderModel.m in Sources */,
 				589629AD218873E6008EFDD8 /* NSDictionary+YZSafe.m in Sources */,
 				584FFE1B218AF734008B2B61 /* YZGoodsModel.m in Sources */,
+				584BC481219836D600FCCBBD /* YZCategoryTableCell.m in Sources */,
 				584FFEAB218C664F008B2B61 /* YZAccountModel.m in Sources */,
 				58497D5A2192CA28005F53A3 /* YZProductTableCell.m in Sources */,
 				58497DC62193532F005F53A3 /* YZAboutViewController.m in Sources */,
