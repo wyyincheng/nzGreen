@@ -8,6 +8,9 @@
 
 #import "YZLoginViewController.h"
 
+#import "YZSMSConfirmViewController.h"
+#import "YZChangePwdViewController.h"
+#import "YZRegisterViewController.h"
 #import "YZMainViewController.h"
 #import "NSString+NZCheck.h"
 #import "NZTipView.h"
@@ -49,31 +52,8 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
 
 #pragma mark - action
 - (IBAction)backAction:(id)sender {
+    [(YZMainViewController *)self.tabBarController gotoIndexVC:YZVCIndex_Home];
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)registerAction:(id)sender {
-    
-    AVUser *user = [AVUser user];// 新建 AVUser 对象实例
-    user.username = @"Tom";// 设置用户名
-    user.password =  @"cat!@#123";// 设置密码
-    user.email = @"tom@leancloud.cn";// 设置邮箱
-    
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // 注册成功
-        } else {
-            // 失败的原因可能有多种，常见的是用户名已经存在。
-        }
-    }];
-    
-    
-    
-    //    self.isRegister = !self.isRegister;
-    //    [self.loginBt setTitle:(self.isRegister ? @"注册" : @"登录")
-    //                  forState:UIControlStateNormal];
-    //    [self.registerBt setTitle:(self.isRegister ? @"登录" : @"注册")
-    //                     forState:UIControlStateNormal];
 }
 
 #pragma mark - delegate
@@ -127,39 +107,53 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
                                                }];
     } else {
         //走云后台
-        
+        [AVUser logInWithMobilePhoneNumberInBackground:self.phoneTextField.text
+                                              password:self.pwdTextField.text
+                                                 block:^(AVUser * _Nullable user, NSError * _Nullable error) {
+                                                     [MBProgressHUD hideHUD];
+                                                     if (error) {
+                                                         if (error.code == 215) {
+                                                             AVUser *user = [[AVUser alloc] init];
+                                                             user.mobilePhoneNumber = self.phoneTextField.text;
+                                                             user.username = self.phoneTextField.text;
+                                                             YZSMSConfirmViewController *smsVC = [[YZSMSConfirmViewController alloc] init];
+                                                             smsVC.isLaunchLogin = self.isLaunchLogin;
+                                                             smsVC.targetUser = user;
+                                                             [self.navigationController pushViewController:smsVC animated:YES];
+                                                         } else {
+                                                             [MBProgressHUD showMessageAuto:error.localizedFailureReason];
+//                                                             [MBProgressHUD showMessageAuto:@"账号密码错误"];
+                                                         }
+                                                     } else {
+                                                         NSLog(@"userInfo:%@",user.description);
+                                                         
+                                                         YZUserModel *userModel = [[YZUserModel alloc] init];
+                                                         userModel.token = [user objectForKey:@"token"];
+                                                         userModel.userType = [[user objectForKey:@"userType"] integerValue];
+                                                         
+                                                         [YZUserCenter shared].userInfo = userModel;
+                                                         [weakSelf hiddenHUD];
+                                                     }
+                                                 }];
     }
-    
-    //    if (self.isRegister) {
-    //        if ([self.phoneTextField.text isEqualToString:@"11111111111"]) {
-    //            [self performSelector:@selector(showRegisterError)
-    //                       withObject:nil
-    //                       afterDelay:(arc4random() % 5 + 1)];
-    //            return;
-    //        }
-    //
-    //        [[YZNCNetAPI sharedAPI].userAPI loginWithPhone:@"11111111111"
-    //                                              password:@"11111111111"
-    //                                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    //                                                   [NZUserCenter shared].normalLogin = YES;
-    //                                                   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_normalLogin"];
-    //                                                   [[NSUserDefaults standardUserDefaults] synchronize];
-    //                                                   [NZUserCenter shared].userInfo = [UserModel yc_objectWithKeyValues:responseObject];
-    //                                                   AccountModel *demo = [[AccountModel alloc] init];
-    //                                                   demo.nickname = self.phoneTextField.text;
-    //                                                   demo.telephone = self.phoneTextField.text;
-    //                                                   [NZUserCenter shared].demoUserInfo = demo;
-    //                                                   [weakSelf hiddenHUD];
-    //                                                   [MBProgressHUD showSuccess:@"注册成功"];
-    //                                               } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
-    //                                                   [MBProgressHUD hideHUD];
-    //                                                   [NZTipView showError:error.msg onScreen:weakSelf.view];
-    //                                               }];
-    //    }
-    
-    //FIXME: network
-    
+}
 
+- (IBAction)registerAction:(id)sender {
+    YZRegisterViewController *vc = [[YZRegisterViewController alloc] init];
+    vc.isLaunchLogin = self.isLaunchLogin;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)changePwdAction:(id)sender {
+    YZChangePwdViewController *vc = [[YZChangePwdViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)contactUsAction:(id)sender {
+    NSURL *telURL = [NSURL URLWithString:[@"tel://" stringByAppendingString:kServiceNumber]];
+    if ([[UIApplication sharedApplication] canOpenURL:telURL]) {
+        [[UIApplication sharedApplication] openURL:telURL];
+    }
 }
 
 - (void)hiddenHUD {
@@ -176,6 +170,5 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     UIWindow *window =  [[UIApplication sharedApplication].delegate window];
     window.rootViewController = [YZMainViewController new];
 }
-
 
 @end

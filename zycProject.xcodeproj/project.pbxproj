@@ -237,6 +237,12 @@
 		58A88DD22191C3BE00A3A2D8 /* icon_comment_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD02191C3BD00A3A2D8 /* icon_comment_empty@2x.png */; };
 		58A88DD52191C45E00A3A2D8 /* icon_goods_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD32191C45E00A3A2D8 /* icon_goods_default@3x.png */; };
 		58A88DD62191C45E00A3A2D8 /* icon_goods_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD42191C45E00A3A2D8 /* icon_goods_default@2x.png */; };
+		58E31E54219446EE004E8931 /* YZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E52219446EE004E8931 /* YZRegisterViewController.m */; };
+		58E31E55219446EE004E8931 /* YZRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E31E53219446EE004E8931 /* YZRegisterViewController.xib */; };
+		58E31E5921944926004E8931 /* YZSMSConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E5721944926004E8931 /* YZSMSConfirmViewController.m */; };
+		58E31E5A21944926004E8931 /* YZSMSConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E31E5821944926004E8931 /* YZSMSConfirmViewController.xib */; };
+		58E31E5E21945F35004E8931 /* YZChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E5C21945F35004E8931 /* YZChangePwdViewController.m */; };
+		58E31E5F21945F35004E8931 /* YZChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E31E5D21945F35004E8931 /* YZChangePwdViewController.xib */; };
 		58FAD8722191B39200E5F24D /* YZCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD8712191B39200E5F24D /* YZCommentModel.m */; };
 		58FAD8762191B3F900E5F24D /* YZWebTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD8742191B3F900E5F24D /* YZWebTableCell.m */; };
 		58FAD8772191B3F900E5F24D /* YZWebTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FAD8752191B3F900E5F24D /* YZWebTableCell.xib */; };
@@ -589,6 +595,15 @@
 		58A88DD02191C3BD00A3A2D8 /* icon_comment_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_comment_empty@2x.png"; sourceTree = "<group>"; };
 		58A88DD32191C45E00A3A2D8 /* icon_goods_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_default@3x.png"; sourceTree = "<group>"; };
 		58A88DD42191C45E00A3A2D8 /* icon_goods_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_default@2x.png"; sourceTree = "<group>"; };
+		58E31E51219446EE004E8931 /* YZRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRegisterViewController.h; sourceTree = "<group>"; };
+		58E31E52219446EE004E8931 /* YZRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZRegisterViewController.m; sourceTree = "<group>"; };
+		58E31E53219446EE004E8931 /* YZRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZRegisterViewController.xib; sourceTree = "<group>"; };
+		58E31E5621944926004E8931 /* YZSMSConfirmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSMSConfirmViewController.h; sourceTree = "<group>"; };
+		58E31E5721944926004E8931 /* YZSMSConfirmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSMSConfirmViewController.m; sourceTree = "<group>"; };
+		58E31E5821944926004E8931 /* YZSMSConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSMSConfirmViewController.xib; sourceTree = "<group>"; };
+		58E31E5B21945F35004E8931 /* YZChangePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZChangePwdViewController.h; sourceTree = "<group>"; };
+		58E31E5C21945F35004E8931 /* YZChangePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZChangePwdViewController.m; sourceTree = "<group>"; };
+		58E31E5D21945F35004E8931 /* YZChangePwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZChangePwdViewController.xib; sourceTree = "<group>"; };
 		58FAD8702191B39200E5F24D /* YZCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZCommentModel.h; sourceTree = "<group>"; };
 		58FAD8712191B39200E5F24D /* YZCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZCommentModel.m; sourceTree = "<group>"; };
 		58FAD8732191B3F900E5F24D /* YZWebTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZWebTableCell.h; sourceTree = "<group>"; };
@@ -1256,6 +1271,7 @@
 		5896296E218861CB008EFDD8 /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
+				58E31E4E21942CF3004E8931 /* ohter */,
 				584FFDFB218ACDBE008B2B61 /* model */,
 				589629B62188746E008EFDD8 /* view */,
 				5896297F21886897008EFDD8 /* YZLoginViewController.h */,
@@ -1519,6 +1535,38 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		58E31E4E21942CF3004E8931 /* ohter */ = {
+			isa = PBXGroup;
+			children = (
+				58E31E4F21942CF3004E8931 /* register */,
+				58E31E5021942CF3004E8931 /* changepwd */,
+			);
+			path = ohter;
+			sourceTree = "<group>";
+		};
+		58E31E4F21942CF3004E8931 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				58E31E51219446EE004E8931 /* YZRegisterViewController.h */,
+				58E31E52219446EE004E8931 /* YZRegisterViewController.m */,
+				58E31E53219446EE004E8931 /* YZRegisterViewController.xib */,
+				58E31E5621944926004E8931 /* YZSMSConfirmViewController.h */,
+				58E31E5721944926004E8931 /* YZSMSConfirmViewController.m */,
+				58E31E5821944926004E8931 /* YZSMSConfirmViewController.xib */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		58E31E5021942CF3004E8931 /* changepwd */ = {
+			isa = PBXGroup;
+			children = (
+				58E31E5B21945F35004E8931 /* YZChangePwdViewController.h */,
+				58E31E5C21945F35004E8931 /* YZChangePwdViewController.m */,
+				58E31E5D21945F35004E8931 /* YZChangePwdViewController.xib */,
+			);
+			path = changepwd;
+			sourceTree = "<group>";
+		};
 		58FAD86F2191B37F00E5F24D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1686,6 +1734,8 @@
 				584FFF39218CB9E8008B2B61 /* icon_address_empty@3x.png in Resources */,
 				58962987218869A9008EFDD8 /* icon_nav_back_radio@2x.png in Resources */,
 				58497D8E2192EA51005F53A3 /* YZWuliuViewController.xib in Resources */,
+				58E31E5F21945F35004E8931 /* YZChangePwdViewController.xib in Resources */,
+				58E31E5A21944926004E8931 /* YZSMSConfirmViewController.xib in Resources */,
 				584FFEC2218C6977008B2B61 /* icon_manager_store@2x.png in Resources */,
 				58497D532192C9BC005F53A3 /* icon_pay_default@2x.png in Resources */,
 				58A88DD22191C3BE00A3A2D8 /* icon_comment_empty@2x.png in Resources */,
@@ -1717,6 +1767,7 @@
 				584FFF36218CB864008B2B61 /* YZAddressTableCell.xib in Resources */,
 				58497D372192C26F005F53A3 /* icon_goods_placeholder_240x260@3x.png in Resources */,
 				584FFEEB218C9B6F008B2B61 /* YZUserAvartTableCell.xib in Resources */,
+				58E31E55219446EE004E8931 /* YZRegisterViewController.xib in Resources */,
 				58497D742192E0EF005F53A3 /* YZOrderDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1793,6 +1844,7 @@
 				584FFE8D218C266C008B2B61 /* YZBaseTableViewCell.m in Sources */,
 				5896295821884C09008EFDD8 /* ViewController.m in Sources */,
 				584FFE5A218B00F1008B2B61 /* NSData+AES256.m in Sources */,
+				58E31E5E21945F35004E8931 /* YZChangePwdViewController.m in Sources */,
 				584FFE1E218AF827008B2B61 /* YZGoodsFreightModel.m in Sources */,
 				589629AC218873E6008EFDD8 /* UIImage+Placeholder.m in Sources */,
 				584FFF4B218CC140008B2B61 /* YZSettingUserTableCell.m in Sources */,
@@ -1817,6 +1869,7 @@
 				58A88DC92191B52400A3A2D8 /* YZCommentEmptyTableCell.m in Sources */,
 				58497DC021932E8E005F53A3 /* YZWuliuInfoTableCell.m in Sources */,
 				58A5732D2191AF040086F8F3 /* YZSwitchTableCell.m in Sources */,
+				58E31E5921944926004E8931 /* YZSMSConfirmViewController.m in Sources */,
 				589629B2218873E6008EFDD8 /* UIView+NZCorner.m in Sources */,
 				584FFF3F218CBADF008B2B61 /* YZAddressAddViewController.m in Sources */,
 				58A573172191A3990086F8F3 /* YZGoodsSelectView.m in Sources */,
@@ -1879,6 +1932,7 @@
 				584FFEA6218C63D1008B2B61 /* YZUserCenterInfoTableCell.m in Sources */,
 				584FFDF4218AB8E3008B2B61 /* YZShopCarViewController.m in Sources */,
 				584FFE17218AF67D008B2B61 /* YZBaseCollectionViewCell.m in Sources */,
+				58E31E54219446EE004E8931 /* YZRegisterViewController.m in Sources */,
 				584FFE4E218B00F1008B2B61 /* OrderModel.m in Sources */,
 				589629AD218873E6008EFDD8 /* NSDictionary+YZSafe.m in Sources */,
 				584FFE1B218AF734008B2B61 /* YZGoodsModel.m in Sources */,

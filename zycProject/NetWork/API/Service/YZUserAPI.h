@@ -11,6 +11,10 @@
 
 @interface YZUserAPI : YNCZBaseService
 
+- (void)registerWithPhone:(NSString *)phone
+                 password:(NSString *)password
+                  success:(SuccessBlock)success
+                  failure:(FailureBlock)failure;
 
 /**
  用户登录

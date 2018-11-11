@@ -15,6 +15,23 @@ static NSString *LogoutAction                   = @"/user/loginOut";
 
 @implementation YZUserAPI
 
+- (void)registerWithPhone:(NSString *)phone
+                 password:(NSString *)password
+                  success:(SuccessBlock)success
+                  failure:(FailureBlock)failure {
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    [dictionary setValue:phone forKey:@"username"];
+    [dictionary setValue:password forKey:@"password"];
+    [dictionary setValue:phone forKey:@"mobilePhoneNumber"];
+    
+    [[YCNetworkManager shared] lc_post:@"/users"
+                         parameters:dictionary
+                           progress:nil
+                            success:success
+                            failure:failure];
+    
+}
+
 - (void)loginWithPhone:(NSString *)phone password:(NSString *)password success:(SuccessBlock)success failure:(FailureBlock)failure {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     [dictionary setValue:phone forKey:@"userName"];

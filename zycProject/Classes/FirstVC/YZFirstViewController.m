@@ -61,7 +61,9 @@
     if ([YZUserCenter shared].hasReviewed && ![YZUserCenter shared].userInfo) {
         YZLoginViewController *loginVC = [YZLoginViewController new];
         loginVC.isLaunchLogin = YES;
-        nextVC = loginVC;
+        UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        loginVC.navigationController.navigationBar.hidden = YES;
+        nextVC = nv;
     } else {
         nextVC = [YZMainViewController new];
     }

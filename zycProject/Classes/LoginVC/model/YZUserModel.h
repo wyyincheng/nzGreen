@@ -42,11 +42,11 @@ typedef NS_ENUM(NSUInteger, UserType) {
  */
 @property (assign, nonatomic) UserType userType;
 
-@property (assign, nonatomic) BOOL testMode;
+//@property (assign, nonatomic) BOOL testMode;
 
-- (void)saveUserInfo;
+//- (void)saveUserInfo;
 
-+ (void)clearUserInfo;
+//+ (void)clearUserInfo;
 
 //+ (YZUserModel *)getUserInfo;
 

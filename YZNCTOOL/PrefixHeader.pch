@@ -123,6 +123,8 @@
 //#define NavigationColor [UIColor colorWithRed:28.0/255 green:27.0/255 blue:32.0/255 alpha:1.0]
 //#define NavigationBlackColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
 
+#define kServiceNumber @"4008626565"
+
 #define kCargoDetailBannerPlaceholder @"icon_goods_default"
 
 //AppInfo

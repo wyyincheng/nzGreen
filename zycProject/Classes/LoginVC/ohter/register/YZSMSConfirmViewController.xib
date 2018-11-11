@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YZSMSConfirmViewController">
+            <connections>
+                <outlet property="requestCodeButton" destination="xdP-h1-8S9" id="ZgM-4i-nZX"/>
+                <outlet property="verifyButton" destination="uka-tP-mov" id="tlV-8j-r8z"/>
+                <outlet property="view" destination="1g9-8S-KfC" id="32Z-1F-Le4"/>
+                <outlet property="yzmTextField" destination="o6f-zW-iUW" id="8K6-1Q-MTy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1g9-8S-KfC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZO-7S-KEQ">
+                    <rect key="frame" x="20" y="48" width="30" height="30"/>
+                    <state key="normal" image="icon_nav_back_radio.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="o1j-uL-qsR"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="新西兰优品，有你更美好" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRM-66-Y67">
+                    <rect key="frame" x="86.5" y="163" width="202" height="21.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6f-zW-iUW">
+                    <rect key="frame" x="46" y="322.5" width="179" height="22"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uka-tP-mov">
+                    <rect key="frame" x="66" y="391.5" width="254" height="50"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.66666666669999997" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="GMC-Nk-thU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="验证手机号">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="confirmSMSAction:" destination="-1" eventType="touchUpInside" id="8hu-kS-4dN"/>
+                        <action selector="verifySMSCode:" destination="-1" eventType="touchUpInside" id="RDd-gG-FMH"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_app_83.5.png" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-YZ-xc0">
+                    <rect key="frame" x="146" y="60" width="83" height="83"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQO-Nk-z6L">
+                    <rect key="frame" x="46" y="350.5" width="179" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="S5F-jN-wLH"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-h1-8S9">
+                    <rect key="frame" x="250" y="319.5" width="90" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="LhG-Vb-Hge"/>
+                        <constraint firstAttribute="height" constant="28" id="OCQ-ef-FN3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="获取验证码">
+                        <color key="titleColor" red="0.38431372549019605" green="0.66666666666666663" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="requestSMSCode:" destination="-1" eventType="touchUpInside" id="cDB-tn-t7x"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WQO-Nk-z6L" firstAttribute="top" secondItem="o6f-zW-iUW" secondAttribute="bottom" constant="6" id="06z-Tp-yQU"/>
+                <constraint firstItem="xdP-h1-8S9" firstAttribute="centerY" secondItem="o6f-zW-iUW" secondAttribute="centerY" id="9V6-E6-m3F"/>
+                <constraint firstItem="zcK-YZ-xc0" firstAttribute="centerX" secondItem="1g9-8S-KfC" secondAttribute="centerX" id="EiI-gE-tQ8"/>
+                <constraint firstItem="0ZO-7S-KEQ" firstAttribute="top" secondItem="lSE-p9-Ko4" secondAttribute="top" constant="28" id="FrS-qx-tar"/>
+                <constraint firstItem="WQO-Nk-z6L" firstAttribute="trailing" secondItem="o6f-zW-iUW" secondAttribute="trailing" id="GQz-vM-hyJ"/>
+                <constraint firstItem="o6f-zW-iUW" firstAttribute="centerY" secondItem="1g9-8S-KfC" secondAttribute="centerY" id="Hfn-0X-CdF"/>
+                <constraint firstItem="uka-tP-mov" firstAttribute="top" secondItem="WQO-Nk-z6L" secondAttribute="bottom" constant="40" id="IAa-AB-Z3d"/>
+                <constraint firstItem="WQO-Nk-z6L" firstAttribute="leading" secondItem="o6f-zW-iUW" secondAttribute="leading" id="Jl3-tc-dO3"/>
+                <constraint firstItem="o6f-zW-iUW" firstAttribute="top" relation="lessThanOrEqual" secondItem="mRM-66-Y67" secondAttribute="bottom" priority="999" constant="80" id="OGW-Gc-MzH"/>
+                <constraint firstItem="0ZO-7S-KEQ" firstAttribute="leading" secondItem="lSE-p9-Ko4" secondAttribute="leading" constant="20" id="fJY-WK-dJQ"/>
+                <constraint firstItem="0ZO-7S-KEQ" firstAttribute="leading" secondItem="lSE-p9-Ko4" secondAttribute="leading" constant="20" id="ihU-l0-G3M"/>
+                <constraint firstItem="o6f-zW-iUW" firstAttribute="leading" secondItem="lSE-p9-Ko4" secondAttribute="leading" constant="46" id="lLS-QQ-YE8"/>
+                <constraint firstItem="uka-tP-mov" firstAttribute="leading" secondItem="o6f-zW-iUW" secondAttribute="leading" constant="20" id="mGI-PK-gvk"/>
+                <constraint firstItem="zcK-YZ-xc0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lSE-p9-Ko4" secondAttribute="top" priority="997" constant="40" id="rku-5Z-3p1"/>
+                <constraint firstItem="xdP-h1-8S9" firstAttribute="trailing" secondItem="uka-tP-mov" secondAttribute="trailing" constant="20" id="xEd-Sy-9ll"/>
+                <constraint firstItem="mRM-66-Y67" firstAttribute="top" secondItem="zcK-YZ-xc0" secondAttribute="bottom" constant="20" id="xQi-mI-qZq"/>
+                <constraint firstItem="lSE-p9-Ko4" firstAttribute="trailing" secondItem="xdP-h1-8S9" secondAttribute="trailing" constant="35" id="xvM-c4-ykd"/>
+                <constraint firstItem="mRM-66-Y67" firstAttribute="centerX" secondItem="1g9-8S-KfC" secondAttribute="centerX" id="y3x-Pn-eiZ"/>
+                <constraint firstItem="xdP-h1-8S9" firstAttribute="leading" secondItem="o6f-zW-iUW" secondAttribute="trailing" constant="25" id="zBQ-Y3-tgV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="lSE-p9-Ko4"/>
+            <point key="canvasLocation" x="136.80000000000001" y="121.88905547226388"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_app_83.5.png" width="83" height="83"/>
+        <image name="icon_nav_back_radio.png" width="30" height="30"/>
+    </resources>
+</document>

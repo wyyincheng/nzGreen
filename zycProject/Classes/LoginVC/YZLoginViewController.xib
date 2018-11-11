@@ -98,7 +98,7 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="FJ9-Vx-zrG"/>
+                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="JZs-Oj-fxY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1t-lA-0ca">
@@ -107,6 +107,9 @@
                     <state key="normal" title="联系客服">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="contactUsAction:" destination="-1" eventType="touchUpInside" id="S0R-uB-Yie"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU6-Wy-gwT">
                     <rect key="frame" x="208" y="433" width="50" height="27"/>
@@ -114,6 +117,9 @@
                     <state key="normal" title="修改密码">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="changePwdAction:" destination="-1" eventType="touchUpInside" id="2Yb-4f-Twx"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_app_83.5.png" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-vh-n6I">
                     <rect key="frame" x="118.5" y="60" width="83" height="83"/>

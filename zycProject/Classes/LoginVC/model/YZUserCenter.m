@@ -75,49 +75,6 @@ static YZUserCenter *userCenter;
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-//- (BOOL)normalUser {
-//    return YES;
-//    return !self.userInfo.testMode;
-//}
-//
-////- (BOOL)canShowChongzhi {
-////    return self.userInfo.testMode;
-////}
-//
-//- (void)setUserInfo:(UserModel *)userInfo {
-//    _userInfo = userInfo;
-//    _forceLogin = NO;
-//    if (userInfo) {
-//        [[NSUserDefaults standardUserDefaults] setValue:userInfo.userInfoDict forKey:userInfoDict];
-//        [[NSUserDefaults standardUserDefaults] synchronize];
-//    }
-//    if (userInfo.token) {
-//        [[AMKeychainManager defaultManager] setKeychainValue:userInfo.token forKey:userToken];
-//    }
-//}
-//
-//- (BOOL)normalLogin {
-//    if (_normalLogin) {
-//        return _normalLogin;
-//    }
-//    return [[NSUserDefaults standardUserDefaults] boolForKey:@"_normalLogin"];
-//}
-//
-//- (void)setCanShowChongzhi:(BOOL)canShowChongzhi {
-//    _canShowChongzhi = canShowChongzhi;
-//
-//    if (_canShowChongzhi != [[NSUserDefaults standardUserDefaults] boolForKey:@"_canShowChongzhi"]) {
-//        _normalLogin = NO;
-//        [[NSUserDefaults standardUserDefaults] setBool:_normalLogin forKey:@"_normalLogin"];
-//        [[NSUserDefaults standardUserDefaults] synchronize];
-//        _userInfo = nil;
-//        _forceLogin = YES;
-//        [[AMKeychainManager defaultManager] removeKeychainEntryForKey:userToken];
-//    }
-//    [[NSUserDefaults standardUserDefaults] setBool:_canShowChongzhi forKey:@"_canShowChongzhi"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//}
-
 - (void)custom_logOut {
     [self clearLocalnUserInfo];
 }
@@ -131,26 +88,15 @@ static YZUserCenter *userCenter;
     //FIXME: 重复弹窗
     id topVC = [UIViewController currentVC];
     if (![topVC isKindOfClass:[YZLoginViewController class]]) {
-        [topVC presentViewController:[YZLoginViewController new]
+        
+        YZLoginViewController *loginVC = [YZLoginViewController new];
+        UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        loginVC.navigationController.navigationBar.hidden = YES;
+        
+        [topVC presentViewController: nv
                             animated:YES
                           completion:nil];
     }
-    
-    
-//    if (![topVC isKindOfClass:[YZLoginViewController class]]) {
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
-//                                                                       message:@"当前登录失效，请重新登录"
-//                                                                preferredStyle:UIAlertControllerStyleAlert];
-//        [alert addAction:[UIAlertAction actionWithTitle:@"好的"
-//                                                  style:UIAlertActionStyleDefault
-//                                                handler:^(UIAlertAction * _Nonnull action) {
-//                                                    [topVC presentViewController:[YZLoginViewController new]
-//                                                                        animated:YES
-//                                                                      completion:nil];
-//                                                }]];
-//        [topVC presentViewController:alert animated:YES completion:nil];
-//    }
-    
 }
 
 - (void)clearLocalnUserInfo {

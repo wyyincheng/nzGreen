@@ -25,6 +25,12 @@ typedef void(^ManagerBlock)(AFHTTPSessionManager * _Nullable manager);
 
 + (YCNetworkManager *_Nonnull)shared;
 
+- (void)lc_post:(NSString *)method
+     parameters:(NSDictionary *)parameters
+       progress:(ProgressBlock)progress
+        success:(SuccessBlock)success
+        failure:(FailureBlock)failure;
+
 -(void)post:(NSString * _Nonnull)method
  parameters:(NSDictionary * _Nullable)parameters
    progress:(ProgressBlock _Nullable)progress
