@@ -11,6 +11,7 @@
 #import "YZSMSConfirmViewController.h"
 #import "YZChangePwdViewController.h"
 #import "YZRegisterViewController.h"
+#import "YZPrivacyViewController.h"
 #import "YZMainViewController.h"
 #import "NSString+NZCheck.h"
 #import "NZTipView.h"
@@ -25,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *registerBt;
 @property (weak, nonatomic) IBOutlet UIButton *loginBt;
 @property (weak, nonatomic) IBOutlet UIButton *backBt;
+@property (weak, nonatomic) IBOutlet UIButton *privacyBt;
+
 
 @end
 
@@ -79,6 +82,12 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
 
 #pragma mark - action
 - (IBAction)loginAction:(UIButton *)sender {
+    
+    if (!self.privacyBt.selected) {
+        [NZTipView showError:@"请先阅读并同意用户协议" onScreen:self.view];
+        return;
+    }
+    
     if (![self.phoneTextField.text isPhoneNumber]) {
         [NZTipView showError:@"请输入正确的账号" onScreen:self.view];
         [self.phoneTextField becomeFirstResponder];
@@ -154,6 +163,14 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     if ([[UIApplication sharedApplication] canOpenURL:telURL]) {
         [[UIApplication sharedApplication] openURL:telURL];
     }
+}
+
+- (IBAction)privacyDetailAction:(id)sender {
+    [self gotoViewController:NSStringFromClass([YZPrivacyViewController class])];
+}
+
+- (IBAction)privacyAction:(id)sender {
+    self.privacyBt.selected = !self.privacyBt.selected;
 }
 
 - (void)hiddenHUD {

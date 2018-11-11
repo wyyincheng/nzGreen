@@ -115,6 +115,11 @@
 
 #pragma mark - delegate
 #pragma mark collectionView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    //类型、
+    return 3;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.goodsArray.count;
 }

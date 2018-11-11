@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +17,7 @@
                 <outlet property="contactServiceBt" destination="N1t-lA-0ca" id="doH-Qx-BPH"/>
                 <outlet property="loginBt" destination="6Ae-ut-MqS" id="Tey-uU-RDL"/>
                 <outlet property="phoneTextField" destination="7rG-x9-Nuj" id="LCO-ld-m9Q"/>
+                <outlet property="privacyBt" destination="tcl-MW-HFq" id="GPK-0R-Qhf"/>
                 <outlet property="pwdTextField" destination="q1b-bH-gHv" id="z7A-AW-4jb"/>
                 <outlet property="registerBt" destination="D1l-Cz-8np" id="DGq-K6-eGX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -144,6 +145,29 @@
                         <constraint firstAttribute="height" constant="1" id="quS-G7-Jtf"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcl-MW-HFq">
+                    <rect key="frame" x="66" y="403" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="0Hc-q3-pmH"/>
+                        <constraint firstAttribute="width" secondItem="tcl-MW-HFq" secondAttribute="height" multiplier="1:1" id="zQg-Ek-dd3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" image="btn_radio_default.png">
+                        <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" image="btn_radio_selected.png"/>
+                    <connections>
+                        <action selector="privacyAction:" destination="-1" eventType="touchUpInside" id="R4S-lV-u8r"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dp-3X-vOA">
+                    <rect key="frame" x="86" y="398" width="113" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="《用户隐私保护协议》"/>
+                    <connections>
+                        <action selector="privacyDetailAction:" destination="-1" eventType="touchUpInside" id="WJp-fy-QtS"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -160,11 +184,13 @@
                 <constraint firstItem="UgI-vh-n6I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Q5M-cg-NOt" secondAttribute="top" priority="997" constant="40" id="I1w-ZR-hiZ"/>
                 <constraint firstItem="r41-3q-Vvd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I8M-Yc-9Sx"/>
                 <constraint firstItem="rV6-YR-BTn" firstAttribute="top" secondItem="D1l-Cz-8np" secondAttribute="top" constant="8" id="IDq-0Z-bR7"/>
+                <constraint firstItem="tcl-MW-HFq" firstAttribute="top" secondItem="6Ae-ut-MqS" secondAttribute="bottom" constant="10" id="KeF-nZ-SfZ"/>
                 <constraint firstItem="D1l-Cz-8np" firstAttribute="top" secondItem="6Ae-ut-MqS" secondAttribute="bottom" constant="40" id="LWH-E9-9WB"/>
                 <constraint firstItem="q1b-bH-gHv" firstAttribute="trailing" secondItem="7rG-x9-Nuj" secondAttribute="trailing" id="NBN-iK-oWg"/>
                 <constraint firstItem="rV6-YR-BTn" firstAttribute="leading" secondItem="N1t-lA-0ca" secondAttribute="trailing" constant="16" id="Qac-kn-425"/>
                 <constraint firstItem="z9u-3M-Ses" firstAttribute="bottom" secondItem="rV6-YR-BTn" secondAttribute="bottom" id="Rdy-49-1f3"/>
                 <constraint firstItem="q1b-bH-gHv" firstAttribute="top" secondItem="7rG-x9-Nuj" secondAttribute="bottom" constant="30" id="SmH-qe-cJf"/>
+                <constraint firstItem="6dp-3X-vOA" firstAttribute="leading" secondItem="tcl-MW-HFq" secondAttribute="trailing" constant="4" id="U25-25-O6h"/>
                 <constraint firstItem="r41-3q-Vvd" firstAttribute="top" secondItem="UgI-vh-n6I" secondAttribute="bottom" constant="20" id="WfX-Tg-zyz"/>
                 <constraint firstItem="6Ae-ut-MqS" firstAttribute="leading" secondItem="q1b-bH-gHv" secondAttribute="leading" constant="20" id="Wnf-95-chA"/>
                 <constraint firstItem="z9u-3M-Ses" firstAttribute="top" secondItem="rV6-YR-BTn" secondAttribute="top" id="XSK-sU-qcE"/>
@@ -179,7 +205,9 @@
                 <constraint firstItem="z9u-3M-Ses" firstAttribute="width" secondItem="rV6-YR-BTn" secondAttribute="width" id="n5X-84-MxO"/>
                 <constraint firstItem="7rG-x9-Nuj" firstAttribute="top" relation="lessThanOrEqual" secondItem="r41-3q-Vvd" secondAttribute="bottom" priority="999" constant="80" id="qNw-I9-nfZ"/>
                 <constraint firstItem="D1l-Cz-8np" firstAttribute="leading" secondItem="rV6-YR-BTn" secondAttribute="trailing" constant="16" id="rik-s3-uHi"/>
+                <constraint firstItem="6dp-3X-vOA" firstAttribute="centerY" secondItem="tcl-MW-HFq" secondAttribute="centerY" id="sgg-ac-4LT"/>
                 <constraint firstItem="rV6-YR-BTn" firstAttribute="bottom" secondItem="D1l-Cz-8np" secondAttribute="bottom" constant="-8" id="shv-JQ-Bci"/>
+                <constraint firstItem="tcl-MW-HFq" firstAttribute="leading" secondItem="6Ae-ut-MqS" secondAttribute="leading" id="t6p-ag-QkP"/>
                 <constraint firstItem="D1l-Cz-8np" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tUD-Ga-aNg"/>
                 <constraint firstItem="D1l-Cz-8np" firstAttribute="centerY" secondItem="N1t-lA-0ca" secondAttribute="centerY" id="uWa-xz-f9K"/>
                 <constraint firstItem="o24-dc-hEB" firstAttribute="top" secondItem="7rG-x9-Nuj" secondAttribute="bottom" constant="6" id="vs7-bd-Ycv"/>
@@ -189,6 +217,8 @@
         </view>
     </objects>
     <resources>
+        <image name="btn_radio_default.png" width="30" height="30"/>
+        <image name="btn_radio_selected.png" width="42" height="42"/>
         <image name="icon_app_83.5.png" width="83" height="83"/>
         <image name="icon_nav_back_radio.png" width="30" height="30"/>
     </resources>
