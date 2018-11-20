@@ -11,7 +11,7 @@
 #import "YZGoodsModel.h"
 #import "YZHomeGoodsCollectionCell.h"
 #import "YZGoodsDetailViewController.h"
-#import "YZGoodsSearchViewController.h"
+#import "YZSearchGoodsViewController.h"
 #import "YZHomeGoodsCollectionHeaderView.h"
 
 @interface YZGoodsListViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,UISearchBarDelegate> {
@@ -120,7 +120,7 @@
 #pragma mark searchBar
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
-    [self gotoViewController:NSStringFromClass([YZGoodsSearchViewController class])];
+    [self gotoViewController:NSStringFromClass([YZSearchGoodsViewController class])];
 }
 
 #pragma mark collectionView

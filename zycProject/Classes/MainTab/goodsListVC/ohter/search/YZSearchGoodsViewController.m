@@ -1,20 +1,19 @@
 //
-//  YZGoodsSearchViewController.m
+//  YZSearchGoodsViewController.m
 //  zycProject
 //
 //  Created by yc on 2018/11/20.
 //  Copyright © 2018 yc. All rights reserved.
 //
 
-#import "YZGoodsSearchViewController.h"
+#import "YZSearchGoodsViewController.h"
 
 #import "YZGoodsModel.h"
 
 #import "YZGoodsSearchTableCell.h"
 #import "YZHomeGoodsCollectionCell.h"
-//#import "YZHomeGoodsCollectionHeaderView.h"
 
-@interface YZGoodsSearchViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
+@interface YZSearchGoodsViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
     NSInteger pageIndex;
 }
 
@@ -28,40 +27,45 @@
 
 @end
 
-
 static NSString * const kLastQueryTime = @"kLastQueryTime";
 static NSString * const kSearchKeyArray = @"kSearchKeyArray";
 static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
-//static NSString * const kNZGoodsSearchCellIdentifiler = @"kNZGoodsSearchCellIdentifiler";
 
-
-@implementation YZGoodsSearchViewController
+@implementation YZSearchGoodsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self initViews];
     [self initDatas];
+    [self.searchBar becomeFirstResponder];
+    self.tableView.hidden = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     self.tableView.hidden = YES;
 }
 
 - (void)initViews {
     
     self.navigationItem.titleView = self.searchBar;
-
+    
     self.collectionLayout.minimumLineSpacing = 4;
     self.collectionLayout.minimumInteritemSpacing = 4;
     
     [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([YZHomeGoodsCollectionCell class])
                                                 bundle:nil]
       forCellWithReuseIdentifier:[YZHomeGoodsCollectionCell yz_cellIdentifiler]];
-//    [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([YZHomeGoodsCollectionHeaderView class])
-//                                                bundle:nil]
-//      forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-//             withReuseIdentifier:[YZHomeGoodsCollectionHeaderView yz_cellIdentifiler]];
+    //    [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([YZHomeGoodsCollectionHeaderView class])
+    //                                                bundle:nil]
+    //      forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+    //             withReuseIdentifier:[YZHomeGoodsCollectionHeaderView yz_cellIdentifiler]];
     
     __weak typeof(self) weakSelf = self;
     _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -105,7 +109,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     }
     
     NSNumber *lastTimeLg = @(0);
-
+    
     __weak typeof(self) weakSelf = self;
     [[YZNCNetAPI sharedAPI].productAPI updateSearchKeyListWithLastQueryTime:lastTimeLg
                                                                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -123,7 +127,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
                                                                     } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
                                                                         NSLog(@"error");
                                                                     }];
-
+    
 }
 
 #pragma mark - private
@@ -143,7 +147,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
                                                          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                              [weakSelf.collectionView.mj_header endRefreshing];
                                                              [weakSelf.collectionView.mj_footer endRefreshing];
-
+                                                             
                                                              NSArray *userArray = [[YZGoodsModel yz_objectArrayWithKeyValuesArray:[responseObject yz_arrayForKey:@"records"]] mutableCopy];
                                                              if (refresh) {
                                                                  weakSelf.searchGoodsArray = [userArray mutableCopy];
@@ -170,7 +174,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
 
 #pragma mark - delegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-//    self.searchGoodsArray = nil;
+    //    self.searchGoodsArray = nil;
     [self.collectionView reloadData];
     [self searchGoods:YES needLoading:YES];
 }
@@ -186,10 +190,10 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     self.searchResult = nil;
     self.searchGoodsArray = nil;
     self.tableView.hidden = YES;
-//    self.goodsArray = nil;
-//    [self.collectionView reloadData];
-//    [self refreshProducts:YES needLoading:needLoading];
-//    //    }
+    //    self.goodsArray = nil;
+    //    [self.collectionView reloadData];
+    //    [self refreshProducts:YES needLoading:needLoading];
+    //    //    }
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
@@ -231,14 +235,14 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize size = [YZHomeGoodsCollectionCell yz_sizeForCellWithModel:[self.searchGoodsArray yz_objectAtIndex:indexPath.row]
-                                                    contentWidth:(kScreenWidth - 5)/2];
+                                                        contentWidth:(kScreenWidth - 5)/2];
     CGFloat height = ((size.height > 0 && indexPath.row < 2 && self.searchBar.text.length == 0) ? size.height - 22.5 : size.height);
     return CGSizeMake(size.width, height + 10);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     YZHomeGoodsCollectionCell *goodsCell = [YZHomeGoodsCollectionCell yz_createCellForCollectionView:collectionView
-                                                                                   indexPath:indexPath];
+                                                                                           indexPath:indexPath];
     [goodsCell yz_configWithModel:[self.searchGoodsArray yz_objectAtIndex:indexPath.row]];
     return goodsCell;
 }
@@ -266,7 +270,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     id model = [self.searchGoodsArray yz_objectAtIndex:indexPath.row];
     if ([model isKindOfClass:[YZGoodsModel class]]) {
         //TODO: goto detailVC
-//        [self performSegueWithIdentifier:@"detailVC" sender:((NZGoodsModel *)model).goodsId];
+        //        [self performSegueWithIdentifier:@"detailVC" sender:((NZGoodsModel *)model).goodsId];
     }
 }
 
@@ -289,7 +293,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     id model = [self.searchResult yz_objectAtIndex:indexPath.row];
     if ([model isKindOfClass:[YZGoodsModel class]]) {
         //TODO:
-//        [self performSegueWithIdentifier:@"detailVC" sender:((NZGoodsModel *)model).goodsId];
+        //        [self performSegueWithIdentifier:@"detailVC" sender:((NZGoodsModel *)model).goodsId];
     } else if ([model isKindOfClass:[NSDictionary class]]) {
         self.searchGoodsArray = nil;
         [self.collectionView reloadData];
@@ -381,5 +385,6 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     }
     return _tableView;
 }
+
 
 @end

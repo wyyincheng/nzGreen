@@ -253,6 +253,8 @@
 		58A88DD22191C3BE00A3A2D8 /* icon_comment_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD02191C3BD00A3A2D8 /* icon_comment_empty@2x.png */; };
 		58A88DD52191C45E00A3A2D8 /* icon_goods_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD32191C45E00A3A2D8 /* icon_goods_default@3x.png */; };
 		58A88DD62191C45E00A3A2D8 /* icon_goods_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD42191C45E00A3A2D8 /* icon_goods_default@2x.png */; };
+		58C146B621A4539E00C2B186 /* YZSearchGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C146B421A4539E00C2B186 /* YZSearchGoodsViewController.m */; };
+		58C146B721A4539E00C2B186 /* YZSearchGoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C146B521A4539E00C2B186 /* YZSearchGoodsViewController.xib */; };
 		58E31E54219446EE004E8931 /* YZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E52219446EE004E8931 /* YZRegisterViewController.m */; };
 		58E31E55219446EE004E8931 /* YZRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E31E53219446EE004E8931 /* YZRegisterViewController.xib */; };
 		58E31E5921944926004E8931 /* YZSMSConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E5721944926004E8931 /* YZSMSConfirmViewController.m */; };
@@ -633,6 +635,9 @@
 		58A88DD02191C3BD00A3A2D8 /* icon_comment_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_comment_empty@2x.png"; sourceTree = "<group>"; };
 		58A88DD32191C45E00A3A2D8 /* icon_goods_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_default@3x.png"; sourceTree = "<group>"; };
 		58A88DD42191C45E00A3A2D8 /* icon_goods_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_default@2x.png"; sourceTree = "<group>"; };
+		58C146B321A4539E00C2B186 /* YZSearchGoodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSearchGoodsViewController.h; sourceTree = "<group>"; };
+		58C146B421A4539E00C2B186 /* YZSearchGoodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSearchGoodsViewController.m; sourceTree = "<group>"; };
+		58C146B521A4539E00C2B186 /* YZSearchGoodsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSearchGoodsViewController.xib; sourceTree = "<group>"; };
 		58E31E51219446EE004E8931 /* YZRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRegisterViewController.h; sourceTree = "<group>"; };
 		58E31E52219446EE004E8931 /* YZRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZRegisterViewController.m; sourceTree = "<group>"; };
 		58E31E53219446EE004E8931 /* YZRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZRegisterViewController.xib; sourceTree = "<group>"; };
@@ -678,6 +683,9 @@
 				587A55D621A40089008581D7 /* YZGoodsSearchViewController.h */,
 				587A55D721A40089008581D7 /* YZGoodsSearchViewController.m */,
 				587A55D921A40F29008581D7 /* YZGoodsSearchViewController.xib */,
+				58C146B321A4539E00C2B186 /* YZSearchGoodsViewController.h */,
+				58C146B421A4539E00C2B186 /* YZSearchGoodsViewController.m */,
+				58C146B521A4539E00C2B186 /* YZSearchGoodsViewController.xib */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -1832,6 +1840,7 @@
 				584FFE85218BFC17008B2B61 /* icon_tab_shopcar_default@3x.png in Resources */,
 				587A55E321A44A9D008581D7 /* icon_search_arrow@2x.png in Resources */,
 				584FFE80218BFC17008B2B61 /* icon_tab_user_default@2x.png in Resources */,
+				58C146B721A4539E00C2B186 /* YZSearchGoodsViewController.xib in Resources */,
 				58497D4E2192C8C6005F53A3 /* YZProductPayTableCell.xib in Resources */,
 				584FFE98218C559C008B2B61 /* btn_radio_default@3x.png in Resources */,
 				584FFEB2218C6783008B2B61 /* icon_arrow_right@2x.png in Resources */,
@@ -2060,6 +2069,7 @@
 				584FFF10218CACBB008B2B61 /* YZOrderListChildViewController.m in Sources */,
 				58497D5F2192D158005F53A3 /* YZDeliverTypeTableCell.m in Sources */,
 				587A55D821A40089008581D7 /* YZGoodsSearchViewController.m in Sources */,
+				58C146B621A4539E00C2B186 /* YZSearchGoodsViewController.m in Sources */,
 				584FFE6A218B0598008B2B61 /* YZProductModel.m in Sources */,
 				584FFF52218CC6C5008B2B61 /* YMMBorderLineProvider.m in Sources */,
 				584FFF55218CC740008B2B61 /* UIView+Controller.m in Sources */,
