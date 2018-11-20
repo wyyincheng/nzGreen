@@ -109,6 +109,12 @@
 }
 
 - (void)hiddenHUD {
+    
+    //TOOD: 获取用户信息
+    NSString *token = [self.targetUser valueForKey:@"token"];
+    NSDictionary *userInfo = @{@"token":token,@"userType":@(1)};
+    [YZUserCenter shared].userInfo = [YZUserModel yz_objectWithKeyValues:userInfo];
+    
     [MBProgressHUD hideHUD];
     if (self.isLaunchLogin) {
         [self jumpToMainVC];

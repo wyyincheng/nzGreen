@@ -49,7 +49,7 @@ static YCNetworkManager *_networkManager;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
 
     if (0 == serviceType) {
-        [manager.requestSerializer setValue:[YZUserCenter shared].userInfo.token
+        [manager.requestSerializer setValue:[self Authorization]
                          forHTTPHeaderField:@"Authorization"];
     } else {
         [manager.requestSerializer setValue:@"6n5w8re56d5GYFbVJGmnLQdp-gzGzoHsz"
@@ -141,7 +141,7 @@ static YCNetworkManager *_networkManager;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:[YZUserCenter shared].userInfo.token
+    [manager.requestSerializer setValue:[self Authorization]
                      forHTTPHeaderField:@"Authorization"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -208,7 +208,7 @@ static YCNetworkManager *_networkManager;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:[YZUserCenter shared].userInfo.token
+    [manager.requestSerializer setValue:[self Authorization]
                      forHTTPHeaderField:@"Authorization"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -271,7 +271,7 @@ static YCNetworkManager *_networkManager;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:[YZUserCenter shared].userInfo.token
+    [manager.requestSerializer setValue:[self Authorization]
                      forHTTPHeaderField:@"Authorization"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -333,7 +333,7 @@ static YCNetworkManager *_networkManager;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:[YZUserCenter shared].userInfo.token
+    [manager.requestSerializer setValue:[self Authorization]
                      forHTTPHeaderField:@"Authorization"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -393,6 +393,10 @@ static YCNetworkManager *_networkManager;
 
 - (void)handleError:(NSError *)error {
     
+}
+
+- (NSString *)Authorization {
+    return ([YZUserCenter shared].userInfo ? [YZUserCenter shared].userInfo.token : @"18de2f5ddb694b8586c1bfca2b88b3f2");
 }
 
 @end

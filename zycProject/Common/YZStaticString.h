@@ -44,6 +44,8 @@ static NSString * const kYZClass_AppStoreInfo = @"YZAppStore";
 static NSString * const kYZClassAppStore_AppVersion = @"appVersion";
 static NSString * const kYZClassAppStore_HasReviewed = @"hasReviewed";
 
+static NSString * const kYZClass_RegisterToken = @"RegisterToken";
+
 //userdefault flag
 //UserInfo
 static NSString * const kYZUserDefault_UserInfoReal = @"kYZUserDefault_UserInfoReal";

@@ -652,6 +652,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5820E45A21991EDB006C8936 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				5820E45B21991EDB006C8936 /* model */,
+				5820E45C21991EDB006C8936 /* view */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		5820E45B21991EDB006C8936 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5820E45C21991EDB006C8936 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5820E45D21991EDB006C8936 /* searchResult */ = {
+			isa = PBXGroup;
+			children = (
+				5820E45E21991EDB006C8936 /* model */,
+				5820E45F21991EDB006C8936 /* view */,
+			);
+			path = searchResult;
+			sourceTree = "<group>";
+		};
+		5820E45E21991EDB006C8936 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5820E45F21991EDB006C8936 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		58497D3C2192C66C005F53A3 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -1527,6 +1573,8 @@
 		58A572F921919E380086F8F3 /* ohter */ = {
 			isa = PBXGroup;
 			children = (
+				5820E45A21991EDB006C8936 /* search */,
+				5820E45D21991EDB006C8936 /* searchResult */,
 				58FAD86F2191B37F00E5F24D /* model */,
 				58A573052191A1120086F8F3 /* view */,
 				58A572FA21919E500086F8F3 /* YZGoodsDetailViewController.h */,

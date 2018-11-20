@@ -84,10 +84,27 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     }
     
     [MBProgressHUD showMessage:@"加载中…"];
+    
+    __block NSString *token = @"1acda2928ce84c328842b8380faad887";
+    AVQuery *query = [AVQuery queryWithClassName:@"RegisterToken"];
+    [query whereKey:@"register" equalTo:@"ha"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            AVObject *object = [objects firstObject];
+            token = [object objectForKey:@"token"];
+            [self registerWithToken:token objectId:object.objectId];
+        } else {
+            [NZTipView showError:@"网络错误，请稍后重试" onScreen:self.view];
+        }
+    }];
+}
+
+- (void)registerWithToken:(NSString *)token objectId:(NSString *)objectId {
     AVUser* user = [[AVUser alloc] init];
     user.username = self.phoneTextField.text;
     user.password = self.pwdTextField.text;
     user.mobilePhoneNumber = self.phoneTextField.text;
+    [user setObject:token forKey:@"token"];
     
     //TODO:带上随机分配的token
     
@@ -105,6 +122,15 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
                     break;
             }
         } else {
+            
+            //TODO: change token value
+            // 第一个参数是 className，第二个参数是 objectId
+            AVObject *todo =[AVObject objectWithClassName:@"RegisterToken" objectId:objectId];
+            // 修改属性
+            [todo setObject:@"haha" forKey:@"register"];
+            // 保存到云端
+            [todo saveInBackground];
+            
             // 注册成功
             YZSMSConfirmViewController *verifyVC = [[YZSMSConfirmViewController alloc] init];
             verifyVC.targetUser = user;
