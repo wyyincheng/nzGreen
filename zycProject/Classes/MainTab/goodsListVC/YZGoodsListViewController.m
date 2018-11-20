@@ -11,9 +11,10 @@
 #import "YZGoodsModel.h"
 #import "YZHomeGoodsCollectionCell.h"
 #import "YZGoodsDetailViewController.h"
+#import "YZGoodsSearchViewController.h"
 #import "YZHomeGoodsCollectionHeaderView.h"
 
-@interface YZGoodsListViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
+@interface YZGoodsListViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,UISearchBarDelegate> {
     NSInteger pageIndex;
 }
 
@@ -22,6 +23,8 @@
 
 @property (nonatomic, strong) NSMutableDictionary *headerIconDict;
 @property (nonatomic, strong) NSMutableArray *goodsArray;
+
+@property (nonatomic, strong) UISearchBar *searchBar;
 
 @end
 
@@ -43,8 +46,8 @@
 
 #pragma mark - init
 - (void)initView {
-    //FIXME: 正式版本顶部有搜索框
-    self.navigationItem.title = @"首页";
+    
+    self.navigationItem.titleView = self.searchBar;
     
     self.collectionLayout.minimumLineSpacing = 4;
     self.collectionLayout.minimumInteritemSpacing = 4;
@@ -114,6 +117,12 @@
 }
 
 #pragma mark - delegate
+#pragma mark searchBar
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [self gotoViewController:NSStringFromClass([YZGoodsSearchViewController class])];
+}
+
 #pragma mark collectionView
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     //类型、
@@ -208,6 +217,26 @@
         _headerIconDict = [NSMutableDictionary dictionary];
     }
     return _headerIconDict;
+}
+
+- (UISearchBar *)searchBar {
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc] init];
+        _searchBar.placeholder = @"搜索";
+        _searchBar.backgroundImage = [UIImage imageNamed:@"icon_search"];
+        
+        UITextField *searchTextField = [_searchBar valueForKey:@"_searchField"];
+        searchTextField.font = [UIFont systemFontOfSize:16];
+        searchTextField.textColor = [UIColor colorWithHex:0x999999];
+        searchTextField.backgroundColor = [UIColor colorWithHex:0x8E8E93 alpha:0.2];
+        
+        _searchBar.tintColor = [UIColor colorWithHex:0x999999];
+        
+        [_searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
+        
+        _searchBar.delegate = self;
+    }
+    return _searchBar;
 }
 
 @end

@@ -189,6 +189,10 @@
 		584FFF55218CC740008B2B61 /* UIView+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF54218CC73F008B2B61 /* UIView+Controller.m */; };
 		584FFF59218CC7BD008B2B61 /* YZOrderStatusTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */; };
 		584FFF5A218CC7BD008B2B61 /* YZOrderStatusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */; };
+		587A55D421A4000D008581D7 /* icon_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 587A55D221A4000D008581D7 /* icon_search@2x.png */; };
+		587A55D521A4000D008581D7 /* icon_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 587A55D321A4000D008581D7 /* icon_search@3x.png */; };
+		587A55D821A40089008581D7 /* YZGoodsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587A55D721A40089008581D7 /* YZGoodsSearchViewController.m */; };
+		587A55DA21A40F29008581D7 /* YZGoodsSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587A55D921A40F29008581D7 /* YZGoodsSearchViewController.xib */; };
 		5896295521884C09008EFDD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896295421884C09008EFDD8 /* AppDelegate.m */; };
 		5896295821884C09008EFDD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5896295721884C09008EFDD8 /* ViewController.m */; };
 		5896295B21884C09008EFDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5896295921884C09008EFDD8 /* Main.storyboard */; };
@@ -527,6 +531,11 @@
 		584FFF56218CC7BD008B2B61 /* YZOrderStatusTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderStatusTableCell.h; sourceTree = "<group>"; };
 		584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderStatusTableCell.m; sourceTree = "<group>"; };
 		584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZOrderStatusTableCell.xib; sourceTree = "<group>"; };
+		587A55D221A4000D008581D7 /* icon_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_search@2x.png"; sourceTree = "<group>"; };
+		587A55D321A4000D008581D7 /* icon_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_search@3x.png"; sourceTree = "<group>"; };
+		587A55D621A40089008581D7 /* YZGoodsSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsSearchViewController.h; sourceTree = "<group>"; };
+		587A55D721A40089008581D7 /* YZGoodsSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZGoodsSearchViewController.m; sourceTree = "<group>"; };
+		587A55D921A40F29008581D7 /* YZGoodsSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZGoodsSearchViewController.xib; sourceTree = "<group>"; };
 		5896295021884C09008EFDD8 /* zycProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zycProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5896295321884C09008EFDD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5896295421884C09008EFDD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -657,6 +666,9 @@
 			children = (
 				5820E45B21991EDB006C8936 /* model */,
 				5820E45C21991EDB006C8936 /* view */,
+				587A55D621A40089008581D7 /* YZGoodsSearchViewController.h */,
+				587A55D721A40089008581D7 /* YZGoodsSearchViewController.m */,
+				587A55D921A40F29008581D7 /* YZGoodsSearchViewController.xib */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -1412,6 +1424,8 @@
 		5896297521886303008EFDD8 /* icon_goods_default.png */ = {
 			isa = PBXGroup;
 			children = (
+				587A55D221A4000D008581D7 /* icon_search@2x.png */,
+				587A55D321A4000D008581D7 /* icon_search@3x.png */,
 				58497DB921932DF0005F53A3 /* icon_wuliu_placeholder@2x.png */,
 				58497DBA21932DF0005F53A3 /* icon_wuliu_placeholder@3x.png */,
 				58497D962192EDF8005F53A3 /* icon_start_default@2x.png */,
@@ -1868,10 +1882,13 @@
 				58A5731C2191A4750086F8F3 /* YZGoodsIconTableCell.xib in Resources */,
 				584FFE83218BFC17008B2B61 /* icon_tab_shopcar_selected@3x.png in Resources */,
 				58497DA22192F029005F53A3 /* YZAgentViewController.xib in Resources */,
+				587A55DA21A40F29008581D7 /* YZGoodsSearchViewController.xib in Resources */,
 				58FAD8772191B3F900E5F24D /* YZWebTableCell.xib in Resources */,
 				584FFF11218CACBB008B2B61 /* YZOrderListChildViewController.xib in Resources */,
+				587A55D421A4000D008581D7 /* icon_search@2x.png in Resources */,
 				58497DB821932D92005F53A3 /* YZWuliuTableCell.xib in Resources */,
 				58A88DCE2191C21200A3A2D8 /* icon_shopcar_radio@3x.png in Resources */,
+				587A55D521A4000D008581D7 /* icon_search@3x.png in Resources */,
 				584FFF36218CB864008B2B61 /* YZAddressTableCell.xib in Resources */,
 				58497D372192C26F005F53A3 /* icon_goods_placeholder_240x260@3x.png in Resources */,
 				584FFEEB218C9B6F008B2B61 /* YZUserAvartTableCell.xib in Resources */,
@@ -2024,6 +2041,7 @@
 				584FFF24218CB0E6008B2B61 /* YZAddressModel.m in Sources */,
 				584FFF10218CACBB008B2B61 /* YZOrderListChildViewController.m in Sources */,
 				58497D5F2192D158005F53A3 /* YZDeliverTypeTableCell.m in Sources */,
+				587A55D821A40089008581D7 /* YZGoodsSearchViewController.m in Sources */,
 				584FFE6A218B0598008B2B61 /* YZProductModel.m in Sources */,
 				584FFF52218CC6C5008B2B61 /* YMMBorderLineProvider.m in Sources */,
 				584FFF55218CC740008B2B61 /* UIView+Controller.m in Sources */,
