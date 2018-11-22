@@ -176,7 +176,7 @@ static NSString * const kYZSettingUserTableCellIdentifiler = @"YZSettingUserTabl
         _logoutButton.backgroundColor = [UIColor colorWithHex:0xCC36A];
         _logoutButton.layer.masksToBounds = YES;
         _logoutButton.layer.cornerRadius = 25;
-        _logoutButton.frame = CGRectMake((kScreenWidth-284)/2, kScreenHeight-50-49-40, 284, 50);
+        _logoutButton.frame = CGRectMake((kScreenWidth-284)/2, kScreenHeight-50-49-40-50, 284, 50);
         [_logoutButton addTarget:self action:@selector(logoutAction) forControlEvents:UIControlEventTouchUpInside];
         //        _logoutButton.hidden = [NZUserCenter shared].canShowChongzhi;
     }

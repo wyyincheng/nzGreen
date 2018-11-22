@@ -244,7 +244,7 @@ static NSInteger kSelectViewTag = 1001;
 
 - (IBAction)goShoprCar:(id)sender {
     if (![YZUserCenter shared].userInfo) {
-        [[YZUserCenter shared] logOut];
+        [[YZUserCenter shared] gotoLogin];
         return;
     }
     [self gotoViewController:NSStringFromClass([YZShopCarViewController class])];
@@ -252,7 +252,7 @@ static NSInteger kSelectViewTag = 1001;
 
 - (IBAction)addShopCar:(id)sender {
     if (![YZUserCenter shared].userInfo) {
-        [[YZUserCenter shared] logOut];
+        [[YZUserCenter shared] gotoLogin];
         return;
     }
 #warning 交互需要讨论
@@ -281,7 +281,7 @@ static NSInteger kSelectViewTag = 1001;
 
 - (IBAction)buyGoodsAction:(id)sender {
     if (![YZUserCenter shared].userInfo) {
-        [[YZUserCenter shared] logOut];
+        [[YZUserCenter shared] gotoLogin];
         return;
     }
     if (!_selectView.hidden && self.goodsModel.count == 0) {

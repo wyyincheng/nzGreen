@@ -157,7 +157,7 @@
         case 0: {
             if (indexPath.row == 0) {
                 if (![YZUserCenter shared].userInfo) {
-                    [[YZUserCenter shared] logOut];
+                    [[YZUserCenter shared] gotoLogin];
                     return;
                 }
                 [self gotoViewController:NSStringFromClass([YZUserInfoViewController class])];
@@ -167,7 +167,7 @@
             
         default: {
             if (![YZUserCenter shared].userInfo) {
-                [[YZUserCenter shared] logOut];
+                [[YZUserCenter shared] gotoLogin];
                 return;
             }
             NSDictionary *settingItem = [[self.settingItemArray yz_arrayAtIndex:indexPath.section - 1] yz_dictAtIndex:indexPath.row];

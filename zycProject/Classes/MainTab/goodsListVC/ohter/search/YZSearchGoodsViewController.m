@@ -12,6 +12,7 @@
 
 #import "YZGoodsSearchTableCell.h"
 #import "YZHomeGoodsCollectionCell.h"
+#import "YZGoodsDetailViewController.h"
 
 @interface YZSearchGoodsViewController () <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate> {
     NSInteger pageIndex;
@@ -53,6 +54,8 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
 }
 
 - (void)initViews {
+    
+    self.navigationController.navigationBar.hidden = NO;
     
     self.navigationItem.titleView = self.searchBar;
     
@@ -269,8 +272,8 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     id model = [self.searchGoodsArray yz_objectAtIndex:indexPath.row];
     if ([model isKindOfClass:[YZGoodsModel class]]) {
-        //TODO: goto detailVC
-        //        [self performSegueWithIdentifier:@"detailVC" sender:((NZGoodsModel *)model).goodsId];
+        [self gotoViewController:NSStringFromClass([YZGoodsDetailViewController class])
+                     lauchParams:@{kYZLauchParams_GoodsId:((YZGoodsModel *)model).goodsId}];
     }
 }
 
@@ -292,8 +295,8 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id model = [self.searchResult yz_objectAtIndex:indexPath.row];
     if ([model isKindOfClass:[YZGoodsModel class]]) {
-        //TODO:
-        //        [self performSegueWithIdentifier:@"detailVC" sender:((NZGoodsModel *)model).goodsId];
+        [self gotoViewController:NSStringFromClass([YZGoodsDetailViewController class])
+                     lauchParams:@{kYZLauchParams_GoodsId:((YZGoodsModel *)model).goodsId}];
     } else if ([model isKindOfClass:[NSDictionary class]]) {
         self.searchGoodsArray = nil;
         [self.collectionView reloadData];

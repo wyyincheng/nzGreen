@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSMutableArray *goodsArray;
 
 @property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UIButton *searchBt;
 
 @end
 
@@ -48,6 +49,10 @@
 - (void)initView {
     
     self.navigationItem.titleView = self.searchBar;
+    [self.searchBar addSubview:self.searchBt];
+    [self.searchBt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.leading.trailing.mas_equalTo(self.searchBar);
+    }];
     
     self.collectionLayout.minimumLineSpacing = 4;
     self.collectionLayout.minimumInteritemSpacing = 4;
@@ -117,6 +122,10 @@
 }
 
 #pragma mark - delegate
+- (void)gotoSearchVC {
+    [self gotoViewController:NSStringFromClass([YZSearchGoodsViewController class])];
+}
+
 #pragma mark searchBar
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
@@ -217,6 +226,16 @@
         _headerIconDict = [NSMutableDictionary dictionary];
     }
     return _headerIconDict;
+}
+
+- (UIButton *)searchBt {
+    if (!_searchBt) {
+        _searchBt = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_searchBt addTarget:self
+                      action:@selector(gotoSearchVC)
+            forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _searchBt;
 }
 
 - (UISearchBar *)searchBar {

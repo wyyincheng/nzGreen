@@ -79,11 +79,8 @@ static YZUserCenter *userCenter;
     [self clearLocalnUserInfo];
 }
 
-- (void)logOut {
-    
+- (void)gotoLogin {
     [self clearLocalnUserInfo];
-    
-    [MBProgressHUD showMessageAuto:@"当前登录失效，请重新登录"];
     
     //FIXME: 重复弹窗
     id topVC = [UIViewController currentVC];
@@ -97,6 +94,13 @@ static YZUserCenter *userCenter;
                             animated:YES
                           completion:nil];
     }
+}
+
+- (void)logOut {
+    
+    [MBProgressHUD showMessageAuto:@"当前登录失效，请重新登录"];
+    
+    [self gotoLogin];
 }
 
 - (void)clearLocalnUserInfo {
