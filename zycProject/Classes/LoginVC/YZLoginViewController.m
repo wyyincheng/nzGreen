@@ -28,6 +28,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *backBt;
 @property (weak, nonatomic) IBOutlet UIButton *privacyBt;
 
+//hidden
+@property (weak, nonatomic) IBOutlet UIButton *privacyInfoBt;
+@property (weak, nonatomic) IBOutlet UILabel *speratorOneLb;
+@property (weak, nonatomic) IBOutlet UILabel *speratorTwoLb;
+
 
 @end
 
@@ -51,6 +56,17 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     
     self.backBt.hidden = self.isLaunchLogin;
+    
+    if ([YZUserCenter shared].hasReviewed) {
+        self.contactServiceBt.hidden = YES;
+        self.privacyInfoBt.hidden = YES;
+        self.speratorOneLb.hidden = YES;
+        self.speratorTwoLb.hidden = YES;
+        self.changePwdBt.hidden = YES;
+        self.registerBt.hidden = YES;
+        self.privacyBt.hidden = YES;
+        self.backBt.hidden = YES;
+    }
 }
 
 #pragma mark - action
@@ -83,7 +99,7 @@ static NSInteger kYZTextFieldTag_Pwd = 8001;
 #pragma mark - action
 - (IBAction)loginAction:(UIButton *)sender {
     
-    if (!self.privacyBt.selected) {
+    if (![YZUserCenter shared].hasReviewed && !self.privacyBt.selected) {
         [NZTipView showError:@"请先阅读并同意用户协议" onScreen:self.view];
         return;
     }

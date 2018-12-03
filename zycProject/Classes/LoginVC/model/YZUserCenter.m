@@ -68,12 +68,19 @@ static YZUserCenter *userCenter;
     return _reviewUserInfo;
 }
 
-- (void)setHasReviewed:(BOOL)hasReviewed {
++ (void)saveAppStatus:(NSInteger)hasReviewed {
     //存储AppStore审核状态
     NSString *appReviewFlag = [NSString stringWithFormat:@"%@%@",kYZUserDefault_AppReviewed,kYZAppVersion];
     [[NSUserDefaults standardUserDefaults] setBool:hasReviewed forKey:appReviewFlag];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+//- (void)setHasReviewed:(BOOL)hasReviewed {
+//    //存储AppStore审核状态
+//    NSString *appReviewFlag = [NSString stringWithFormat:@"%@%@",kYZUserDefault_AppReviewed,kYZAppVersion];
+//    [[NSUserDefaults standardUserDefaults] setBool:hasReviewed forKey:appReviewFlag];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//}
 
 - (void)custom_logOut {
     [self clearLocalnUserInfo];

@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (YZUserCenter *)shared;
 
++ (void)saveAppStatus:(NSInteger)hasReviewed;
+
 @property (nonatomic, strong) YZUserModel *userInfo;
 @property (nonatomic, strong) YZAccountModel *accountInfo;
 //@property (nonatomic, assign) BOOL normalUser;

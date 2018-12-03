@@ -18,8 +18,11 @@
                 <outlet property="loginBt" destination="6Ae-ut-MqS" id="Tey-uU-RDL"/>
                 <outlet property="phoneTextField" destination="7rG-x9-Nuj" id="LCO-ld-m9Q"/>
                 <outlet property="privacyBt" destination="tcl-MW-HFq" id="GPK-0R-Qhf"/>
+                <outlet property="privacyInfoBt" destination="6dp-3X-vOA" id="vlT-kL-bKy"/>
                 <outlet property="pwdTextField" destination="q1b-bH-gHv" id="z7A-AW-4jb"/>
                 <outlet property="registerBt" destination="D1l-Cz-8np" id="DGq-K6-eGX"/>
+                <outlet property="speratorOneLb" destination="rV6-YR-BTn" id="wX9-QG-9pG"/>
+                <outlet property="speratorTwoLb" destination="z9u-3M-Ses" id="Coe-v5-lOy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -75,16 +78,6 @@
                         <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="V2E-H0-yPH"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV6-YR-BTn">
-                    <rect key="frame" x="128" y="441" width="1" height="11"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="1" id="wte-kw-YLo"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9u-3M-Ses">
                     <rect key="frame" x="191" y="441" width="1" height="11"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,6 +161,16 @@
                         <action selector="privacyDetailAction:" destination="-1" eventType="touchUpInside" id="WJp-fy-QtS"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV6-YR-BTn">
+                    <rect key="frame" x="128" y="441" width="1" height="11"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="wte-kw-YLo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
