@@ -8,6 +8,7 @@
 
 #import "YZUserCenterViewController.h"
 
+#import "YZUserManagerViewController.h"
 #import "YZOrderListViewController.h"
 #import "YZUserCenterInfoTableCell.h"
 #import "YZUserInfoViewController.h"
@@ -126,7 +127,7 @@
                     switch (mangerType) {
                             //TODO:
                         case AgentMangerType_User:
-                            [weakSelf performSegueWithIdentifier:@"userVC" sender:nil];
+                            [weakSelf gotoViewController:NSStringFromClass([YZUserManagerViewController class])];
                             break;
                         case AgentMangerType_Order:
                             [weakSelf gotoViewController:NSStringFromClass([YZAgentViewController class])];

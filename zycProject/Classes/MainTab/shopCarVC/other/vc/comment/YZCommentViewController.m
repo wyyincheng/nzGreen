@@ -52,7 +52,7 @@ NSString *placeHolder = @"描述一下您购买的商品吧！";
     [super viewWillAppear:animated];
 #warning for yc 订单的数据结构有问题
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:self.orderModel.image]
-                     placeholderImage:[UIImage imageNamed:@"goodsDefaultIcon"]];
+                     placeholderImage:[UIImage imageNamed:@"icon_goods_default"]];
 }
 
 - (void)didReceiveMemoryWarning {
