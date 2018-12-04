@@ -40,7 +40,9 @@
     [query whereKey:kYZClassAppStore_AppVersion equalTo:kYZAppVersion];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
-            [YZUserCenter shared].hasReviewed = [[objects firstObject] objectForKey:kYZClassAppStore_HasReviewed];
+            NSInteger hasReviewed = [[[objects firstObject] objectForKey:kYZClassAppStore_HasReviewed] integerValue];
+            [YZUserCenter shared].hasReviewed = (hasReviewed == 1);
+            [YZUserCenter saveAppStatus:hasReviewed];
         }
         [self gotoNextVC];
     }];
