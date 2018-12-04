@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="NZStoreHeaerCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_me_avart" translatesAutoresizingMaskIntoConstraints="NO" id="Nac-af-S4e">
+                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Meb-JY-yPd"/>
+                            <constraint firstAttribute="width" constant="60" id="bjf-r7-ck3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBt-vk-1ux">
+                        <rect key="frame" x="123.5" y="70" width="73.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_edit" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-GI-9dD">
+                        <rect key="frame" x="197" y="77.5" width="16" height="16"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ut-rU-9fK">
+                        <rect key="frame" x="123.5" y="70" width="89.5" height="30"/>
+                        <connections>
+                            <action selector="editAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lwd-ty-aP1"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SK9-HJ-Nwa">
+                        <rect key="frame" x="75.5" y="64" width="170" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="1MO-e1-zR4"/>
+                            <constraint firstAttribute="width" constant="170" id="XPE-MD-7w1"/>
+                        </constraints>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gBt-vk-1ux" firstAttribute="bottom" secondItem="2ut-rU-9fK" secondAttribute="bottom" id="264-cQ-qxA"/>
+                    <constraint firstItem="gBt-vk-1ux" firstAttribute="leading" secondItem="2ut-rU-9fK" secondAttribute="leading" id="29T-cU-jet"/>
+                    <constraint firstItem="gBt-vk-1ux" firstAttribute="centerX" secondItem="Nac-af-S4e" secondAttribute="centerX" id="2Kh-ui-L8V"/>
+                    <constraint firstItem="Nac-af-S4e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="76o-7o-fQ5"/>
+                    <constraint firstItem="SK9-HJ-Nwa" firstAttribute="top" secondItem="Nac-af-S4e" secondAttribute="bottom" constant="4" id="Jco-mm-FO7"/>
+                    <constraint firstItem="gBt-vk-1ux" firstAttribute="top" secondItem="2ut-rU-9fK" secondAttribute="top" id="dgn-ma-jdO"/>
+                    <constraint firstItem="SK9-HJ-Nwa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gdd-AL-g2x"/>
+                    <constraint firstItem="Cef-GI-9dD" firstAttribute="leading" secondItem="gBt-vk-1ux" secondAttribute="trailing" id="j1Z-RM-E9R"/>
+                    <constraint firstItem="Cef-GI-9dD" firstAttribute="centerY" secondItem="gBt-vk-1ux" secondAttribute="centerY" id="oO2-wY-kjy"/>
+                    <constraint firstItem="Nac-af-S4e" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="pXX-bL-4Eg"/>
+                    <constraint firstItem="gBt-vk-1ux" firstAttribute="top" secondItem="Nac-af-S4e" secondAttribute="bottom" constant="10" id="siT-yh-PBw"/>
+                    <constraint firstItem="Cef-GI-9dD" firstAttribute="trailing" secondItem="2ut-rU-9fK" secondAttribute="trailing" id="zan-Re-xfR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="editIcon" destination="Cef-GI-9dD" id="lPV-kZ-vez"/>
+                <outlet property="editTF" destination="SK9-HJ-Nwa" id="xJU-qa-ye4"/>
+                <outlet property="storeIconView" destination="Nac-af-S4e" id="7At-Ew-osu"/>
+                <outlet property="storeNameLb" destination="gBt-vk-1ux" id="3c4-tq-chR"/>
+            </connections>
+            <point key="canvasLocation" x="84" y="174"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_edit" width="16" height="16"/>
+        <image name="icon_me_avart" width="60" height="60"/>
+    </resources>
+</document>

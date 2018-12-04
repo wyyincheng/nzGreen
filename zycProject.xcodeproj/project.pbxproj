@@ -253,8 +253,20 @@
 		58A88DD22191C3BE00A3A2D8 /* icon_comment_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD02191C3BD00A3A2D8 /* icon_comment_empty@2x.png */; };
 		58A88DD52191C45E00A3A2D8 /* icon_goods_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD32191C45E00A3A2D8 /* icon_goods_default@3x.png */; };
 		58A88DD62191C45E00A3A2D8 /* icon_goods_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58A88DD42191C45E00A3A2D8 /* icon_goods_default@2x.png */; };
+		58B16D0D21B6C0EE007D3ACF /* YZStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B16D0B21B6C0EE007D3ACF /* YZStoreViewController.m */; };
+		58B16D0E21B6C0EE007D3ACF /* YZStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B16D0C21B6C0EE007D3ACF /* YZStoreViewController.xib */; };
+		58B16D1121B6C501007D3ACF /* YZAgentGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B16D1021B6C501007D3ACF /* YZAgentGoodsModel.m */; };
+		58B16D1421B6C54C007D3ACF /* YZShopInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B16D1321B6C54C007D3ACF /* YZShopInfoModel.m */; };
+		58B16D1821B6C5CD007D3ACF /* NZStoreItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B16D1621B6C5CD007D3ACF /* NZStoreItemCell.xib */; };
+		58B16D1921B6C5CD007D3ACF /* NZStoreItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B16D1721B6C5CD007D3ACF /* NZStoreItemCell.m */; };
+		58B16D1D21B6C5F2007D3ACF /* NZStoreHeaerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B16D1A21B6C5F2007D3ACF /* NZStoreHeaerCell.m */; };
+		58B16D1E21B6C5F2007D3ACF /* NZStoreHeaerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B16D1C21B6C5F2007D3ACF /* NZStoreHeaerCell.xib */; };
+		58B16D2121B6C931007D3ACF /* icon_store_avart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B16D1F21B6C931007D3ACF /* icon_store_avart@3x.png */; };
+		58B16D2221B6C931007D3ACF /* icon_store_avart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B16D2021B6C931007D3ACF /* icon_store_avart@2x.png */; };
 		58C146B621A4539E00C2B186 /* YZSearchGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C146B421A4539E00C2B186 /* YZSearchGoodsViewController.m */; };
 		58C146B721A4539E00C2B186 /* YZSearchGoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C146B521A4539E00C2B186 /* YZSearchGoodsViewController.xib */; };
+		58E28B4321B6C9C8004AD2CD /* icon_edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E28B4121B6C9C7004AD2CD /* icon_edit@2x.png */; };
+		58E28B4421B6C9C8004AD2CD /* icon_edit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E28B4221B6C9C8004AD2CD /* icon_edit@3x.png */; };
 		58E31E54219446EE004E8931 /* YZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E52219446EE004E8931 /* YZRegisterViewController.m */; };
 		58E31E55219446EE004E8931 /* YZRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E31E53219446EE004E8931 /* YZRegisterViewController.xib */; };
 		58E31E5921944926004E8931 /* YZSMSConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E31E5721944926004E8931 /* YZSMSConfirmViewController.m */; };
@@ -635,9 +647,26 @@
 		58A88DD02191C3BD00A3A2D8 /* icon_comment_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_comment_empty@2x.png"; sourceTree = "<group>"; };
 		58A88DD32191C45E00A3A2D8 /* icon_goods_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_default@3x.png"; sourceTree = "<group>"; };
 		58A88DD42191C45E00A3A2D8 /* icon_goods_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_goods_default@2x.png"; sourceTree = "<group>"; };
+		58B16D0A21B6C0EE007D3ACF /* YZStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZStoreViewController.h; sourceTree = "<group>"; };
+		58B16D0B21B6C0EE007D3ACF /* YZStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZStoreViewController.m; sourceTree = "<group>"; };
+		58B16D0C21B6C0EE007D3ACF /* YZStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZStoreViewController.xib; sourceTree = "<group>"; };
+		58B16D0F21B6C501007D3ACF /* YZAgentGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAgentGoodsModel.h; sourceTree = "<group>"; };
+		58B16D1021B6C501007D3ACF /* YZAgentGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAgentGoodsModel.m; sourceTree = "<group>"; };
+		58B16D1221B6C54C007D3ACF /* YZShopInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZShopInfoModel.h; sourceTree = "<group>"; };
+		58B16D1321B6C54C007D3ACF /* YZShopInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZShopInfoModel.m; sourceTree = "<group>"; };
+		58B16D1521B6C5CD007D3ACF /* NZStoreItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZStoreItemCell.h; sourceTree = "<group>"; };
+		58B16D1621B6C5CD007D3ACF /* NZStoreItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZStoreItemCell.xib; sourceTree = "<group>"; };
+		58B16D1721B6C5CD007D3ACF /* NZStoreItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZStoreItemCell.m; sourceTree = "<group>"; };
+		58B16D1A21B6C5F2007D3ACF /* NZStoreHeaerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZStoreHeaerCell.m; sourceTree = "<group>"; };
+		58B16D1B21B6C5F2007D3ACF /* NZStoreHeaerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZStoreHeaerCell.h; sourceTree = "<group>"; };
+		58B16D1C21B6C5F2007D3ACF /* NZStoreHeaerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NZStoreHeaerCell.xib; sourceTree = "<group>"; };
+		58B16D1F21B6C931007D3ACF /* icon_store_avart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_store_avart@3x.png"; sourceTree = "<group>"; };
+		58B16D2021B6C931007D3ACF /* icon_store_avart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_store_avart@2x.png"; sourceTree = "<group>"; };
 		58C146B321A4539E00C2B186 /* YZSearchGoodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSearchGoodsViewController.h; sourceTree = "<group>"; };
 		58C146B421A4539E00C2B186 /* YZSearchGoodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSearchGoodsViewController.m; sourceTree = "<group>"; };
 		58C146B521A4539E00C2B186 /* YZSearchGoodsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZSearchGoodsViewController.xib; sourceTree = "<group>"; };
+		58E28B4121B6C9C7004AD2CD /* icon_edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_edit@2x.png"; sourceTree = "<group>"; };
+		58E28B4221B6C9C8004AD2CD /* icon_edit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_edit@3x.png"; sourceTree = "<group>"; };
 		58E31E51219446EE004E8931 /* YZRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRegisterViewController.h; sourceTree = "<group>"; };
 		58E31E52219446EE004E8931 /* YZRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZRegisterViewController.m; sourceTree = "<group>"; };
 		58E31E53219446EE004E8931 /* YZRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZRegisterViewController.xib; sourceTree = "<group>"; };
@@ -1074,6 +1103,9 @@
 		584FFE62218B0485008B2B61 /* agent */ = {
 			isa = PBXGroup;
 			children = (
+				58B16D0721B6C0CE007D3ACF /* order */,
+				58B16D0121B6C0CE007D3ACF /* store */,
+				58B16D0421B6C0CE007D3ACF /* user */,
 				584FFE63218B0485008B2B61 /* model */,
 			);
 			path = agent;
@@ -1444,6 +1476,10 @@
 		5896297521886303008EFDD8 /* icon_goods_default.png */ = {
 			isa = PBXGroup;
 			children = (
+				58E28B4121B6C9C7004AD2CD /* icon_edit@2x.png */,
+				58E28B4221B6C9C8004AD2CD /* icon_edit@3x.png */,
+				58B16D2021B6C931007D3ACF /* icon_store_avart@2x.png */,
+				58B16D1F21B6C931007D3ACF /* icon_store_avart@3x.png */,
 				587A55E121A44A9D008581D7 /* icon_search_arrow@2x.png */,
 				587A55E021A44A9C008581D7 /* icon_search_arrow@3x.png */,
 				587A55D221A4000D008581D7 /* icon_search@2x.png */,
@@ -1674,6 +1710,88 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		58B16D0121B6C0CE007D3ACF /* store */ = {
+			isa = PBXGroup;
+			children = (
+				58B16D0221B6C0CE007D3ACF /* model */,
+				58B16D0321B6C0CE007D3ACF /* view */,
+				58B16D0A21B6C0EE007D3ACF /* YZStoreViewController.h */,
+				58B16D0B21B6C0EE007D3ACF /* YZStoreViewController.m */,
+				58B16D0C21B6C0EE007D3ACF /* YZStoreViewController.xib */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		58B16D0221B6C0CE007D3ACF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				58B16D0F21B6C501007D3ACF /* YZAgentGoodsModel.h */,
+				58B16D1021B6C501007D3ACF /* YZAgentGoodsModel.m */,
+				58B16D1221B6C54C007D3ACF /* YZShopInfoModel.h */,
+				58B16D1321B6C54C007D3ACF /* YZShopInfoModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		58B16D0321B6C0CE007D3ACF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				58B16D1B21B6C5F2007D3ACF /* NZStoreHeaerCell.h */,
+				58B16D1A21B6C5F2007D3ACF /* NZStoreHeaerCell.m */,
+				58B16D1C21B6C5F2007D3ACF /* NZStoreHeaerCell.xib */,
+				58B16D1521B6C5CD007D3ACF /* NZStoreItemCell.h */,
+				58B16D1721B6C5CD007D3ACF /* NZStoreItemCell.m */,
+				58B16D1621B6C5CD007D3ACF /* NZStoreItemCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		58B16D0421B6C0CE007D3ACF /* user */ = {
+			isa = PBXGroup;
+			children = (
+				58B16D0521B6C0CE007D3ACF /* model */,
+				58B16D0621B6C0CE007D3ACF /* view */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		58B16D0521B6C0CE007D3ACF /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		58B16D0621B6C0CE007D3ACF /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		58B16D0721B6C0CE007D3ACF /* order */ = {
+			isa = PBXGroup;
+			children = (
+				58B16D0821B6C0CE007D3ACF /* model */,
+				58B16D0921B6C0CE007D3ACF /* view */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
+		58B16D0821B6C0CE007D3ACF /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		58B16D0921B6C0CE007D3ACF /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		58E31E4E21942CF3004E8931 /* ohter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1819,6 +1937,8 @@
 				584FFF1A218CAE2C008B2B61 /* YZOrderListTableCell.xib in Resources */,
 				58497D3A2192C2B9005F53A3 /* icon_detail_close@3x.png in Resources */,
 				584FFE93218C2723008B2B61 /* YZShopCarTableCell.xib in Resources */,
+				58E28B4421B6C9C8004AD2CD /* icon_edit@3x.png in Resources */,
+				58B16D2221B6C931007D3ACF /* icon_store_avart@2x.png in Resources */,
 				5896298321886897008EFDD8 /* YZLoginViewController.xib in Resources */,
 				58A88DD52191C45E00A3A2D8 /* icon_goods_default@3x.png in Resources */,
 				584FFE84218BFC17008B2B61 /* icon_tab_home_default@2x.png in Resources */,
@@ -1827,6 +1947,7 @@
 				584FFEAF218C675C008B2B61 /* icon_me_avart@3x.png in Resources */,
 				584FFEC3218C6977008B2B61 /* icon_manager_order@3x.png in Resources */,
 				584BC482219836D600FCCBBD /* YZCategoryTableCell.xib in Resources */,
+				58B16D2121B6C931007D3ACF /* icon_store_avart@3x.png in Resources */,
 				58A5732E2191AF040086F8F3 /* YZSwitchTableCell.xib in Resources */,
 				589629B5218873E6008EFDD8 /* MBProgressHUD.bundle in Resources */,
 				58A573142191A2E80086F8F3 /* YZGoodsServiceTableCell.xib in Resources */,
@@ -1834,6 +1955,7 @@
 				58497D602192D158005F53A3 /* YZDeliverTypeTableCell.xib in Resources */,
 				58A88DCD2191C21200A3A2D8 /* icon_shopcar_radio@2x.png in Resources */,
 				58497D6E2192D831005F53A3 /* YZBuySuccessViewController.xib in Resources */,
+				58B16D0E21B6C0EE007D3ACF /* YZStoreViewController.xib in Resources */,
 				587A55DF21A44A02008581D7 /* YZGoodsSearchTableCell.xib in Resources */,
 				584FFEC1218C6977008B2B61 /* icon_manager_order@2x.png in Resources */,
 				584FFEF8218CA342008B2B61 /* YZBalanceViewController.xib in Resources */,
@@ -1887,6 +2009,7 @@
 				58497D532192C9BC005F53A3 /* icon_pay_default@2x.png in Resources */,
 				58A88DD22191C3BE00A3A2D8 /* icon_comment_empty@2x.png in Resources */,
 				584FFEB3218C6783008B2B61 /* icon_arrow_right@3x.png in Resources */,
+				58B16D1E21B6C5F2007D3ACF /* NZStoreHeaerCell.xib in Resources */,
 				584FFEE8218C9B6F008B2B61 /* YZUserInfoViewController.xib in Resources */,
 				58497DB22193021B005F53A3 /* YZOrderSelectTableCell.xib in Resources */,
 				58497D9B2192EDF9005F53A3 /* icon_start_default@3x.png in Resources */,
@@ -1896,6 +2019,7 @@
 				58497D832192E39E005F53A3 /* YZOrderDetailCountTableCell.xib in Resources */,
 				584FFE99218C559C008B2B61 /* btn_radio_default@2x.png in Resources */,
 				58A88DD62191C45E00A3A2D8 /* icon_goods_default@2x.png in Resources */,
+				58E28B4321B6C9C8004AD2CD /* icon_edit@2x.png in Resources */,
 				584FFE23218AFB19008B2B61 /* YZHomeGoodsCollectionHeaderView.xib in Resources */,
 				5896297E21886381008EFDD8 /* YZFirstViewController.xib in Resources */,
 				584FFF5A218CC7BD008B2B61 /* YZOrderStatusTableCell.xib in Resources */,
@@ -1912,6 +2036,7 @@
 				58FAD8772191B3F900E5F24D /* YZWebTableCell.xib in Resources */,
 				584FFF11218CACBB008B2B61 /* YZOrderListChildViewController.xib in Resources */,
 				587A55D421A4000D008581D7 /* icon_search@2x.png in Resources */,
+				58B16D1821B6C5CD007D3ACF /* NZStoreItemCell.xib in Resources */,
 				58497DB821932D92005F53A3 /* YZWuliuTableCell.xib in Resources */,
 				58A88DCE2191C21200A3A2D8 /* icon_shopcar_radio@3x.png in Resources */,
 				587A55D521A4000D008581D7 /* icon_search@3x.png in Resources */,
@@ -1994,6 +2119,7 @@
 				584FFE5E218B02B3008B2B61 /* NZError.m in Sources */,
 				584FFE8D218C266C008B2B61 /* YZBaseTableViewCell.m in Sources */,
 				5896295821884C09008EFDD8 /* ViewController.m in Sources */,
+				58B16D1D21B6C5F2007D3ACF /* NZStoreHeaerCell.m in Sources */,
 				584FFE5A218B00F1008B2B61 /* NSData+AES256.m in Sources */,
 				58E31E5E21945F35004E8931 /* YZChangePwdViewController.m in Sources */,
 				584FFE1E218AF827008B2B61 /* YZGoodsFreightModel.m in Sources */,
@@ -2007,6 +2133,7 @@
 				58FAD8762191B3F900E5F24D /* YZWebTableCell.m in Sources */,
 				58497DA12192F029005F53A3 /* YZAgentViewController.m in Sources */,
 				584FFDFF218ACDE2008B2B61 /* YZBaseModel.m in Sources */,
+				58B16D0D21B6C0EE007D3ACF /* YZStoreViewController.m in Sources */,
 				584FFE4C218B00F1008B2B61 /* YZNCNetAPI.m in Sources */,
 				58A573242191AE220086F8F3 /* YZWebViewController.m in Sources */,
 				584FFF4F218CC676008B2B61 /* UIView+YMMBorder.m in Sources */,
@@ -2056,6 +2183,7 @@
 				584FFE26218AFBA6008B2B61 /* YZBaseCollectionView.m in Sources */,
 				584FFF02218CA618008B2B61 /* YZBalanceLogModel.m in Sources */,
 				58497D732192E0EF005F53A3 /* YZOrderDetailViewController.m in Sources */,
+				58B16D1421B6C54C007D3ACF /* YZShopInfoModel.m in Sources */,
 				589629AE218873E6008EFDD8 /* UIColor+Utils.m in Sources */,
 				584BC4862198372A00FCCBBD /* YZCategoryCollectionCell.m in Sources */,
 				584FFF2F218CB5EC008B2B61 /* YZAddressViewController.m in Sources */,
@@ -2095,6 +2223,7 @@
 				584BC481219836D600FCCBBD /* YZCategoryTableCell.m in Sources */,
 				584FFEAB218C664F008B2B61 /* YZAccountModel.m in Sources */,
 				58497D5A2192CA28005F53A3 /* YZProductTableCell.m in Sources */,
+				58B16D1121B6C501007D3ACF /* YZAgentGoodsModel.m in Sources */,
 				58497DC62193532F005F53A3 /* YZAboutViewController.m in Sources */,
 				58497D4D2192C8C6005F53A3 /* YZProductPayTableCell.m in Sources */,
 				584FFE72218B1036008B2B61 /* UIViewController+YZUtils.m in Sources */,
@@ -2104,6 +2233,7 @@
 				584FFE66218B0495008B2B61 /* YZOrderManagerModel.m in Sources */,
 				589629B92188746E008EFDD8 /* NZTipView.m in Sources */,
 				584FFF45218CBFDC008B2B61 /* YZSettingViewController.m in Sources */,
+				58B16D1921B6C5CD007D3ACF /* NZStoreItemCell.m in Sources */,
 				5896297D21886381008EFDD8 /* YZFirstViewController.m in Sources */,
 				584BC475219828FF00FCCBBD /* YZPrivacyViewController.m in Sources */,
 				58A573032191A0CD0086F8F3 /* YZBuyNowViewController.m in Sources */,

@@ -18,6 +18,7 @@
 #import "YZSettingItemTableCell.h"
 #import "UINavigationBar+Alpha.h"
 #import "YZAboutViewController.h"
+#import "YZStoreViewController.h"
 
 @interface YZUserCenterViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -130,7 +131,7 @@
                             [weakSelf performSegueWithIdentifier:@"orderVC" sender:nil];
                             break;
                         case AgentMangerType_Sotre:
-                            [weakSelf performSegueWithIdentifier:@"storeVC" sender:nil];
+                            [weakSelf gotoViewController:NSStringFromClass([YZStoreViewController class])];
                             break;
                         default:
                             break;
