@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +15,6 @@
                 <outlet property="allPriceLb" destination="Ld4-0Y-Oad" id="jFx-uA-1eM"/>
                 <outlet property="bottomGap" destination="Gi8-0N-EVi" id="ZQR-0B-R3e"/>
                 <outlet property="managerBt" destination="XnV-3Z-j9Y" id="Qde-qX-zXv"/>
-                <outlet property="mergeItem" destination="D0M-Hs-XWY" id="mWU-Fj-EPb"/>
-                <outlet property="passBt" destination="Gfz-cw-fQG" id="RFT-BJ-dyo"/>
                 <outlet property="selectAllBt" destination="qGn-jL-owr" id="VK8-Y2-c5A"/>
                 <outlet property="tableView" destination="ZwN-aJ-TqM" id="9pd-nl-GsQ"/>
                 <outlet property="view" destination="zBS-bq-HuT" id="NU2-SZ-Rfq"/>
@@ -50,6 +48,9 @@
                             <state key="normal" title="通过">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="passAction:" destination="-1" eventType="touchUpInside" id="aCY-Kb-gsC"/>
+                            </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计：¥0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-0Y-Oad">
                             <rect key="frame" x="164" y="14" width="73" height="21"/>
@@ -113,20 +114,14 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="bBK-fV-hqm"/>
         </view>
-        <navigationItem title="订单管理" id="y6n-Bv-MHz">
-            <barButtonItem key="backBarButtonItem" title=" " id="2QW-JX-C02"/>
+        <navigationItem title="订单管理" id="aTz-8I-6bx">
+            <barButtonItem key="backBarButtonItem" title=" " id="VIa-c8-KOW"/>
             <rightBarButtonItems>
-                <barButtonItem title="合并" id="D0M-Hs-XWY">
+                <barButtonItem title="合并" id="ebg-cT-dqU">
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <action selector="mergeOrdersAction:" destination="-1" id="Ox5-Ya-wEm"/>
-                    </connections>
                 </barButtonItem>
-                <barButtonItem title="通过" id="Gfz-cw-fQG">
+                <barButtonItem title="通过" id="APE-E8-TRW">
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <action selector="passOrdersAction:" destination="-1" id="gAS-jp-Vxf"/>
-                    </connections>
                 </barButtonItem>
             </rightBarButtonItems>
         </navigationItem>

@@ -50,9 +50,9 @@
 }
 
 + (CGFloat)yz_heightForCellWithModel:(id)model contentWidth:(CGFloat)width {
-    if ([model isKindOfClass:[YZOrderModel class]]) {
+//    if ([model isKindOfClass:[YZOrderModel class]]) {
         return 125;
-    }
+//    }
     return 0;
 }
 
@@ -107,6 +107,7 @@
         }
     } else if ([model isKindOfClass:[YZOrderManagerModel class]])  {
         YZOrderManagerModel *order = model;
+        self.orderModel = model;
         
         self.priceLb.text =  [NSString stringWithFormat:@"共%@件商品 合计：¥%.2f（含运费¥%@）",order.totalNumber,[order.price floatValue],order.freight];
         self.contactLb.text = order.nickname.length > 0 ? [NSString stringWithFormat:@"买家：%@",order.nickname] : nil;

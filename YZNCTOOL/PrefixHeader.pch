@@ -20,7 +20,7 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kStatusBarHeight CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
 #define kNavigationHeight kStatusBarHeight + 44
-#define kSafeAreaBottomHeight (kScreenHeight == 812. ? 34.f : 0.f)
+#define kSafeAreaBottomHeight (kScreenHeight >= 812. ? 34.f : 0.f)
 //#define ScreenScale  375.0 / CGRectGetWidth([UIScreen mainScreen].bounds)
 
 //#define NVH         44

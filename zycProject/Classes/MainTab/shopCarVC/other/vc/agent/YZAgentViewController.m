@@ -30,9 +30,9 @@
 @property (nonatomic, strong) NSMutableArray *mergeListArray;
 @property (nonatomic, assign) BOOL isPassAction;
 @property (nonatomic, assign) BOOL isMergeAction;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *passBt;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *passBt;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomGap;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *mergeItem;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *mergeItem;
 @property (weak, nonatomic) IBOutlet UIButton *selectAllBt;
 @property (weak, nonatomic) IBOutlet UILabel *allPriceLb;
 @property (weak, nonatomic) IBOutlet UIButton *managerBt;
@@ -48,6 +48,9 @@
 }
 
 - (void)initViews {
+    
+    self.title = @"订单管理";
+    
     self.tableView.backgroundColor = kYZBackViewColor;
     
     __weak typeof(self) weakSelf = self;
@@ -87,6 +90,17 @@
     
     self.allPriceLb.hidden = NO;
     self.bottomGap.constant = kSafeAreaBottomHeight;
+    
+    
+    self.passBt = [[UIBarButtonItem alloc] initWithTitle:@"通过"
+                                                   style:UIBarButtonItemStyleDone
+                                                  target:self
+                                                  action:@selector(passOrdersAction:)];
+    self.mergeItem = [[UIBarButtonItem alloc] initWithTitle:@"合并"
+                                                      style:UIBarButtonItemStyleDone
+                                                     target:self
+                                                     action:@selector(mergeOrdersAction:)];
+    self.navigationItem.rightBarButtonItems = @[self.passBt,self.mergeItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
