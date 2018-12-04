@@ -129,7 +129,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    YZBalanceTableCell *cell = [tableView dequeueReusableCellWithIdentifier:[YZBaseTableViewCell yz_cellIdentifiler]];
+    YZBalanceTableCell *cell = (YZBalanceTableCell *)[YZBalanceTableCell yz_createCellForTableView:tableView];
     [cell yz_configWithModel:[self.array yz_objectAtIndex:indexPath.row]];
     return cell;
 }
