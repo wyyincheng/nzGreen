@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSMutableDictionary *searchKeyDict;
 @property (nonatomic, strong) NSMutableArray *searchResult;
 @property (nonatomic, strong) NSMutableArray *searchGoodsArray;
+@property (nonatomic, assign) BOOL firstLaunch;
 
 @end
 
@@ -39,13 +40,21 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     
     [self initViews];
     [self initDatas];
-    [self.searchBar becomeFirstResponder];
     self.tableView.hidden = NO;
+    self.firstLaunch = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (self.firstLaunch) {
+     [self.searchBar becomeFirstResponder];
+        self.firstLaunch = NO;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -55,7 +64,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
 
 - (void)initViews {
     
-    self.navigationController.navigationBar.hidden = NO;
+//    self.navigationController.navigationBar.hidden = NO;
     
     self.navigationItem.titleView = self.searchBar;
     
@@ -100,9 +109,9 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    
+//    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)initDatas {
