@@ -41,6 +41,11 @@ NSString *placeHolder = @"描述一下您购买的商品吧！";
     self.textView.delegate = self;
     
     self.textViewCountLb.text = [NSString stringWithFormat:@"%ld/%ld字",(long)MAX_LIMIT_NUMS,(long)MAX_LIMIT_NUMS];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发布"
+                                                                              style:UIBarButtonItemStyleDone
+                                                                             target:self
+                                                                             action:@selector(publishPingjia:)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
