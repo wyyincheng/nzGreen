@@ -251,6 +251,7 @@
                 [mArray addObject:mdict];
             }
         }
+            break;
             
         default: {
             for (YZProductModel *model in self.productArray) {
@@ -613,6 +614,8 @@
         productId = [item yz_stringForKey:@"productId"];
     } else if ([item isKindOfClass:[YZProductModel class]]) {
         productId = ((YZProductModel *)item).productId;
+    } else if ([item isKindOfClass:[NSString class]]) {
+        productId = item;
     }
     
     [[YZNCNetAPI sharedAPI].productAPI payWeixinWithProductId:productId

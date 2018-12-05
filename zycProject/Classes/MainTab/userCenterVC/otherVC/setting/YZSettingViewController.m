@@ -125,13 +125,17 @@ static NSString * const kYZSettingUserTableCellIdentifiler = @"YZSettingUserTabl
 }
 
 - (void)sendByEmail{
-    MFMailComposeViewController *mailSender = [[MFMailComposeViewController alloc]init];
-    mailSender.mailComposeDelegate = self;
-    [mailSender setSubject:@"意见反馈"];
-    [mailSender setMessageBody:@"" isHTML:NO];
-    [mailSender setToRecipients:[NSArray arrayWithObjects:@"wyyincheng@yeah.net", nil]];
-//    [mailSender addAttachmentData:datamimeType:mimeTypefileName:fileName];
-    [self presentViewController:mailSender animated:YES completion:nil];
+    NSURL *telURL = [NSURL URLWithString:[@"tel://" stringByAppendingString:kServiceNumber]];
+    if ([[UIApplication sharedApplication] canOpenURL:telURL]) {
+        [[UIApplication sharedApplication] openURL:telURL];
+    }
+//    MFMailComposeViewController *mailSender = [[MFMailComposeViewController alloc]init];
+//    mailSender.mailComposeDelegate = self;
+//    [mailSender setSubject:@"意见反馈"];
+//    [mailSender setMessageBody:@"" isHTML:NO];
+//    [mailSender setToRecipients:[NSArray arrayWithObjects:@"wyyincheng@yeah.net", nil]];
+////    [mailSender addAttachmentData:datamimeType:mimeTypefileName:fileName];
+//    [self.navigationController presentViewController:mailSender animated:YES completion:nil];
 }
 
 #pragma mark - MFMailComposeViewControllerDelegate
