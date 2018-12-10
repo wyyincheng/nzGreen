@@ -134,8 +134,7 @@
 
 #pragma mark collectionView
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    //类型、
-    return 3;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
