@@ -90,6 +90,7 @@
     }
     [[YZNCNetAPI sharedAPI].productAPI getProductListWithPageIndex:pageIndex
                                                            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                               [MBProgressHUD hideHUD];
                                                                [weakSelf.collectionView.mj_header endRefreshing];
                                                                [weakSelf.collectionView.mj_footer endRefreshing];
                                                                NSArray *userArray = [YZGoodsModel yz_objectArrayWithKeyValuesArray:[responseObject yz_arrayForKey:@"records"]];
@@ -103,6 +104,7 @@
                                                                }
                                                                [weakSelf.collectionView reloadData];
                                                            } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                               [MBProgressHUD hideHUD];
                                                                [weakSelf.collectionView.mj_header endRefreshing];
                                                                [weakSelf.collectionView.mj_footer endRefreshing];
                                                                [MBProgressHUD showMessageAuto:error.msg];

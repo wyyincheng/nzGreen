@@ -350,9 +350,11 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     [[YZNCNetAPI sharedAPI].userAPI updateStoreInfoWithShopName:name
                                                       shopImage:nil imageName:nil
                                                         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                            [MBProgressHUD hideHUD];
                                                             weakSelf.shopInfo.shopName = name;
                                                             [weakSelf.tableView reloadData];
                                                         } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                            [MBProgressHUD hideHUD];
                                                             [MBProgressHUD showError:error.msg];
                                                         }];
 }
@@ -385,12 +387,14 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
         NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
         
         [[YZNCNetAPI sharedAPI].userAPI updateStoreInfoWithShopName:nil shopImage:encodedImageStr imageName:@"shopName" success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [MBProgressHUD hideHUD];
             if ([responseObject isKindOfClass:[NSString class]]) {
                 [MBProgressHUD showSuccess:@"修改成功"];
                 weakSelf.shopInfo.shopImage = responseObject;
                 [weakSelf.tableView reloadData];
             }
         } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+            [MBProgressHUD hideHUD];
             [MBProgressHUD showError:error.msg];
         }];
     }
