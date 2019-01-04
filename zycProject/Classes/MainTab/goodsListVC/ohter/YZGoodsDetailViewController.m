@@ -167,11 +167,13 @@ static NSInteger kSelectViewTag = 1001;
         [MBProgressHUD showMessage:@""];
         [[YZNCNetAPI sharedAPI].productAPI getProductDetailWithGoodsId:self.goodsId
                                                                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                   [MBProgressHUD hideHUD];
                                                                    weakSelf.goodsModel = [YZGoodsModel yz_objectWithKeyValues:responseObject];
                                                                    [weakSelf updateSelectView];
                                                                    weakSelf.goodsModel.count = 1;
                                                                    [weakSelf reloadDetailVC];
                                                                } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                   [MBProgressHUD hideHUD];
                                                                    [MBProgressHUD showMessageAuto:error.msg];
                                                                }];
     }

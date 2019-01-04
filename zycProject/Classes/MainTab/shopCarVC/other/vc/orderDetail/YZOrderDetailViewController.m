@@ -199,9 +199,11 @@ static NSString * const kYZAddressTableCellIdentifiler = @"kYZAddressTableCellId
             [MBProgressHUD showMessage:@""];
             [[YZNCNetAPI sharedAPI].orderAPI adoptOrderWithOrderList:@[self.agentDetailModel.orderNumber]
                                                              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                 [MBProgressHUD hideHUD];
                                                                  weakSelf.agentDetailModel.userOrderStatus = [[responseObject firstObject] yz_integerForKey:@"userOrderStatus"];
                                                                  [weakSelf.tableView reloadData];
                                                              } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                 [MBProgressHUD hideHUD];
                                                                  [MBProgressHUD showError:error.msg];
                                                              }];
         }

@@ -127,6 +127,7 @@
     [[YZNCNetAPI sharedAPI].productAPI getOrderManagerListWithPageIndex:pageIndex
                                                                    type:(isPassAction ? 1 : 0)
                                                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                    [MBProgressHUD hideHUD];
                                                                     [weakSelf.tableView.mj_header endRefreshing];
                                                                     [weakSelf.tableView.mj_footer endRefreshing];
                                                                     NSArray *userArray = [YZOrderManagerModel yz_objectArrayWithKeyValuesArray:[responseObject yz_arrayForKey:@"records"]];
@@ -146,6 +147,7 @@
                                                                         finishBlock();
                                                                     }
                                                                 } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                    [MBProgressHUD hideHUD];
                                                                     [weakSelf.tableView.mj_header endRefreshing];
                                                                     [weakSelf.tableView.mj_footer endRefreshing];
                                                                     [MBProgressHUD showMessageAuto:error.msg];
@@ -306,11 +308,13 @@
     __weak typeof(self) weakSelf = self;
     [[YZNCNetAPI sharedAPI].orderAPI rejectOrderWithOrderNumber:model.orderNumber
                                                         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                            [MBProgressHUD hideHUD];
                                                             if ([responseObject respondsToSelector:@selector(integerValue)]) {
                                                                 model.userOrderStatus = [responseObject integerValue];
                                                             }
                                                             [weakSelf.tableView reloadData];
                                                         } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                            [MBProgressHUD hideHUD];
                                                             [MBProgressHUD showError:error.msg];
                                                         }];
 }
@@ -322,9 +326,11 @@
         [MBProgressHUD showMessage:@""];
         [[YZNCNetAPI sharedAPI].orderAPI adoptOrderWithOrderList:@[order.orderNumber]
                                                          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                             [MBProgressHUD hideHUD];
                                                              model.userOrderStatus = [[responseObject firstObject] yz_integerForKey:@"userOrderStatus"];
                                                              [weakSelf.tableView reloadData];
                                                          } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                             [MBProgressHUD hideHUD];
                                                              [MBProgressHUD showError:error.msg];
                                                          }];
     } else {
@@ -619,7 +625,7 @@
     __weak typeof(self) weakSelf = self;
     [[YZNCNetAPI sharedAPI].orderAPI passOrdersByAgentWithOrders:marray
                                                          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                             
+                                                             [MBProgressHUD hideHUD];
 #warning for yc 通过后重新刷新列表还是仅将老数据移除
                                                              [weakSelf refreshGoods:YES passAction:YES finish:nil];
                                                              //                                                              for (YZOrderManagerModel *order in marray) {
@@ -627,6 +633,7 @@
                                                              //                                                              }
                                                              //                                                              [weakSelf.tableView reloadData];
                                                          } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                             [MBProgressHUD hideHUD];
                                                              [MBProgressHUD showSuccess:error.msg];
                                                          }];
 }

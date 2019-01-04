@@ -121,6 +121,7 @@
     if (self.buyType == BuyType_ReSubmit) {
         [MBProgressHUD showMessage:@""];
         [[YZNCNetAPI sharedAPI].orderAPI getReSubmitOrderInfoWithOrderNumber:[self.goodsDict yz_stringForKey:@"orderNumber"] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [MBProgressHUD hideHUD];
             self.reSubmitOrder = [YZReSubmitOrderModel yz_objectWithKeyValues:responseObject];
             self.addressModel = self.reSubmitOrder.userAddress;
             self.freightModel = self.reSubmitOrder.productFreight;
@@ -128,6 +129,7 @@
             [self caculateAllGoodsPrice];
             [self.tableView reloadData];
         } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+            [MBProgressHUD hideHUD];
             [MBProgressHUD showError:error.msg];
         }];
     } else {
@@ -296,10 +298,12 @@
             [[YZNCNetAPI sharedAPI].orderAPI mergeOrdersByAgentWithOrders:mArray
                                                                 addressId:self.addressModel.addressId
                                                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                      [MBProgressHUD hideHUD];
                                                                       YZUserOrderDTOModel *userOrder = [YZUserOrderDTOModel yz_objectWithKeyValues:responseObject];
                                                                       [weakSelf gotoViewController:NSStringFromClass([YZBuySuccessViewController class])
                                                                                        lauchParams:@{kYZLauchParams_UserOrder:userOrder}];
                                                                   } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                      [MBProgressHUD hideHUD];
                                                                       [MBProgressHUD showError:error.msg];
                                                                   }];
             
@@ -313,10 +317,12 @@
                                                                deliveryMode:self.deliveTypeCode
                                                                     address:self.addressModel.addressId
                                                                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                        [MBProgressHUD hideHUD];
                                                                         YZUserOrderDTOModel *userOrder = [YZUserOrderDTOModel yz_objectWithKeyValues:responseObject];
                                                                         [weakSelf gotoViewController:NSStringFromClass([YZBuySuccessViewController class])
                                                                                          lauchParams:@{kYZLauchParams_UserOrder:userOrder}];
                                                                     } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                        [MBProgressHUD hideHUD];
                                                                         [MBProgressHUD showError:error.msg];
                                                                     }];
             return;
@@ -328,10 +334,12 @@
                                                           deliveryMode:self.deliveTypeCode
                                                                address:self.addressModel.addressId
                                                                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                   [MBProgressHUD hideHUD];
                                                                    YZUserOrderDTOModel *userOrder = [YZUserOrderDTOModel yz_objectWithKeyValues:responseObject];
                                                                    [weakSelf gotoViewController:NSStringFromClass([YZBuySuccessViewController class])
                                                                                     lauchParams:@{kYZLauchParams_UserOrder:userOrder}];
                                                                } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                   [MBProgressHUD hideHUD];
                                                                    [MBProgressHUD showError:error.msg];
                                                                }];
             return;

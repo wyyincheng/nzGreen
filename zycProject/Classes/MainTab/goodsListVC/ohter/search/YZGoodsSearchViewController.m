@@ -141,6 +141,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     [[YZNCNetAPI sharedAPI].productAPI searchProductWithKeyWorld:self.searchBar.text
                                                        pageIndex:pageIndex
                                                          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                             [MBProgressHUD hideHUD];
                                                              [weakSelf.collectionView.mj_header endRefreshing];
                                                              [weakSelf.collectionView.mj_footer endRefreshing];
 
@@ -162,6 +163,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
                                                              [weakSelf.collectionView reloadData];
                                                              weakSelf.searchBar.showsCancelButton = YES;
                                                          } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                             [MBProgressHUD hideHUD];
                                                              [MBProgressHUD showMessageAuto:error.msg];
                                                              [weakSelf.collectionView.mj_header endRefreshing];
                                                              [weakSelf.collectionView.mj_footer endRefreshing];

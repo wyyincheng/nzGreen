@@ -100,10 +100,9 @@
     }
     [MBProgressHUD showMessage:@""];
     [AVUser verifyMobilePhone:smsCode withBlock:^(BOOL succeeded, NSError *error) {
+        [MBProgressHUD hideHUD];
         if (error) {
             [MBProgressHUD showError:error.localizedDescription];
-        } else {
-            [self hiddenHUD];
         }
     }];
 }

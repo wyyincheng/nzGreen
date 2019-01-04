@@ -167,6 +167,7 @@
         [[YZNCNetAPI sharedAPI].productAPI getOrderManagerListWithPageIndex:pageIndex
                                                                        type:1
                                                                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                                        [MBProgressHUD hideHUD];
                                                                         [weakSelf.tableView.mj_header endRefreshing];
                                                                         [weakSelf.tableView.mj_footer endRefreshing];
                                                                         NSArray *userArray = [YZOrderManagerItemModel yz_objectArrayWithKeyValuesArray:[responseObject yz_arrayForKey:@"records"]];
@@ -174,6 +175,7 @@
                                                                                        isRefresh:isRefresh
                                                                                          hasNext:([[responseObject yz_numberForKey:@"hasNext"] boolValue])];
                                                                     } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                                        [MBProgressHUD hideHUD];
                                                                         [weakSelf.tableView.mj_header endRefreshing];
                                                                         [weakSelf.tableView.mj_footer endRefreshing];
                                                                         [MBProgressHUD showMessageAuto:error.msg];

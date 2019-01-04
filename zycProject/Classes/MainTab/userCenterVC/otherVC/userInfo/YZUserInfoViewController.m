@@ -54,12 +54,14 @@
         [[YZNCNetAPI sharedAPI].userAPI updateUserInfoWithAvart:encodedImageStr
                                                       avartName:@"userAvartIcon"
                                                        nickName:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                           [MBProgressHUD hideHUD];
                                                            [MBProgressHUD showSuccess:@"修改成功"];
                                                            if ([responseObject isKindOfClass:[NSString class]]) {
                                                                [YZUserCenter shared].accountInfo.avatar = responseObject;
                                                                [weakSelf.tableView reloadData];
                                                            }
                                                        } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                           [MBProgressHUD hideHUD];
                                                            [MBProgressHUD showError:error.msg];
                                                        }];
     }

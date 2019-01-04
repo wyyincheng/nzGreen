@@ -43,12 +43,14 @@
     [MBProgressHUD showMessage:@""];
     [[YZNCNetAPI sharedAPI].orderAPI getDeliveInfoWithOrderNumber:self.orderNumber
                                                           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                              [MBProgressHUD hideHUD];
                                                               if ([responseObject isKindOfClass:[NSDictionary class]]) {
                                                                   weakSelf.logisticsNumber = [responseObject yz_stringForKey:@"logisticsNumber"];
                                                                   weakSelf.logisticsCompany = [responseObject yz_stringForKey:@"logisticsCompany"];
                                                                   [weakSelf downLoadIcons:[responseObject yz_arrayForKey:@"imageList"]];            [weakSelf.tableView reloadData];
                                                               }
                                                           } Failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
+                                                              [MBProgressHUD hideHUD];
                                                               [MBProgressHUD showError:error.msg];
                                                           }];
 }
