@@ -119,7 +119,7 @@
     //    isOrderMerge = ([self.goodsDict yz_integerForKey:@"type"] == BuyType_Merge);
     self.buyType = (BuyType)[self.goodsDict yz_integerForKey:@"type"];
     if (self.buyType == BuyType_ReSubmit) {
-        [MBProgressHUD showMessage:@""];
+        [MBProgressHUD showMessage:@"加载……"];
         [[YZNCNetAPI sharedAPI].orderAPI getReSubmitOrderInfoWithOrderNumber:[self.goodsDict yz_stringForKey:@"orderNumber"] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             [MBProgressHUD hideHUD];
             self.reSubmitOrder = [YZReSubmitOrderModel yz_objectWithKeyValues:responseObject];

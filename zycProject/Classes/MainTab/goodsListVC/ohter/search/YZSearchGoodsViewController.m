@@ -149,7 +149,7 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
     __weak typeof(self) weakSelf = self;
     pageIndex = refresh ? 1 : pageIndex + 1;
     if (refresh && needLoading) {
-        [MBProgressHUD showMessage:@""];
+        [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"刷新搜索列表" : @"")];
     }
     if (refresh) {
         [self.collectionView.mj_footer resetNoMoreData];

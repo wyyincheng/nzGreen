@@ -184,7 +184,7 @@
         [self refreshGoods:YES passAction:self.isPassAction finish:nil];
         
     } else {
-        [MBProgressHUD showMessage:@""];
+        [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"正在加载" : @"")];
         [self refreshGoods:YES passAction:self.isPassAction finish:^{
             //            weakSelf.passBt.title = self.isPassAction ? @"取消" : @"通过";
             //            weakSelf.bottomGap.constant = self.isPassAction ? -49 : 0;
@@ -217,7 +217,7 @@
     __weak typeof(self) weakSelf = self;
     if (self.isPassAction) {
         self.isPassAction = NO;
-        [MBProgressHUD showMessage:@""];
+        [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"加载中" : @"")];
         [self refreshGoods:YES passAction:NO finish:^{
             weakSelf.passBt.title = @"通过";
             weakSelf.mergeItem.title = @"合并";

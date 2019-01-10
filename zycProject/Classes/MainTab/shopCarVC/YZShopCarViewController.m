@@ -157,7 +157,7 @@
     pageIndex = isRefresh ? 1 : pageIndex + 1;
     __weak typeof(self) weakSelf = self;
     if (isRefresh) {
-        [MBProgressHUD showMessage:@""];
+        [MBProgressHUD showMessage:@"加载中……"];
     }
     if (isRefresh) {
         [self.tableView.mj_footer resetNoMoreData];

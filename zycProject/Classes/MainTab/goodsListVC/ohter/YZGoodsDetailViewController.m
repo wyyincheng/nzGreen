@@ -164,7 +164,7 @@ static NSInteger kSelectViewTag = 1001;
     
     __weak typeof(self) weakSelf = self;
     if (self.goodsId) {
-        [MBProgressHUD showMessage:@""];
+        [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"请求详情数据" : @"")];
         [[YZNCNetAPI sharedAPI].productAPI getProductDetailWithGoodsId:self.goodsId
                                                                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                                    [MBProgressHUD hideHUD];
@@ -266,7 +266,7 @@ static NSInteger kSelectViewTag = 1001;
         return;
     }
     
-    [MBProgressHUD showMessage:@""];
+    [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"添加至购物车" : @"")];
     __weak typeof(self) weakSelf = self;
     [[YZNCNetAPI sharedAPI].productAPI addShoppingCarWithGoodsId:self.goodsId
                                                      goodsNumber:[NSNumber numberWithInteger:self.goodsModel.count]

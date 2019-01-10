@@ -31,6 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL hasReviewed;
 
+/**
+ 是否展示loading场景
+ */
+@property (nonatomic, assign) BOOL showLoadScreen;
+
 - (void)logOut;
 
 - (void)gotoLogin;

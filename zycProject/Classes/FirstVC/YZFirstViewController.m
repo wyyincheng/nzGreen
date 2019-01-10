@@ -33,6 +33,7 @@
     } else {
         [self checkAppReviewInfo];
     }
+    [self checkAppConfigInfo];
 }
 
 - (void)checkAppReviewInfo {
@@ -45,6 +46,17 @@
             [YZUserCenter saveAppStatus:hasReviewed];
         }
         [self gotoNextVC];
+    }];
+}
+
+- (void)checkAppConfigInfo {
+    AVQuery *query = [AVQuery queryWithClassName:kYZClass_AppStoreInfo];
+    [query whereKey:kYZClassAppStore_AppVersion equalTo:kYZAppVersion];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            NSInteger hasReviewed = [[[objects firstObject] objectForKey:kYZClassAppStore_ShowLoadScreen] integerValue];
+            [YZUserCenter shared].hasReviewed = (hasReviewed == 1);
+        }
     }];
 }
 

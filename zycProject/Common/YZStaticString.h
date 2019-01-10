@@ -43,6 +43,7 @@ static NSString * const kYZBugly_AppId = @"c6cbb003f3";
 static NSString * const kYZClass_AppStoreInfo = @"YZAppStore";
 static NSString * const kYZClassAppStore_AppVersion = @"appVersion";
 static NSString * const kYZClassAppStore_HasReviewed = @"hasReviewed";
+static NSString * const kYZClassAppStore_ShowLoadScreen = @"loadingScreen";
 
 static NSString * const kYZClass_RegisterToken = @"RegisterToken";
 
