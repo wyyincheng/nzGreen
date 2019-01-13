@@ -55,7 +55,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
             NSInteger hasReviewed = [[[objects firstObject] objectForKey:kYZClassAppStore_ShowLoadScreen] integerValue];
-            [YZUserCenter shared].hasReviewed = (hasReviewed == 1);
+            [YZUserCenter shared].showLoadScreen = (hasReviewed == 1);
         }
     }];
 }

@@ -83,7 +83,8 @@
     pageIndex = refresh ? 1 : pageIndex + 1;
     __weak typeof(self) weakSelf = self;
     if (refresh && needLoading) {
-        [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"刷新商品列表" : @"")];
+//        [MBProgressHUD showMessage:([YZUserCenter shared].showLoadScreen ? @"刷新商品列表" : @"")];
+         [self.collectionView.mj_header beginRefreshing];
     }
     if (refresh) {
         [self.collectionView.mj_footer resetNoMoreData];
