@@ -109,10 +109,15 @@ static NSString * const kYZSettingUserTableCellIdentifiler = @"YZSettingUserTabl
 //
 //            break;
         case 2:
-            [self sendByEmail];
+            if ([YZUserCenter shared].hasReviewed) {
+                [self gotoChangePwd];
+            } else {
+                [self sendByEmail];
+            }
             break;
             
         default:
+            [self sendByEmail];
             break;
     }
     NSDictionary *item = [[self.itemArray yz_arrayAtIndex:indexPath.section - 1] yz_dictAtIndex:indexPath.row];
@@ -122,6 +127,10 @@ static NSString * const kYZSettingUserTableCellIdentifiler = @"YZSettingUserTabl
 - (void)logoutAction {
     [[YZUserCenter shared] custom_logOut];
     [(YZMainViewController *)self.tabBarController gotoIndexVC:YZVCIndex_UserCenter];
+}
+
+- (void)gotoChangePwd {
+//    [self gotoViewController:@"NZChangePwdViewController"];
 }
 
 - (void)sendByEmail{
@@ -191,12 +200,14 @@ static NSString * const kYZSettingUserTableCellIdentifiler = @"YZSettingUserTabl
     
     CGFloat cacheSize = [[SDImageCache sharedImageCache] getSize] / 1024 / 1024;
     NSString *size = cacheSize > 0 ? [NSString stringWithFormat:@"%.2fM",cacheSize] : @" ";
-    
-    return @[
-             @[@{kYZDictionary_TitleKey:@"清除缓存",kYZDictionary_InfoKey:size}],
-//             @[@{kYZDictionary_TitleKey:@"修改密码"}],
-             @[@{kYZDictionary_TitleKey:@"联系我们"}]
-             ];
+    return [YZUserCenter shared].hasReviewed ? @[
+                                                 @[@{kYZDictionary_TitleKey:@"清除缓存",kYZDictionary_InfoKey:size}],
+                                                 @[@{kYZDictionary_TitleKey:@"修改密码",kYZVCClassName:@"NZChangePwdViewController"}],
+                                                 @[@{kYZDictionary_TitleKey:@"联系我们"}]
+                                                 ] : @[
+                                                       @[@{kYZDictionary_TitleKey:@"清除缓存",kYZDictionary_InfoKey:size}],
+                                                       @[@{kYZDictionary_TitleKey:@"联系我们"}]
+                                                       ];
 }
 
 @end

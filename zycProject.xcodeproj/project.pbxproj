@@ -189,6 +189,8 @@
 		584FFF55218CC740008B2B61 /* UIView+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF54218CC73F008B2B61 /* UIView+Controller.m */; };
 		584FFF59218CC7BD008B2B61 /* YZOrderStatusTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */; };
 		584FFF5A218CC7BD008B2B61 /* YZOrderStatusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */; };
+		5874EF3B22000D1E008FCA71 /* NZChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5874EF3922000D1E008FCA71 /* NZChangePwdViewController.m */; };
+		5874EF3C22000D1E008FCA71 /* NZChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5874EF3A22000D1E008FCA71 /* NZChangePwdViewController.xib */; };
 		587A55D421A4000D008581D7 /* icon_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 587A55D221A4000D008581D7 /* icon_search@2x.png */; };
 		587A55D521A4000D008581D7 /* icon_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 587A55D321A4000D008581D7 /* icon_search@3x.png */; };
 		587A55D821A40089008581D7 /* YZGoodsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587A55D721A40089008581D7 /* YZGoodsSearchViewController.m */; };
@@ -557,6 +559,9 @@
 		584FFF56218CC7BD008B2B61 /* YZOrderStatusTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZOrderStatusTableCell.h; sourceTree = "<group>"; };
 		584FFF57218CC7BD008B2B61 /* YZOrderStatusTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZOrderStatusTableCell.m; sourceTree = "<group>"; };
 		584FFF58218CC7BD008B2B61 /* YZOrderStatusTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YZOrderStatusTableCell.xib; sourceTree = "<group>"; };
+		5874EF3822000D1E008FCA71 /* NZChangePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NZChangePwdViewController.h; sourceTree = "<group>"; };
+		5874EF3922000D1E008FCA71 /* NZChangePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NZChangePwdViewController.m; sourceTree = "<group>"; };
+		5874EF3A22000D1E008FCA71 /* NZChangePwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NZChangePwdViewController.xib; sourceTree = "<group>"; };
 		587A55D221A4000D008581D7 /* icon_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_search@2x.png"; sourceTree = "<group>"; };
 		587A55D321A4000D008581D7 /* icon_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_search@3x.png"; sourceTree = "<group>"; };
 		587A55D621A40089008581D7 /* YZGoodsSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZGoodsSearchViewController.h; sourceTree = "<group>"; };
@@ -1195,6 +1200,7 @@
 		584FFEDB218C9B6F008B2B61 /* otherVC */ = {
 			isa = PBXGroup;
 			children = (
+				5874EF3422000CD7008FCA71 /* changePwd */,
 				58497DC22193531A005F53A3 /* about */,
 				584FFF41218CBFCD008B2B61 /* setting */,
 				584FFF3B218CBAB8008B2B61 /* addAddress */,
@@ -1371,6 +1377,16 @@
 				584FFF4A218CC140008B2B61 /* YZSettingUserTableCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		5874EF3422000CD7008FCA71 /* changePwd */ = {
+			isa = PBXGroup;
+			children = (
+				5874EF3822000D1E008FCA71 /* NZChangePwdViewController.h */,
+				5874EF3922000D1E008FCA71 /* NZChangePwdViewController.m */,
+				5874EF3A22000D1E008FCA71 /* NZChangePwdViewController.xib */,
+			);
+			path = changePwd;
 			sourceTree = "<group>";
 		};
 		5896294721884C09008EFDD8 = {
@@ -2015,6 +2031,7 @@
 				58497DA82192F61A005F53A3 /* YZOrderMangerTableCell.xib in Resources */,
 				584FFEA7218C63D1008B2B61 /* YZUserCenterInfoTableCell.xib in Resources */,
 				5896295D21884C0A008EFDD8 /* Assets.xcassets in Resources */,
+				5874EF3C22000D1E008FCA71 /* NZChangePwdViewController.xib in Resources */,
 				584FFE6E218B0C8A008B2B61 /* icon_vcdefault_empty@3x.png in Resources */,
 				584FFEAE218C675C008B2B61 /* icon_me_avart@2x.png in Resources */,
 				584FFE87218BFC17008B2B61 /* icon_tab_user_selected@3x.png in Resources */,
@@ -2156,6 +2173,7 @@
 				5896295821884C09008EFDD8 /* ViewController.m in Sources */,
 				58B16D1D21B6C5F2007D3ACF /* NZStoreHeaerCell.m in Sources */,
 				58E28B5721B6D5B4004AD2CD /* YZUserManagerViewController.m in Sources */,
+				5874EF3B22000D1E008FCA71 /* NZChangePwdViewController.m in Sources */,
 				584FFE5A218B00F1008B2B61 /* NSData+AES256.m in Sources */,
 				58E31E5E21945F35004E8931 /* YZChangePwdViewController.m in Sources */,
 				584FFE1E218AF827008B2B61 /* YZGoodsFreightModel.m in Sources */,

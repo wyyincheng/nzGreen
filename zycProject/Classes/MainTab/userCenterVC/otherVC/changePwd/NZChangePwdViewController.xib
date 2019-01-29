@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NZChangePwdViewController">
+            <connections>
+                <outlet property="theNewPwdConfirmTF" destination="WDe-ad-2b1" id="5bG-Bn-wfE"/>
+                <outlet property="theNewPwdTF" destination="lgP-ft-YNu" id="oj4-v8-bXy"/>
+                <outlet property="theOldPwdTF" destination="lrc-Kp-D5e" id="lAB-qa-Ka8"/>
+                <outlet property="view" destination="DG5-rx-FQz" id="3CC-iR-hWF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="DG5-rx-FQz">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xZ-rx-sjw">
+                    <rect key="frame" x="20" y="60" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入原密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrc-Kp-D5e">
+                    <rect key="frame" x="75" y="51" width="280" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="xpc-RY-qXy"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NI-Qo-Q6g">
+                    <rect key="frame" x="20" y="107" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgP-ft-YNu">
+                    <rect key="frame" x="75" y="98" width="280" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Dix-Rx-jNI"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSC-M4-pIE">
+                    <rect key="frame" x="20" y="154" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请再次输入新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-ad-2b1">
+                    <rect key="frame" x="75" y="145" width="280" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="IL9-9X-Nn4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN3-Xq-UF4">
+                    <rect key="frame" x="45.5" y="255" width="284" height="50"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.66666666669999997" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Kdr-57-zR9"/>
+                        <constraint firstAttribute="width" constant="284" id="Rz3-0X-Qe6"/>
+                    </constraints>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="changePwdAction:" destination="-1" eventType="touchUpInside" id="Iau-N5-G0b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="lrc-Kp-D5e" firstAttribute="centerY" secondItem="5xZ-rx-sjw" secondAttribute="centerY" id="0UQ-cj-98g"/>
+                <constraint firstItem="lgP-ft-YNu" firstAttribute="leading" secondItem="lrc-Kp-D5e" secondAttribute="leading" id="0ul-Xo-PmK"/>
+                <constraint firstItem="lgP-ft-YNu" firstAttribute="centerY" secondItem="6NI-Qo-Q6g" secondAttribute="centerY" id="3qd-Bc-to8"/>
+                <constraint firstItem="WDe-ad-2b1" firstAttribute="trailing" secondItem="lrc-Kp-D5e" secondAttribute="trailing" id="4b4-8M-iOG"/>
+                <constraint firstItem="lgP-ft-YNu" firstAttribute="leading" secondItem="6NI-Qo-Q6g" secondAttribute="trailing" constant="12" id="4lc-5r-JfR"/>
+                <constraint firstItem="5xZ-rx-sjw" firstAttribute="leading" secondItem="FBo-WX-VtG" secondAttribute="leading" constant="20" id="DmB-qZ-nev"/>
+                <constraint firstItem="5xZ-rx-sjw" firstAttribute="top" secondItem="FBo-WX-VtG" secondAttribute="top" constant="40" id="PMt-ws-jZf"/>
+                <constraint firstItem="lrc-Kp-D5e" firstAttribute="leading" secondItem="5xZ-rx-sjw" secondAttribute="trailing" constant="12" id="RHU-Hv-fhD"/>
+                <constraint firstItem="WDe-ad-2b1" firstAttribute="leading" secondItem="lrc-Kp-D5e" secondAttribute="leading" id="X3W-aW-zHq"/>
+                <constraint firstItem="lgP-ft-YNu" firstAttribute="trailing" secondItem="lrc-Kp-D5e" secondAttribute="trailing" id="bzT-r1-SH4"/>
+                <constraint firstItem="WDe-ad-2b1" firstAttribute="leading" secondItem="iSC-M4-pIE" secondAttribute="trailing" constant="12" id="haY-Fr-foM"/>
+                <constraint firstItem="WDe-ad-2b1" firstAttribute="top" secondItem="lgP-ft-YNu" secondAttribute="bottom" constant="12" id="has-x2-Z3x"/>
+                <constraint firstItem="FBo-WX-VtG" firstAttribute="trailing" secondItem="lrc-Kp-D5e" secondAttribute="trailing" constant="20" id="kTi-Xe-a9K"/>
+                <constraint firstItem="UN3-Xq-UF4" firstAttribute="centerX" secondItem="DG5-rx-FQz" secondAttribute="centerX" id="kZL-XR-WcU"/>
+                <constraint firstItem="WDe-ad-2b1" firstAttribute="centerY" secondItem="iSC-M4-pIE" secondAttribute="centerY" id="nsZ-5P-9X6"/>
+                <constraint firstItem="lgP-ft-YNu" firstAttribute="top" secondItem="lrc-Kp-D5e" secondAttribute="bottom" constant="12" id="oAg-zD-Qg5"/>
+                <constraint firstItem="iSC-M4-pIE" firstAttribute="leading" secondItem="5xZ-rx-sjw" secondAttribute="leading" id="rvX-Tz-ZMX"/>
+                <constraint firstItem="6NI-Qo-Q6g" firstAttribute="leading" secondItem="5xZ-rx-sjw" secondAttribute="leading" id="x7H-Xn-yOx"/>
+                <constraint firstItem="UN3-Xq-UF4" firstAttribute="top" secondItem="WDe-ad-2b1" secondAttribute="bottom" constant="75" id="ypj-iI-7OJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="FBo-WX-VtG"/>
+        </view>
+    </objects>
+</document>
