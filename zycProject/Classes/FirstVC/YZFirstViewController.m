@@ -37,16 +37,26 @@
 }
 
 - (void)checkAppReviewInfo {
-    AVQuery *query = [AVQuery queryWithClassName:kYZClass_AppStoreInfo];
-    [query whereKey:kYZClassAppStore_AppVersion equalTo:kYZAppVersion];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (!error) {
-            NSInteger hasReviewed = [[[objects firstObject] objectForKey:kYZClassAppStore_HasReviewed] integerValue];
-            [YZUserCenter shared].hasReviewed = (hasReviewed == 1);
-            [YZUserCenter saveAppStatus:hasReviewed];
-        }
+    
+    [[YZNCNetAPI sharedAPI].userAPI checkAppStatusWithsuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        BOOL available = responseObject;
+        [YZUserCenter shared].hasReviewed = available;
+        [YZUserCenter saveAppStatus:(available ? 1 : 0)];
+        [self gotoNextVC];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NZError * _Nonnull error) {
         [self gotoNextVC];
     }];
+    
+//    AVQuery *query = [AVQuery queryWithClassName:kYZClass_AppStoreInfo];
+//    [query whereKey:kYZClassAppStore_AppVersion equalTo:kYZAppVersion];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+//        if (!error) {
+//            NSInteger hasReviewed = [[[objects firstObject] objectForKey:kYZClassAppStore_HasReviewed] integerValue];
+//            [YZUserCenter shared].hasReviewed = (hasReviewed == 1);
+//            [YZUserCenter saveAppStatus:hasReviewed];
+//        }
+//        [self gotoNextVC];
+//    }];
 }
 
 - (void)checkAppConfigInfo {

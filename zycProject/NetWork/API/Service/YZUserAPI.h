@@ -11,6 +11,9 @@
 
 @interface YZUserAPI : YNCZBaseService
 
+- (void)checkAppStatusWithsuccess:(SuccessBlock)success
+                          failure:(FailureBlock)failure;
+
 - (void)registerWithPhone:(NSString *)phone
                  password:(NSString *)password
                   success:(SuccessBlock)success
