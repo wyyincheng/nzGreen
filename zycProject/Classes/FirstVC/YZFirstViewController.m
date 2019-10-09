@@ -39,7 +39,11 @@
 - (void)checkAppReviewInfo {
     
     [[YZNCNetAPI sharedAPI].userAPI checkAppStatusWithsuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        BOOL available = responseObject;
+        BOOL available = NO;
+        if ([responseObject respondsToSelector:@selector(boolValue)]) {
+            available = [responseObject boolValue];
+        }
+        
         [YZUserCenter shared].hasReviewed = available;
         [YZUserCenter saveAppStatus:(available ? 1 : 0)];
         [self gotoNextVC];

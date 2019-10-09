@@ -587,16 +587,21 @@ static NSString * const kGoodsSearhResultCell = @"kGoodsSearhResultCell";
         _searchBar.placeholder = @"搜索";
         _searchBar.backgroundImage = [UIImage imageNamed:@"icon_search"];
         
-        UITextField *searchTextField = [_searchBar valueForKey:@"_searchField"];
+        UITextField *searchTextField = nil;
+        if (@available(iOS 13, *)) {
+            searchTextField = _searchBar.searchTextField;
+            [_searchBar setValue:@"取消" forKey:@"cancelButtonText"];
+        } else {
+            searchTextField = [_searchBar valueForKey:@"_searchField"];
+            [_searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
+        }
+        
         searchTextField.font = [UIFont systemFontOfSize:16];
         searchTextField.textColor = [UIColor colorWithHex:0x999999];
         searchTextField.backgroundColor = [UIColor colorWithHex:0x8E8E93 alpha:0.2];
         
         _searchBar.tintColor = [UIColor colorWithHex:0x999999];
         
-        [_searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
-        
-        //        _searchBar.showsCancelButton = YES;
         _searchBar.delegate = self;
     }
     return _searchBar;
